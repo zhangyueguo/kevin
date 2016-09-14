@@ -1,0 +1,222 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<!-- Use IE7 mode -->
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7 charset={$charset}" />
+<meta http-equiv="Content-Type" content="text/html; charset={$charset}" />
+<title>{$page_title|escape}</title>
+<meta name="author" content="ecmall.shopex.cn" />
+<meta name="copyright" content="ShopEx Inc. All Rights Reserved" />
+<link href="{$res_base}/css/user.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.particular_wrap h2 { text-align: center; margin-bottom: 20px; }
+.particular_wrap h3 { margin-bottom: 10px; position: relative; }
+.particular_wrap h3 .btn1 {margin-left: 20px; position: relative; _top: 3px;}
+.particular_wrap h3 strong { position: absolute; top: 0; right: 10px; font-size: 12px; }
+.particular_wrap h3 strong span { color: #ff4e00; }
+.activity { border-top: 1px solid #eee; border-bottom: 1px solid #eee; padding: 1px 0; margin-bottom: 20px; }
+.activity table { width: 100%; border-top: 1px solid #eee; border-collapse: collapse; color: #666; line-height: 20px; }
+.activity th { font-weight: normal; border-right: 1px solid #eee; border-bottom: 1px solid #eee; width: 100px; }
+.activity td { border-bottom: 1px solid #eee; padding: 10px 0 10px 20px; }
+.ware_list { border-bottom: 1px solid #eee; }
+.ware_list .links { width: 40%; float: left; padding-left: 4%; }
+.ware_list .links a { text-decoration: none; color: #666; }
+.ware_list .links a:hover { text-decoration: underline; }
+.ware_list .price { width: 25%; float: left; text-align: center; }
+.ware_list p { width: 25%; float: left; text-align: center; padding:0; }
+
+.dialog_wrapper { background: #595959; padding-bottom: 4px; position: absolute; top: 50%; left: 50%; z-index: 20; }
+.dialog_body { padding: 6px; border: 4px solid #dadada; background: #fff; }
+
+.eject_con { border: 1px solid #e2e2e2; border-top: 0; }
+
+.eject_con .add_float { width: 358px; padding: 20px; overflow: hidden; }
+.eject_con .add_float ul { width: 358px; overflow: hidden; }
+.eject_con .add_float li { width: 358px; overflow: hidden; float: left; padding-bottom: 10px; }
+.eject_con .add_float li h3 { float: left; width: 78px; color: #646665; font-weight: normal; font-size: 12px; line-height: 26px; }
+.eject_con .add_float li p { float: left; }
+.eject_con .add_float li p span { color: #b4b4b4; }
+.eject_con .add_float li p textarea { height: 100px; overflow-y: auto; }
+
+.eject_con .add_float .submit { width: 458px; padding: 10px 0 0 80px; }
+.eject_con .add_float .submit .btn { border: 0; width: 120px; height: 32px; background: url({res file=images/btn.gif}) no-repeat 0 -253px; cursor: pointer; font-weight: bold; color: #3f3d3e; }
+
+.tab { width: 100%; height: 28px; line-height: 26px; background: url({res file=images/tab.gif}) repeat-x bottom; }
+.tab li { float: left; margin-right: 2px; cursor: pointer; font-size: 14px; }
+.tab .active { height: 26px; color: #ff4f01; font-weight: bold; padding: 0 20px; border: 1px solid #e2e2e2; border-bottom: 1px solid #fff; background: #fff; }
+.tab .normal { height: 26px; color: #3e3e3e; font-weight: bold; padding: 0px; border: 1px solid #e2e2e2; background: #f9f9f9; }
+.tab .active a { color: #ff4f01; text-decoration: none; float: left; height: 26px; padding: 0 20px; }
+.tab .normal a { color: #3e3e3e; text-decoration: none; float: left; height: 26px; padding: 0 20px; }
+
+.eject_con .add_float { width:auto; }
+#result tr td, #result_head tr td{ border-bottom: 1px dotted #BBDBF1; empty-cells: show; }
+#result_head tr td { font-weight: bold; }
+
+#warning { border:red 1px solid; background:#FFB7B7; color:#000; padding:3px 10px; margin:8px 0px; display:none; color:#000; font-weight:normal; }
+#warning label { display:block; margin:3px 0px; }
+#warning label.error { color:#000; font-weight:normal; }
+</style>
+<script type="text/javascript">
+//<!CDATA[
+var SITE_URL = "{$site_url}";
+var PRICE_FORMAT = '{$price_format}';
+//]]>
+</script>
+<script type="text/javascript" src="index.php?act=jslang"></script>
+<script type="text/javascript" src="{lib file=jquery.js}" charset="utf-8"></script>
+<script type="text/javascript" src="{lib file=ecmall.js}" charset="utf-8"></script>
+<script type="text/javascript" src="{lib file=member.js}" charset="utf-8"></script>
+<script type="text/javascript">
+$(function(){
+    $('#left h1 span,h2.title a.fold').click(function(){
+        if($(this).hasClass('span_close')){
+            $(this).removeClass('span_close');
+            $(this).addClass('span_open');
+            this.title = 'open';
+            closeSubmenu($(this).parent());
+        }
+        else{
+            $(this).removeClass('span_open');
+            $(this).addClass('span_close');
+            this.title = 'close';
+            openSubmenu($(this).parent());
+        }
+    });
+});
+function closeSubmenu(h1){
+    h1.next('ul').css('display', 'none');
+}
+function openSubmenu(h1){
+    h1.next('ul').css('display', '');
+}
+</script>
+{$_head_tags}
+</head>
+<body>
+<div id="header">
+    <h1 title="{$site_title}"><a href="index.php"><img src="{$site_logo}" alt="{$site_title}" /></a></h1>
+    <div id="subnav">
+        <p>
+        {$lang.hello},{$visitor.user_name|escape}
+        <!--{if !$visitor.user_id}-->
+            [<a href="index.php?app=member&amp;act=login&amp;ret_url={$ret_url}">{$lang.login}</a>]
+            [<a href="index.php?app=member&amp;act=register&amp;ret_url={$ret_url}">{$lang.register}</a>]
+            <!--{else}-->
+            [<a href="index.php?app=member&amp;act=logout">{$lang.logout}</a>]
+            <!--{/if}-->
+        </p>
+        <p>
+        <a class="shopping" href="index.php?app=cart">{$lang.shopping_cart}</a> <span>|</span>
+        <a class="favorite" href="index.php?app=my_favorite">{$lang.favorite}</a> <span>|</span>
+        <a class="note" href="index.php?app=message&amp;act=inbox">{$lang.pm}{if $new_message.total}({$new_message.total}){/if}</a> <span>|</span>
+        <a class="help" href="index.php?app=article&amp;code={$acc_help}">{$lang.help_center}</a>
+        </p>
+    </div>
+    <div id="topbtn">
+        <div class="topbtn1"></div>
+        <div class="topbtn2"></div>
+        <a href="index.php?app=member" class="user">{$lang.member_center}</a> <span>|</span>
+        <a href="index.php?app=category">{$lang.i_want_buy}</a> <span>|</span>
+        <a href="index.php?app=my_goods&amp;act=add">{$lang.i_want_sell}</a>
+    </div>
+    <div id="path">
+        {$lang.curlocal}:
+        <!--{foreach from=$_curlocal item=lnk}-->
+        <!--{if $lnk.url}-->
+        <a href="{$lnk.url}">{$lnk.text|escape}</a> <span>&#8250;</span>
+        <!--{else}-->
+        {$lnk.text|escape}
+        <!--{/if}-->
+        <!--{/foreach}-->
+    </div>
+    <div class="search">
+        <form id="" name="" method="get" action="">
+            <div class="input">
+                <div class="input1"></div>
+                <div class="input2"></div>
+                <select name="act" class="select1">
+                <option value="index">{$lang.search_goods}</option>
+                <option value="store">{$lang.search_store}</option>
+                </select>
+                <input type="hidden" name="app" value="search" />
+                <input type="text" class="text2" name="keyword" />
+            </div>
+            <input class="btn" type="submit" name="Submit" value=""/>
+        </form>
+    </div>
+</div>
+<div class="content">
+
+    <div class="particular">
+
+        <div class="particular_wrap">
+            <h2>{$specialpage.name|escape}</h2>
+
+            <h3>{$lang.specialpage_description}</h3>
+
+            <div class="activity">
+                <table>
+                    <tr>
+                        <th>{$lang.specialpage_time}</th>
+                        <td>{$specialpage.starttime|date:Y.m.d} -- {$specialpage.endtime|date:Y.m.d}</td>
+                    </tr>
+                    <tr>
+                        <th>{$lang.specialpage_cate}</th>
+                        <td>
+                            {foreach from=$specialpage.category item=cate_name}&#8226; {$cate_name}<br />{/foreach}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>{$lang.specialpage_description}</th>
+                        <td>{$specialpage.description|escape}</td>
+                    </tr>
+                </table>
+            </div>
+
+            <h3>
+                {$lang.my_submit_goods}
+                <input dialog_id="submit_goods" dialog_title="submit_goods" dialog_width="600" ectype="dialog" uri="index.php?module=specialpage&amp;act=submit_goods&amp;id={$smarty.get.id}" type="submit" class="btn1" value="{$lang.i_will_submit}" />
+                <strong>{if $lefttime.startleft}{$lefttime.startleft_lang}{elseif $lefttime.endleft}{$lefttime.endtime_lang}{/if}</strong>
+            </h3>
+
+            <div class="ware_line">
+                <div class="ware">
+                    {foreach from=$goodss item=goods}
+                    <div class="ware_list">
+                        <div class="links"><a target="_blank" href="{$site_url}/index.php?app=goods&amp;id={$goods.goods_id}">{$goods.goods_name}</a></div>
+                        <div class="price">{$goods.gs.price|price}</div>
+                        <p>{if $goods.verified eq 1}{$lang.verified}{else}{$lang.not_verified}{/if}</p>
+                    </div>
+                    {/foreach}
+                </div>
+            </div>
+
+            <div class="particular_bottom"></div>
+        </div>
+
+        <div class="clear"></div>
+        <div class="adorn_right1"></div>
+        <div class="adorn_right2"></div>
+        <div class="adorn_right3"></div>
+        <div class="adorn_right4"></div>
+    </div>
+
+    <div class="clear"></div>
+</div>
+<div id="footer">
+    <p>
+        <a href="index.php">{$lang.index}</a>
+        <!--{foreach from=$navs.footer item=nav}-->
+        | <a href="{$nav.link}"{if $nav.open_new} target="_blank"{/if}>{$nav.title|escape}</a>
+        <!--{/foreach}-->
+    </p>
+    {sprintf lang=query_info var1=query_time var2=query_count var3=query_user_count}
+    <!--{if $gzip_enabled}-->{$lang.gzip_enabled}<!--{else}-->{$lang.gzip_disabled}<!--{/if}-->
+    <!--{if $memory_info}-->{sprintf lang=memory_info var1=memory_info}<!--{/if}--> {$statistics_code}<br />
+    <a>bdtaobao.com</a>
+    <!--{if $icp_number}--><br />{$icp_number}<!--{/if}-->
+</div>
+{$async_sendmail}
+<iframe id='iframe_post' name="iframe_post" src="about:blank" frameborder="0" width="0" height="0"></iframe>
+</body>
+</html>

@@ -1,0 +1,130 @@
+{include file="header.html"}
+<script type="text/javascript">
+
+$(function(){
+
+    $('#add_time_from').datepicker({dateFormat: 'yy-mm-dd'});
+
+    $('#add_time_to').datepicker({dateFormat: 'yy-mm-dd'});
+
+});
+
+</script>
+<div id="rightTop">
+  <p>店铺销售统计</p>
+</div>
+<div class="mrightTop">
+  <div class="fontl">
+    <form method="get">
+       <div class="left">
+          <input type="hidden" name="app" value="storebao" />
+          <input type="hidden" name="act" value="index" />
+         
+          
+          
+          
+<!--          {$lang.owner_name}:
+          <input class="queryInput" type="text" name="owner_name" value="{$smarty.get.owner_name|escape}" />-->
+          
+          
+          {$lang.store_name}:
+          <input class="queryInput" type="text" name="store_name" value="{$smarty.get.store_name|escape}" />
+   
+                 <select class="querySelect" name="status">
+
+                    <option value="">订单状态</option>
+
+                    {html_options options=$order_status_list selected=$smarty.get.status}
+
+                </select>
+                   开始:<input class="queryInput2" type="text" value="{$query.add_time_from}" id="add_time_from" name="add_time_from" class="pick_date" />
+               结束:<input class="queryInput2" type="text" value="{$query.add_time_to}" id="add_time_to" name="add_time_to" class="pick_date" />
+                  
+
+               显示条数：<input class="queryInput" type="text" name="orderlist" value="{$limit}" />      
+           
+          
+          <input type="submit" class="formbtn" value="{$lang.query}" />
+      </div>
+       <a class="left formbtn1" href="index.php?app=storebao&act=create&store_name={$smarty.get.store_name|escape}&state={$state}&orderlist={$limit}&status={$smarty.get.status}&add_time_from={$smarty.get.add_time_from}&add_time_to={$smarty.get.add_time_to}&page={$smarty.get.page}">导出</a>
+      
+    <a class="left formbtn1" href="index.php?app=storebao&state={$state}">{$lang.cancel_query}</a>
+    </form>
+  </div>
+  <div class="fontr">{include file=page.top.html} </div>
+</div>
+<div class="tdare">
+  <table width="100%" cellspacing="0" class="dataTable">
+    <!--{if $stores}-->
+    <tr class="tatr1">
+
+
+      <td>店铺名称</td>
+      <td>订单数
+（笔）</td>
+    
+     
+     
+      <td class="table-center">销售额
+（元）</td>
+     
+      
+     
+     
+        
+     
+    </tr>
+    <!--{/if}-->
+    <!--{foreach from=$stores item=store}-->
+    <tr class="tatr2">
+
+
+      <td>
+       {$store.store_name|escape}
+       </td>
+     
+        
+      <td>{$store.order_sum}</td>
+      <td class="table-center">{$store.order_amount}</td>
+    
+        
+       
+</td>
+    </tr>
+    <!--{foreachelse}-->
+    <tr class="no_data">
+      <td colspan="12">{$lang.no_data}</td>
+    </tr>
+    <!--{/foreach}-->
+    
+    
+    
+    
+    <tr class="tatr2">
+
+
+      <td>
+               
+               合计
+             </td>
+      <td>{$counts.order_sum}</td>
+        
+
+      <td class="table-center">{$counts.order_amount}</td>
+ 
+        
+       
+
+    </tr>
+  </table>
+  <!--{if $stores}-->
+  <div id="dataFuncs">
+    <div class="pageLinks">{include file=page.bottom.html}</div>
+    <div id="batchAction" class="left paddingT15">
+    </div>
+  </div>
+  <div class="clear"></div>
+  <!--{/if}-->
+
+</div>
+{include file="footer.html"}

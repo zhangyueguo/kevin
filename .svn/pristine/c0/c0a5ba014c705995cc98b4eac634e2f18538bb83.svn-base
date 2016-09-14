@@ -1,0 +1,39 @@
+<div id="footer" class="w-full">
+	<div class="foot-service w clearfix">
+      <dl>
+         <dt class="fts-1"></dt>
+         <dd><a>官方认证商家</a></dd>
+         <dd><a>100%全场正品</a></dd>
+      </dl>
+      <dl>
+         <dt class="fts-2"></dt>
+         <dd><a>新手指南</a></dd>
+         <dd><a>官方微博</a></dd>
+      </dl>
+      <dl>
+         <dt class="fts-3"></dt>
+         <dd><a>客服专线：400-800-800</a></dd>
+         <dd><a>商家入驻：400-800-800</a></dd>
+      </dl>
+      <dl>
+         <dt class="fts-4"></dt>
+         <dd><a>优质商家入驻商城</a></dd>
+         <dd><a>了解微创动力微信商城</a></dd>
+      </dl>
+   </div>
+	<div class="foot-group">
+
+   </div>
+	<div class="foot-copyright">Copyright &copy; 2011-2015 <a href="http://vmall.vchuang.cn">微创动力微信商城</a> 版权所有 <!--{if $icp_number}--><br />{$icp_number}<!--{/if}--> {$statistics_code}</div>
+	<div class="foot-parter mb20">
+		<a href="javascript:;"><img src="static/images/bt_logo_1.png" /></a>
+		<a href="javascript:;"><img src="static/images/bt_logo_2.png" /></a>
+		<a href="javascript:;"><img src="static/images/bt_logo_3.png" /></a>
+	</div>
+   
+	<div class="footer-fixed">
+		<a id="gotop" class="toTop" href="javascript:void(0);"></a>
+    </div>
+</div>
+</body>
+</html>

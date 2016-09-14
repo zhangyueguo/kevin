@@ -1,0 +1,64 @@
+{include file=company.header.html}
+<style>
+    .borline td { padding:10px 0px; }
+    .ware_list th { text-align:left; }
+    .width4{width:80px;}
+</style>
+<div class="content">
+    {include file=company.menu.html}
+    <div id="right">
+
+        {include file=member.submenu.html}
+
+        <div class="wrap">
+            <div class="public">
+                <form method="post" enctype="multipart/form-data" id="profile_form" action="index.php?app=buyer_invoice&act=addzizhi&type=<?php if($_GET['type']=='add'){
+                    echo 'add';
+                }else if($_GET['type'] == 'edit'){
+                    echo 'edit';
+                }?>">
+                    <div class="information">
+
+                        <table class="invoice_list" cellpadding="0" cellspacing="0">
+                            <tbody>
+                            <tr>
+                                <th style="width:5%">编号</th>
+                                <th style="width:20%">商家名称</th>
+                                <th style="width:18%">记账员工/所属部门</th>
+                                <th style="width:10%">记账额度</th>
+                                <th style="width:12%">已使用金额</th>
+                                <th style="width:10%">距离结算</th>
+                                <th style="width:25%">操作</th>
+                            </tr>
+                            <!--{foreach from=$order_billing item=list name=foo}-->
+                            <tr>
+                                <td>{$smarty.foreach.foo.iteration}</td>
+                                <td>{$list.seller_name}</td>
+                                <td>{$list.buyer_name} &nbsp;|&nbsp; 企划部</td>
+                                <td>{$list.limit_money}元</td>
+                                <td>{$list.order_amount}元</td>
+                                <td><!--{if $list.cutoff_time >= 0}-->{$list.cutoff_time}<!--{else}-->您已逾期{$list.cutoff_time|quzheng}天<!--{/if}-->天</td>
+                                <td><!--{if ($list.bstatus eq '421' && $list.order_type eq '1') || ($list.bstatus eq '422' && $list.order_type eq '2')}--><font color="#ff0000">【本期已结算】</font><!--{else}-->【<a href="index.php?app=billing_order_company&act=dobalance&sid={$list.seller_id}">我要结算</a>】<!--{/if}-->【<a href="">联系商家</a>】<br>【<a href="index.php?app=billing_order_company&act=billing_show&sid={$list.seller_id}">详细记账记录</a>】</td>
+                            </tr>
+                            <!--{/foreach}-->
+                            </tbody>
+                        </table>
+                    </div>
+                    <input type="hidden" name="template_id" value="<?php echo $_GET['bid']?>">
+                </form>
+                
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="adorn_right1"></div>
+        <div class="adorn_right2"></div>
+        <div class="adorn_right3"></div>
+        <div class="adorn_right4"></div>
+    </div>
+    <div class="clear"></div>
+</div>
+</div>
+<script type="text/javascript">
+    
+</script>
+{include file=footer.html}

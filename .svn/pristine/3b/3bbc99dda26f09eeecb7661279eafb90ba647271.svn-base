@@ -1,0 +1,84 @@
+{include file=company1.header.html}
+<style>
+    .borline td { padding:10px 0px; }
+    .ware_list th { text-align:left; }
+</style>
+<script type="text/javascript">
+    $(function(){
+        $("input[type='radio']").click(function(){
+              if($(this).val()=='shang'){
+                  $(".shangh").show();
+              }else{
+                  $(".shangh").hide();
+              }
+        });
+
+    });
+
+</script>
+<div class="content">
+    {include file=company.menu.html}
+    <div id="right">
+        {include file=member.submenu.html}
+        <div class="wrap">
+            <div class="public">
+                <form method="post" enctype="multipart/form-data" id="profile_form">
+                    <div class="information">
+                        <div class="info individual">
+                            <table>
+                                <tr>
+                                    <!--<th class="width4">{$lang.company_name}: </th>-->
+                                    <th class="width4">企业名称: </th>
+                                    <td>{$company.companyname}</td>
+                                    <input type="hidden" class="text width_normal" name="company_name" value="{$company.companyname}" />
+                                    <input type="hidden" class="text width_normal" name="company_id" value="{$company.id}" />
+                                </tr>
+                                <tr>
+                                    <th>印呗类型:</th>
+                                    <td>
+                                        <label><input type="radio" name="beilei" value="ping" {if $profile.gender eq 1}checked="checked"{/if} /> 平台授信 </label>
+                                        <label><input type="radio" name="beilei" value="shang" {if $profile.gender eq 2}checked="checked"{/if} /> 商家授信 </label>
+                                    </td>
+                                </tr>
+                                <tr class="shangh" style="display: none">
+                                    <th>选择商户:</th>
+                                    <td class="paddingT15 wordSpacing5" >
+                                        <div id="region">
+                                            <input type="hidden" id="zih" name="region_id" value="" class="mls_id" />
+                                            <input type="hidden" name="region_name" value="" class="mls_names" />
+                                            <!--<span>{$company.region_name|escape}</span>-->
+                                            <input type="button" value="{$lang.edit}" class="edit_region" />
+                                            <select style="display:none">
+                                                <option>{$lang.select_pls}</option>
+                                                {html_options options=$regions}
+                                            </select>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <!--<th>{$lang.birthday}: </th>-->
+                                    <th>申请额度: </th>
+                                    <td>
+                                        <input type="text" class="text width_normal" name="edu" id="birthday" value="" /> 元（整数）
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th></th>
+                                    <td><input type="submit" class="btn" value="提交" /></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="adorn_right1"></div>
+        <div class="adorn_right2"></div>
+        <div class="adorn_right3"></div>
+        <div class="adorn_right4"></div>
+    </div>
+    <div class="clear"></div>
+</div>
+</div>
+{include file=footer.html}

@@ -1,0 +1,162 @@
+<?php
+/**
+ *  @Created By ECMall PhpCacheServer
+ *  @Time:2016-09-07 04:07:26
+ */
+
+if(filemtime(__FILE__) + 86400 < time())return false;
+
+return array (
+  'model_id' => 1290282489,
+  'model_name' => '',
+  'tabs' => 
+  array (
+    0 => '一周惠选',
+    1 => '新品推荐',
+    2 => '热卖商品',
+    3 => '店铺推荐',
+  ),
+  'goods_list' => 
+  array (
+    0 => 
+    array (
+      0 => 
+      array (
+        'goods_id' => '111',
+        'virtual_seles' => '0',
+        'goods_name' => 'A4铜版纸70g打印',
+        'default_image' => 'data/files/mall/settings/default_goods_image.png',
+        'price' => '0.10',
+        'stock' => '0',
+        'spec_id' => '129',
+        'sales' => '0',
+        'store_id' => '2',
+        'store_name' => '超级店铺',
+      ),
+      1 => 
+      array (
+        'goods_id' => '110',
+        'virtual_seles' => '0',
+        'goods_name' => 'A3布纹纸打印',
+        'default_image' => 'data/files/mall/settings/default_goods_image.png',
+        'price' => '1.50',
+        'stock' => '0',
+        'spec_id' => '125',
+        'sales' => '0',
+        'store_id' => '2',
+        'store_name' => '超级店铺',
+      ),
+      2 => 
+      array (
+        'goods_id' => '109',
+        'virtual_seles' => '100',
+        'goods_name' => 'A3铜版纸80g打印',
+        'default_image' => 'data/files/mall/settings/default_goods_image.png',
+        'price' => '0.50',
+        'stock' => '0',
+        'spec_id' => '121',
+        'sales' => '0',
+        'store_id' => '2',
+        'store_name' => '超级店铺',
+      ),
+    ),
+    1 => 
+    array (
+      0 => 
+      array (
+        'goods_id' => '111',
+        'virtual_seles' => '0',
+        'goods_name' => 'A4铜版纸70g打印',
+        'default_image' => 'data/files/mall/settings/default_goods_image.png',
+        'price' => '0.10',
+        'stock' => '0',
+        'spec_id' => '129',
+        'sales' => '0',
+        'store_id' => '2',
+        'store_name' => '超级店铺',
+      ),
+      1 => 
+      array (
+        'goods_id' => '110',
+        'virtual_seles' => '0',
+        'goods_name' => 'A3布纹纸打印',
+        'default_image' => 'data/files/mall/settings/default_goods_image.png',
+        'price' => '1.50',
+        'stock' => '0',
+        'spec_id' => '125',
+        'sales' => '0',
+        'store_id' => '2',
+        'store_name' => '超级店铺',
+      ),
+      2 => 
+      array (
+        'goods_id' => '109',
+        'virtual_seles' => '100',
+        'goods_name' => 'A3铜版纸80g打印',
+        'default_image' => 'data/files/mall/settings/default_goods_image.png',
+        'price' => '0.50',
+        'stock' => '0',
+        'spec_id' => '121',
+        'sales' => '0',
+        'store_id' => '2',
+        'store_name' => '超级店铺',
+      ),
+    ),
+    2 => 
+    array (
+    ),
+    3 => 
+    array (
+    ),
+  ),
+  'ads' => 
+  array (
+    1 => 
+    array (
+      'ad_image_url' => 'data/files/mall/template/201403311153027168.gif',
+      'ad_link_url' => '/index.php?app=goods&id=1302',
+    ),
+    2 => 
+    array (
+      'ad_image_url' => 'data/files/mall/template/201403311200543356.gif',
+      'ad_link_url' => 'index.php?app=goods&id=1015',
+    ),
+    3 => 
+    array (
+      'ad_image_url' => 'data/files/mall/template/201403311208321274.gif',
+      'ad_link_url' => '/index.php?app=goods&id=436',
+    ),
+    4 => 
+    array (
+      'ad_image_url' => 'data/files/mall/template/201403312043281454.gif',
+      'ad_link_url' => '/index.php?app=goods&id=1310',
+    ),
+    5 => 
+    array (
+      'ad_image_url' => 'data/files/mall/template/201403312100583949.gif',
+      'ad_link_url' => '/',
+    ),
+    6 => 
+    array (
+      'ad_image_url' => 'data/files/mall/template/201403312111131024.gif',
+      'ad_link_url' => '/',
+    ),
+    7 => 
+    array (
+      'ad_image_url' => 'data/files/mall/template/201403312115483433.gif',
+      'ad_link_url' => '/',
+    ),
+    8 => 
+    array (
+      'ad_image_url' => 'data/files/mall/template/201403312121398097.gif',
+      'ad_link_url' => '/',
+    ),
+    9 => 
+    array (
+      'ad_image_url' => 'data/files/mall/template/201403312130201906.gif',
+      'ad_link_url' => '/',
+    ),
+  ),
+);
+
+?>

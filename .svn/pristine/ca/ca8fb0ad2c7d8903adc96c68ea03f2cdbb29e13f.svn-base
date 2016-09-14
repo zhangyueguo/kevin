@@ -1,0 +1,79 @@
+{include file=company.header.html}
+<style>
+    .borline td { padding:10px 0px; }
+    .ware_list th { text-align:left; }
+</style>
+<script type="text/javascript">
+    $(function(){
+
+    });
+</script>
+<div class="content">
+    {include file=company.menu.html}
+    <div id="right">
+
+
+        <div class="submenu">
+
+            <!--<ul class="tab">
+
+                <li class="active {if $smarty.foreach.member_submenu.first}first{/if}"><h2><a href="javascript:;">员工列表</a></h2></li>
+
+                <li class="normal {if $smarty.foreach.member_submenu.first}first{/if}"><h2><a href="index.php?app=company&act=addsector">添加部门</a></h2></li>
+
+                <li class="normal {if $smarty.foreach.member_submenu.first}first{/if}"><h2><a href="index.php?app=company&act=sectorlist">部门列表</a></h2></li>
+
+                <li class="normal {if $smarty.foreach.member_submenu.first}first{/if}"><h2><a href="index.php?app=company&act=addworker">添加员工</a></h2></li>
+
+                <div class="dustbin"><a href="index.php?app=buyer_order&act=dustbin" {if $_s_m.dustbin eq '1'}style="color:#EE3000; text-decoration:none"{/if}>订单回收站</a></div>
+            </ul>-->
+
+        </div>
+
+
+
+
+        <div class="wrap">
+            <div class="public">
+                <form method="post" enctype="multipart/form-data" id="profile_form">
+                    <div class="information">
+                        <div class="info individual">
+                            <table>
+                                <tr>
+                                    <th class="width4">企业名称</th>
+                                    <th class="width4">授信额度</th>
+                                    <th class="width4">账单日</th>
+                                    <th class="width4">结算日</th>
+                                    <th class="width4">审核签约时间</th>
+                                </tr>
+                                <!--{foreach from=$xincredits item=comworker}-->
+                                <tr>
+                                    <td>{$comworker.company_name}</td>
+
+                                    <td>{$comworker.edu}</td>
+
+                                    <td>{$comworker.zhangdanri}</td>
+                                    <td>{$comworker.jiesuanri}</td>
+
+                                    <td>{$comworker.shenhetime|date:complete}</td>
+
+                                </tr>
+                                <!--{foreachelse}-->
+                                <tr><td>还没有授信账户</td></tr>
+                                <!--{/foreach}-->
+                            </table>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="adorn_right1"></div>
+        <div class="adorn_right2"></div>
+        <div class="adorn_right3"></div>
+        <div class="adorn_right4"></div>
+    </div>
+    <div class="clear"></div>
+</div>
+</div>
+{include file=footer.html}

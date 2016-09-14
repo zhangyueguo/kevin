@@ -1,0 +1,54 @@
+{include file=company.header.html}
+<style>
+    .borline td { padding:10px 0px; }
+    .ware_list th { text-align:left; }
+    .width4{width:80px;}
+</style>
+<div class="content">
+    {include file=company.menu.html}
+    <div id="right">
+
+        {include file=member.submenu.html}
+
+        <div class="wrap">
+            <div class="public">
+               
+                    <div class="information">
+
+                        <table class="invoice_list" cellpadding="0" cellspacing="0">
+                            <tbody>
+                            <tr>
+                                <th style="width:12%">订单编号</th>
+                                <th style="width:34%">订单名称</th>
+                                <th style="width:14%">记账日期</th>
+                                <th style="width:10%">金额（元）</th>
+                                <th style="width:15%">操作</th>
+                            </tr>
+                            <!--{foreach from=$infos item=list}-->
+                            <tr>
+                                <td>{$list.order_sn}</td>
+                                <td>{$list.order_name}&nbsp;&nbsp;</td>
+                                <td>{$list.pay_time|date:Y-m-d H:i}</td>
+                                <td>{$list.order_amount}</td>
+                                <td><a href="">订单详情</a></td>
+                            </tr>
+                            <!--{/foreach}-->
+                            </tbody>
+                        </table>
+                    </div>
+                    
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="adorn_right1"></div>
+        <div class="adorn_right2"></div>
+        <div class="adorn_right3"></div>
+        <div class="adorn_right4"></div>
+    </div>
+    <div class="clear"></div>
+</div>
+</div>
+<script type="text/javascript">
+    
+</script>
+{include file=footer.html}

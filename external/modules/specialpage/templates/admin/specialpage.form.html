@@ -1,0 +1,84 @@
+{include file="header.html"}
+{$build_editor}
+<script type="text/javascript" src="{res file='inline_edit.js'}"></script>
+<script language="javascript">
+$(function(){
+    $('#endtime,#starttime').datepicker({dateFormat: 'yy-mm-dd'});
+});
+</script>
+<div id="rightTop">
+    <p>{$lang.specialpage}</p>
+    <ul class="subnav">
+        <li><a class="btn3" href="index.php?module=specialpage">{$lang.manage_specialpage}</a></li>
+        <li><!-- {if $specialpage.spec_id} --><a class="btn3" href="index.php?module=specialpage&amp;act=add">{$lang.add_specialpage}</a><!-- {else} --><span>{$lang.add_specialpage}</span><!-- {/if} --></li>
+    </ul>
+</div>
+
+<div class="info">
+    <form method="post" enctype="multipart/form-data">
+            <table class="infoTable">
+            <tr>
+                <th class="paddingT15">
+                  {$lang.specialpage_name}:</th>
+                <td class="paddingT15 wordSpacing5">
+                    <input class="infoTableInput2" id="name" type="text" name="name" value="{$specialpage.name|escape}" />
+                    <span class="field_notice">({$lang.notice_name})</span>
+              </td>
+            </tr>
+            <tr>
+                <th class="paddingT15">
+                    {$lang.specialpage_starttime}:</th>
+                <td class="paddingT15 wordSpacing5">
+                    <input class="infoTableInput2" id="starttime" type="text" name="starttime" value="{$specialpage.starttime|date:Y-m-d}" />
+                    <span class="field_notice">({$lang.notice_starttime})</span>
+                </td>
+            </tr>
+            <tr>
+                <th class="paddingT15">
+                    {$lang.specialpage_endtime}:</th>
+                <td class="paddingT15 wordSpacing5">
+                    <input class="infoTableInput2" id="endtime" type="text" name="endtime" value="{$specialpage.endtime|date:Y-m-d}" />
+                    <span class="field_notice">({$lang.notice_endtime})</span>
+                </td>
+            </tr>
+            <tr>
+                <th class="paddingT15">
+                    {$lang.specialpage_sgrade}:</th>
+                <td class="paddingT15 wordSpacing5">
+                {html_checkbox name=sgrades[] options=$sgrades checked=$specialpage.sgrades}
+                <span class="field_notice">({$lang.notice_sgrade})</span>
+                </td>
+            </tr>
+            <tr>
+                <th class="paddingT15">
+                    {$lang.specialpage_cate}:</th>
+                <td class="paddingT15 wordSpacing5">
+                <textarea name="category">{$specialpage.category}</textarea>
+                <span class="field_notice">({$lang.notice_category})</span>
+                </td>
+            </tr>
+            <tr>
+                <th class="paddingT15">
+                    {$lang.specialpage_description}:</th>
+                <td class="paddingT15 wordSpacing5">
+                <textarea name="description">{$specialpage.description|escape}</textarea>
+                <span class="field_notice">({$lang.notice_description})</span></td>
+            </tr>
+            <tr>
+                <th class="paddingT15">
+                    {$lang.specialpage_posters}:</th>
+                <td class="paddingT15 wordSpacing5">
+                    <textarea class="infoTableInput2" style="width:600px; height:400px; " id="posters" type="text" name="posters">{$specialpage.posters|escape}</textarea>
+                </td>
+            </tr>
+        <tr>
+            <th></th>
+            <td class="ptb20">
+                <input class="formbtn" type="submit" name="Submit" value="{$lang.submit}" />
+                <input class="formbtn" type="reset" name="Submit2" value="{$lang.reset}" />
+            </td>
+        </tr>
+        </table>
+    </form>
+</div>
+{include file="footer.html"}

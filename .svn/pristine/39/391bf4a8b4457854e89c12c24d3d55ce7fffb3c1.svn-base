@@ -1,0 +1,80 @@
+﻿{include file=member.header.html}
+<link href="http://bbs.0710tao.com/themes/wapmall/default/styles/default/css/user2.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript">
+$(function(){
+    $('#add_time_from').datepicker({dateFormat: 'yy-mm-dd'});
+    $('#add_time_to').datepicker({dateFormat: 'yy-mm-dd'});
+});
+</script>
+
+<body class="gray" style="overflow-x:hidden;">
+    <div class="w320">
+        <div class="fixed">
+            <!---头部------>
+            <div class="header header2">
+                <a href="{url app=default}"
+                   class="back2_index"></a>
+                交易宝
+                <a href="{url app=my_favorite}" class="bookmark"></a>
+            </div>    
+        </div>
+        
+        
+       
+       
+       <div class="public table deposit" style="margin-top:60px;">
+            	<div class="recordlist">
+                	<!--{if $records.list}-->
+                	<div class="notice-word">通过交易宝交易的收支记录</div>
+                    <!--{/if}-->
+                	<div class="title clearfix">
+                    	<form method="get" class="float-left">
+                        	<input type="hidden" name="app" value="deposit" />
+                            <input type="hidden" name="act" value="recordlist" />
+                			<input class="text" type="text" name="add_time_from" id="add_time_from" value="{$smarty.get.add_time_from}" /> <span>-</span>
+                            <input class="text" id="add_time_to" type="text" name="add_time_to" value="{$smarty.get.add_time_to}" />
+                			<input type="submit" class="btn-record" value="{$lang.search}" />
+        				</form>
+                        <div class="float-left">
+                    		总收入 <strong>{$records.total_income}</strong> 元，</a>
+							</a>
+							 总支出 <strong>{$records.total_outlay}</strong> 元
+                        </div>
+                     <!--   <div class="float-right">
+                    		<a href="{url app=deposit&act=monthbill}">月账单下载</a>
+                        </div>-->
+                    </div>
+                    
+                    <div class="u_order">
+                    <!--{foreach from=$records.list item=record}-->
+                    <div class="orderbox">
+                <div class="detail">
+                    <a href="{url app=deposit&act=record&tradesn=$record.tradesn}">流水帐号： {$record.tradesn} </a>
+                    <p>{if $record.flow eq 'income'}{$record.end_time|date:Y.m.d H.i.s}{else}{$record.pay_time|date:Y.m.d H.i.s}{/if}</p>
+                    <p>​{$record.name}{if $record.remark} ：{$record.remark|escape|truncate:30}{/if}</p>
+                     <p>收入： {if $record.flow eq 'income'}+{$record.amount}{else}&nbsp;{/if} {if $record.flow eq 'outlay'}-{$record.amount}{else}&nbsp;{/if}</p>
+                     <p>余额：{$record.balance}</p>
+                     <p>交易方式：{$record.payway}</p>
+                </div>
+                <p class="opr">
+                    <a href="{url app=deposit&act=record&tradesn=$record.tradesn}" class="white_btn">查看</a>
+
+                </p>
+            </div>
+                    <!--{foreachelse}-->
+                        <div class="notice-word mt10">没有任何收支记录。</div>
+                        <!--{/foreach}-->
+                    </div>
+                    
+                    
+                    
+                    
+                    <div class="mt10 clearfix">{include file=member.page.bottom.html}</div>
+				</div>
+            </div> 
+        
+        
+    </div>    
+
+
+{include file=footer.html}

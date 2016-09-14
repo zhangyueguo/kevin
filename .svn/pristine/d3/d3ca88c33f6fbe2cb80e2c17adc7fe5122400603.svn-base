@@ -1,0 +1,58 @@
+{include file=company.header.html}
+<style>
+    .borline td { padding:10px 0px; }
+    .ware_list th { text-align:left; }
+    .width4{width:80px;}
+</style>
+<div class="content">
+    {include file=company.menu.html}
+    <div id="right">
+
+        {include file=member.submenu.html}
+
+        <div class="wrap">
+            <div class="public">
+                
+                    <div class="information">
+
+                        <table class="invoice_list" cellpadding="0" cellspacing="0">
+                            <tbody>
+                            <tr>
+                                <th style="width:5%">编号</th>
+                                <th style="width:15%">买家名称</th>
+                                <th style="width:10%">记账属性</th>
+                                <th style="width:15%">记账额度（元）</th>
+                                <th style="width:16%">已使用金额（元）</th>
+                                <th style="width:14%">结算时间</th>
+                                <th style="width:25%">操作</th>
+                            </tr>
+                            <!--{foreach from=$order_billing item=list name=foo}-->
+                            <tr>
+                                <td>{$smarty.foreach.foo.iteration}</td>
+                                <td><!--{if $list.company_name neq ''}-->{$list.company_name}<!--{else}-->{$list.buyer_name}<!--{/if}--></td>
+                                <td><!--{if $list.order_type eq '2'}-->企业<!--{else}-->个人<!--{/if}--></td>
+                                <td>{$list.limit_money}</td>
+                                <td>{$list.order_amount}</td>
+                                <td>{$list.cutoff_time}</td>
+                                <td>【<a href="">恢复额度</a>】&nbsp;&nbsp;【<a href="">提额</a>】<br>【<a href="">降额</a>】&nbsp;&nbsp;【<a href="">收回记账</a>】<br></td>
+                            </tr>
+                            <!--{/foreach}-->
+                            </tbody>
+                        </table>
+                    </div>
+                    
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="adorn_right1"></div>
+        <div class="adorn_right2"></div>
+        <div class="adorn_right3"></div>
+        <div class="adorn_right4"></div>
+    </div>
+    <div class="clear"></div>
+</div>
+</div>
+<script type="text/javascript">
+    
+</script>
+{include file=footer.html}

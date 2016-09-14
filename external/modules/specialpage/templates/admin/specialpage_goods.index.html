@@ -1,0 +1,96 @@
+{include file="header.html"}
+<script type="text/javascript" src="{res file=admin/js/inline_edit.js}"></script>
+<div id="rightTop">
+    <p>{$lang.specialpage}</p>
+    <ul class="subnav">
+        <li><a class="btn3" href="index.php?module=specialpage">{$lang.manage_specialpage}</a></li>
+        <li><span>{$lang.manage_specialpage_goods}</span></li>
+        <li><a class="btn3" href="index.php?module=specialpage&amp;act=add_goods&amp;id={$smarty.get.id}">{$lang.add_specialpage_goods}</a></li>
+    </ul>
+</div>
+
+<div class="mrightTop">
+    <div class="fontl">
+        <form method="get">
+            <div class="left">
+                <input type="hidden" name="module" value="specialpage" />
+                <input type="hidden" name="act" value="goods" />
+                <input type="hidden" name="id" value="{$smarty.get.id}" />
+                {$lang.specialpage_goods_name}:
+                <input class="queryInput" type="text" name="title" value="{$query.title|escape}" />
+                {$lang.specialpage_cate}:
+                <select class="querySelect" id="category" name="category">
+                <option value="">{$lang.select_pls}</option>
+                {html_options output=$categories values=$categories selected=$smarty.get.category}
+                </select>
+                <input type="submit" class="formbtn" value="{$lang.query}" />
+            </div>
+            <!--{if $filtered}-->
+            <a class="left formbtn1" href="index.php?module=specialpage&amp;act=goods&amp;id={$smarty.get.id}">{$lang.cancel_query}</a>
+            <!--{/if}-->
+        </form>
+    </div>
+    <div class="fontr">
+
+    </div>
+</div>
+
+<div class="tdare">
+    <table width="100%" cellspacing="0" class="dataTable">
+        <!-- {if $goodss} -->
+        <tr class="tatr1">
+            <td width="20" class="firstCell"><input id="checkall_1" type="checkbox" class="checkall"/></td>
+            <td>{$lang.specialpage_goods_name}</td>
+            <td width="100">{$lang.specialpage_cate}</td>
+            <td width="100">{$lang.store_name}</td>
+            <td>{$lang.specialpage_verified}</td>
+            <td>{$lang.sort_order}</td>
+            <td width="120">{$lang.specialpage_add_time}</td>
+            <td class="handler">{$lang.handler}</td>
+        </tr>
+        <!-- {/if} -->
+        <!--{foreach from=$goodss item=val key=key}-->
+        <tr class="tatr2">
+            <td width="20" class="firstCell">
+            <input type="checkbox" class="checkitem" value="{$key}" />
+            </td>
+            <td>{$val.goods_name|escape}</td>
+          <td class="table_center">
+            {$val.category|escape}
+          </td>
+          <td class="table_center">{$val.store_name|escape}</td>
+            <td class="table_center"><!-- {if $val.verified} --><img src="{res file=admin/images/positive_enabled.gif}" ectype="inline_edit" fieldname="verified" fieldid="{$val.spec_id} {$val.goods_id}" fieldvalue="1" title="{$lang.yes}" /><!--{else}--><img src="{res file=admin/images/positive_disabled.gif}" ectype="inline_edit" fieldname="verified" fieldid="{$val.spec_id} {$val.goods_id}" fieldvalue="0" title="{$lang.no}" /><!-- {/if} --></td>
+            <td><span ectype="inline_edit" fieldname="sort_order" fieldid="{$val.spec_id} {$val.goods_id}" datatype="pint" maxvalue="255" title="{$lang.editable}" class="editable">{$val.sort_order}</span></td>
+            <td><span class="table_center">{$val.add_time|date:complete}</span></td>
+            <td class="handler">
+            <a target="_blank" href="{$site_url}/index.php?app=goods&amp;id={$key}">{$lang.view}</a>
+                |
+            <a href="index.php?module=specialpage&amp;act=edit_goods&amp;goods_id={$key}&amp;id={$smarty.get.id}">{$lang.edit}</a>
+                | <a href="javascript:if(confirm('{$lang.drop_confirm}'))window.location = 'index.php?module=specialpage&amp;act=drop&amp;mod=_goods_mod&amp;id={$key}&amp;spec_id={$smarty.get.id}';">{$lang.drop}</a>  </td>
+        </tr>
+        <!--{foreachelse}-->
+        <tr class="no_data">
+            <td colspan="8">{$lang.no_data}</td>
+        </tr>
+        <!--{/foreach}-->
+    </table>
+    <!--{if $goodss}-->
+<div id="dataFuncs">
+        <div class="pageLinks">
+            {include file=page.bottom.html}
+        </div>
+        <div id="batchAction" class="left paddingT15">
+            <label style="margin-left: 25px;" for="checkall1"><input id="checkall_2" type="checkbox" class="checkall"></label>
+            &nbsp;&nbsp;
+            <span class="all_checkbox"><label for="checkall_2">{$lang.checkall}</label></span>
+            &nbsp;&nbsp;
+            <input class="formbtn batchButton" type="button" value="{$lang.drop}" name="id" uri="index.php?module=specialpage&act=drop&mod=_goods_mod&spec_id={$smarty.get.id}" presubmit="confirm('{$lang.drop_confirm}');" />
+            &nbsp;&nbsp;
+            <input class="formbtn batchButton" type="button" value="{$lang.edit}" name="id" uri="index.php?module=specialpage&spec_id={$smarty.get.id}&act=bat_edit" />
+            <!--<input class="formbtn batchButton" type="button" value="lang.update_order" name="id" presubmit="updateOrder(this);" />-->
+        </div>
+  </div>
+    <div class="clear"></div>
+    <!--{/if}-->
+</div>
+{include file="footer.html"}

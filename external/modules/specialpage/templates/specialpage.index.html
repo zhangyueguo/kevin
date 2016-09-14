@@ -1,0 +1,45 @@
+{include file=header.html}
+<style type="text/css">
+#special_banner { margin-bottom: 10px;width: 1200px;margin:auto; }
+.special_list { width: 1200px;margin:auto; }
+.special_list h2 { width: 1200px; height: 45px; position: relative; background: url({res file=images/special_list_h2.png}) repeat-x; }
+.special_list h2 span { float: left; height: 45px; line-height: 40px; margin-left: 10px; padding-left: 18px; background: url({res file=images/special_list_h2_span.png}) no-repeat 0 8px; }
+.special_list h2 .adorn1 { width: 2px; height: 45px; overflow: hidden; background: url({res file=images/special_list_h2.png}) no-repeat 0 -45px; position: absolute; top: 0; left: 0; }
+.special_list h2 .adorn2 { width: 2px; height: 45px; overflow: hidden; background: url({res file=images/special_list_h2.png}) no-repeat 0 -90px;position: absolute; top: 0; right: 0; }
+dl.item{float:left;width:170px;height:260px;padding-left:35px; padding-right:33px;padding-top:10px;padding-bottom:10px;border-bottom:1px #e5e5e5 solid;}
+</style>
+
+<div class="content">
+    <div id="special_banner">{$specialpage.posters|editor}</div>
+    {foreach from=$specialpage.category item=category}
+    <div class="special_list">
+        {if $category.category}
+        <h2>
+            <span><a style="font-size:14px; color:#F77026; ">{$category.category}</a></span>
+            <div class="adorn1"></div>
+            <div class="adorn2"></div>
+        </h2>
+        {/if}
+		<div class="clearfix">
+        <div class="squares clearfix" ectype="current_display_mode">
+            {foreach from=$category.goodss item=goods}
+			<dl class="item clearfix">
+				<dt><a class="spec" href="{url app=goods&id=$goods.goods_id}" target="_blank"><img width="160" height="160" src="{$goods.default_image}" alt="{$goods.goods_name}"/></a></dt>
+				<dd class="desc"><a  class="wenzi" href="{url app=goods&id=$goods.goods_id}" target="_blank">{$goods.goods_name}</a></dd><br/>
+				<dd class="price twofloat clearfix"><em>{$goods.gs.price|price}</em></dd>
+				<dd class="desc">
+                					<div>
+									<div style="float:left"><a href="{url app=store&id=$goods.store_id}" target="_blank"><img src="{res file=images/see.gif}" /></a></div>
+									<div style="float:right"><a href="{url app=goods&id=$goods.goods_id}" target="_blank"><img src="{res file=images/gou.gif}" /></a></div>
+									</div>
+                               
+                				</dd>
+           </dl>
+            {/foreach}
+        </div>
+    </div></div>
+	
+    {/foreach}
+	
+</div>
+{include file=footer.html}

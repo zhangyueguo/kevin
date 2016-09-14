@@ -1,0 +1,112 @@
+{include file=company.header.html}
+<style>
+    .borline td { padding:10px 0px; }
+    .ware_list th { text-align:left; }
+</style>
+<script type="text/javascript">
+    //<!CDATA[
+    $(function(){
+        $('#profile_form').validate({
+            errorPlacement: function(error, element){
+                $(element).parent('span').parent('b').after(error);
+            },
+            rules : {
+                portrait : {
+                    accept   : 'gif|jpe?g|png'
+                }
+            },
+            messages : {
+                portrait  : {
+                    accept   : '{$lang.avatar}'
+                }
+            }
+        });
+        $('input[ectype="change_avatar"]').change(function(){
+
+            var src = getFullPath($(this)[0]);
+            $('img[ectype="avatar"]').attr('src', src);
+            $('input[ectype="change_avatar"]').removeAttr('name');
+            $(this).attr('name', 'portrait');
+        });
+    });
+
+    //]]>
+</script>
+<div class="content">
+    {include file=company.menu.html}
+    <div id="right">
+
+
+
+        <div class="submenu">
+
+            <ul class="tab">
+
+
+                <div class="dustbin"><a href="index.php?app=buyer_order&act=dustbin" {if $_s_m.dustbin eq '1'}style="color:#EE3000; text-decoration:none"{/if}>订单回收站</a></div>
+            </ul>
+
+
+        </div>
+
+
+
+
+        <div class="wrap">
+            <div class="public">
+                <form method="post" enctype="multipart/form-data" id="profile_form">
+                    <div class="information">
+
+                        <div class="info individual">
+                            <table>
+                                <tr>
+                                    <!--<th class="width4">{$lang.company_name}: </th>-->
+                                    <th class="width4">企业名称: </th>
+                                    <td><input type="text" class="text width_normal" name="worker_name" value="{$company.companyname}" /></td>
+                                </tr>
+                                <tr>
+                                    <th>纳税人识别码:</th>
+                                    <td><input type="text" class="text width_normal" name="worker_phone" value="{$company.email}" /></td>
+                                </tr>
+
+                                <tr>
+                                    <th>注册地址: </th>
+                                    <td>
+                                        <input type="text" class="text width_normal" name="juese" id="birthday" value="{$company.lxrname}" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>注册电话:</th>
+                                    <td> <input type="text" class="text width_normal" name="section" value="{$company.section}" /></td>
+                                </tr>
+
+                                <tr>
+                                    <th>开户银行:</th>
+                                    <td> <input type="text" class="text width_normal" name="section" value="{$company.section}" /></td>
+                                </tr>
+
+                                <tr>
+                                    <th>开户账号:</th>
+                                    <td> <input type="text" class="text width_normal" name="section" value="{$company.section}" /></td>
+                                </tr>
+
+                                <tr>
+                                    <th></th>
+                                    <td><input type="submit" class="btn" value="提交" /></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="adorn_right1"></div>
+        <div class="adorn_right2"></div>
+        <div class="adorn_right3"></div>
+        <div class="adorn_right4"></div>
+    </div>
+    <div class="clear"></div>
+</div>
+</div>
+{include file=footer.html}

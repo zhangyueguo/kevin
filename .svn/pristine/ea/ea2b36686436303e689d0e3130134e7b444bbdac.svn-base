@@ -1,0 +1,50 @@
+{include file=header.html}
+<style type="text/css">
+#special_banner { margin-bottom: 10px;width: 1200px;margin:auto; }
+.special_list { width: 1200px;margin:auto; }
+.special_list h2 { width: 1200px; height: 45px; position: relative; background: url({res file=images/special_list_h2.png}) repeat-x; }
+.special_list h2 span { float: left; height: 45px; line-height: 45px; margin-left: 10px; padding-left: 18px; background: url({res file=images/special_list_h2_span.png}) no-repeat 0 8px; }
+.special_list h2 .adorn1 { width: 2px; height: 45px; overflow: hidden; background: url({res file=images/special_list_h2.png}) no-repeat 0 -45px; position: absolute; top: 0; left: 0; }
+.special_list h2 .adorn2 { width: 2px; height: 45px; overflow: hidden; background: url({res file=images/special_list_h2.png}) no-repeat 0 -90px;position: absolute; top: 0; right: 0; }
+.special_list ul { width: 1200px; padding-bottom: 30px; overflow: hidden; }
+.special_list ul li { width: 200px; float: left; }
+.special_list .pic { width: 160px; height: 160px; background: #eee; margin: 0 auto 12px; }
+.special_list .pic a { display: block; width: 160px; height: 160px; }
+.special_list p { width: 160px; height: 30px; line-height: 15px; text-align: center; overflow: hidden; margin: 0 auto 10px; }
+.special_list p a { color: #656565; text-decoration: none; }
+.special_list p a:hover { text-decoration: underline; }
+.special_list .price { width: 160px; text-align: center; font-weight: bold; font-size: 14px; color: #ff5404; margin: 0 auto 10px; }
+.special_info { width: 160px; text-align: center; color: #666; margin: 0 auto 10px; }
+.special_btn { width: 160px; margin: 0 auto; }
+.special_btn a { width: 41px; height: 19px; }
+.special_list .buy { float: left; background: url({res file=images/special_btn.png}) no-repeat 0 0; margin-left: 34px; }
+.special_list .collection { float: right; background: url({res file=images/special_btn.png}) no-repeat right 0; margin-right: 34px; }
+
+
+</style>
+
+<div class="content">
+
+    <div id="special_banner">{$specialpage.posters|editor}</div>
+    {foreach from=$specialpage.category item=category}
+    <div class="special_list">
+        {if $category.category}
+        <h2>
+            <span>{$category.category}</span>
+            <div class="adorn1"></div>
+            <div class="adorn2"></div>
+        </h2>
+        {/if}
+        <ul>
+            {foreach from=$category.goodss item=goods}
+            <li>
+                <div class="pic"><a target="_blank" href="index.php?app=goods&id={$goods.goods_id}"><img width="160" height="160" src="{$goods.default_image}" /></a></div>
+                <p><a target="_blank" href="index.php?app=goods&id={$goods.goods_id}">{$goods.goods_name}</a></p>
+                <div class="price">{$goods.gs.price|price}</div>
+            </li>
+            {/foreach}
+        </ul>
+    </div>
+    {/foreach}
+</div>
+{include file=footer.html}

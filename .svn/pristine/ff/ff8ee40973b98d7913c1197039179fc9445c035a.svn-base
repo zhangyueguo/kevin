@@ -1,0 +1,87 @@
+<?php
+class CompanyApp extends CompanybaseApp
+{
+    protected $_feed_enabled = false;
+    public function __construct()
+    {
+        $this->CompanyApp();
+    }
+    public function CompanyApp()
+    {
+        parent::__construct();
+        $ms = & ms();
+        $this->_feed_enabled = $ms->feed->feed_enabled();
+        $this->assign('feed_enabled',$this->_feed_enabled);
+    }
+
+    public function index()
+    {
+        $id=2;   //暂时
+        if(!IS_POST)
+        {
+            /* 当前位置 */
+            $this->_curlocal(LANG::get('member_center'),  'index.php?app=company',
+                LANG::get('basic'));
+
+           //企业中心菜单
+            $this->_curitem('overview');
+
+            /* 当前所处子菜单 */
+            $this->_curmenu('basic_information');
+
+            $region_mod = & m('region');
+            $this->assign('regions',$region_mod->get_options(0));
+
+            $model_company = & m('company');
+            $company = $model_company->get_info(2);
+            $this->assign('company',$company);
+
+            $this->import_resource(
+              array('script'=>'jquery.plugins/jquery.validate.js',)
+            );
+
+            $this->display('company.index.html');
+        }
+        else
+        {
+           $data = array(
+                 'companyname'  =>  $_POST['company_name'],
+                 'email'         =>  $_POST['email'],
+                 'lxrname'       =>  $_POST['lxrname'],
+                 'section'       =>  $_POST['section'],
+                 'tel'           =>  $_POST['tel'],
+                 'phone'        =>  $_POST['phone'],
+                'region_id'    =>  $_POST['region_id'],
+               'region_name'  =>  $_POST['region_name']
+           );
+
+            $model_company = & m('company');
+            $model_company->edit(2,$data);                        //没做登入，暂时
+
+            if($model_company->has_error())
+            {
+                $this->show_warning($model_company->get_error());
+                return;
+            }
+            $this->show_warning('edit_company_successed');
+        }
+    }
+
+    public function approve()
+    {
+        /* 当前位置 */
+        $this->_curlocal(LANG::get('member_center'),  'index.php?app=company',
+            LANG::get('basic'));
+
+        //企业中心菜单
+        $this->_curitem('my_profile');
+
+        /* 当前所处子菜单 */
+        $this->_curmenu('basic_information');
+
+        $this->display('company.approve.html');
+    }
+
+}
+
+?>

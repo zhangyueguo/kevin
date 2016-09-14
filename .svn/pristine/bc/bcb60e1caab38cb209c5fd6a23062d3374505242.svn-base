@@ -1,0 +1,118 @@
+{include file=company.header.html}
+<style>
+    .borline td { padding:10px 0px; }
+    .ware_list th { text-align:left; }
+</style>
+<script type="text/javascript">
+    //<!CDATA[
+    $(function(){
+        $('#profile_form').validate({
+            errorPlacement: function(error, element){
+                $(element).parent('span').parent('b').after(error);
+            },
+            rules : {
+                portrait : {
+                    accept   : 'gif|jpe?g|png'
+                }
+            },
+            messages : {
+                portrait  : {
+                    accept   : '{$lang.avatar}'
+                }
+            }
+        });
+        $('input[ectype="change_avatar"]').change(function(){
+            var src = getFullPath($(this)[0]);
+            $('img[ectype="avatar"]').attr('src', src);
+            $('input[ectype="change_avatar"]').removeAttr('name');
+            $(this).attr('name', 'portrait');
+        });
+    });
+
+    //]]>
+</script>
+<div class="content">
+    {include file=company.menu.html}
+    <div id="right">
+        {include file=member.submenu.html}
+        <div class="wrap">
+            <div class="public">
+                <form method="post" enctype="multipart/form-data" id="profile_form">
+                    <div class="information">
+
+                        <div class="info individual">
+                            <table>
+
+                                <tr>
+                                    <th>授信周期:</th>
+                                    <td><input type="text" class="text width_normal" name="zhouqi" value="{$credit_set.zhouqi}" /></td>
+                                </tr>
+                                <tr>
+                                    <th class="width4">账单日: </th>
+                                    <td>
+                                        <select name="zhangdanri">
+                                        <option>{$lang.select_pls}</option>
+                                        {html_options options=$days selected=$credit_set.zhangdanri}
+                                        </select>
+                                    日</td>
+                                </tr>
+                                <tr>
+                                    <th>结算日:</th>
+                                    <td>
+                                        <select name="jiesuanri">
+                                            <option>{$lang.select_pls}</option>
+                                            {html_options options=$days selected=$credit_set.jiesuanri}
+                                        </select>
+                                    日</td>
+                                </tr>
+
+                                <!--<tr>
+                                    <th>地区:</th>
+                                    <td class="paddingT15 wordSpacing5" >
+                                        <div id="region">
+                                            <input type="hidden" name="region_id" value="{$store.region_id}" class="mls_id" />
+                                            <input type="hidden" name="region_name" value="{$store.region_name|escape}" class="mls_names" />
+                                            <span>{$store.region_name|escape}</span>
+                                            <input type="button" value="{$lang.edit}" class="edit_region" />
+                                            <select style="display:none">
+                                                <option>{$lang.select_pls}</option>
+                                                {html_options options=$regions}
+                                            </select>
+                                        </div>
+                                    </td>
+                                </tr>-->
+                                <tr>
+                                    <th>滞纳金: </th>
+                                    <td>
+                                        <input type="text" class="text width_normal" name="zhijin" id="birthday" value="{$credit_set.zhijin}" /> %/天
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>电子账单模板:</th>
+                                    <td> <input type="text" class="text width_normal" name="emailtm" value="{$credit_set.emailtm}" /></td>
+                                </tr>
+                                <tr>
+                                    <th>短信账单模板:</th>
+                                    <td><input type="text"  class="text width_normal"name="phonetm" value="{$credit_set.phonetm}" /></td>
+                                </tr>
+                                <tr>
+                                    <th></th>
+                                    <!--<td><input type="submit" class="btn" value="{$lang.save_edit}" /></td>-->
+                                    <td><input type="submit" class="btn" value="保存修改" /></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="adorn_right1"></div>
+        <div class="adorn_right2"></div>
+        <div class="adorn_right3"></div>
+        <div class="adorn_right4"></div>
+    </div>
+    <div class="clear"></div>
+</div>
+</div>
+{include file=footer.html}

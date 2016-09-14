@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        {$page_seo}
+        <link href="{res file=css/common.css}" type="text/css" rel="stylesheet" />
+        <link href="{res file=css/index.css}" type="text/css" rel="stylesheet" />
+        <script type="text/javascript" src="index.php?act=jslang"></script>
+        <script type="text/javascript" src="{lib file=jquery.js}" charset="utf-8"></script>
+        <script type="text/javascript" src="{lib file=ecmall.js}" charset="utf-8"></script>
+        {$_head_tags}
+    </head>
+    <script type="text/javascript" src="{res file=js/kissy/build/kissy.js}"></script>
+    <script type="text/javascript" src="{res file=js/kissy/build/switchable/switchable-pkg.js}"></script>
+
+    <body id="log-reg" class="gray">
+        <div class="tmall-h5-v2">
+            <div class="region">
+                <div class="slider" id="J_m-slider">
+                    <ul class="ks-switchable-content">
+                        <li><a href="#"><img src="{res file=images/index/slider1.jpg}"/></a></li>
+                        <li><a href="#"><img src="{res file=images/index/slider2.jpg}"/></a></li>
+                        <li><a href="#"><img src="{res file=images/index/slider3.jpg}"/></a></li>
+                        <li><a href="#"><img src="{res file=images/index/slider4.jpg}"/></a></li>
+                        <li><a href="#"><img src="{res file=images/index/slider5.jpg}"/></a></li>
+                    </ul> 
+                    <div class="ks-switchable-nav">
+                        <a class="ks-active"></a><a class=""></a><a class=""></a><a class=""></a><a class=""></a>
+                    </div> 
+                </div>
+                <p>
+                  <script>
+                    KISSY.use('switchable', function(S) {
+                        S.Slide('#J_m-slider', {
+                            effect: 'scrollx',
+                            easing: 'easeOutStrong'
+                        });
+                    });
+                </script>
+                </p>
+                <p>&nbsp;      </p>
+          </div>
+          <header class="region"> 
+                <div class="content"> 
+                    
+                    <div id="fake-search"> 
+                        <form method="GET" action="{url app=search}">
+                            <div class="fakeInput">
+                                <input class="text" name="keyword" style="color:silver"/>
+                                <input type="submit" value="" class="search-button" />
+                                <input type="hidden" name="app" value="search" />
+                                <input type="hidden" name="act" value="index" />
+                            </div> 
+                        </form>
+                    </div> 
+                </div> 
+            </header>
+
+             <div class="region entry-list"> 
+              <a href="{url app=category}"><img alt="商品类目" height="30" src="{res file=images/catimg/band.png}" width="30"/><br/>
+              <span>商品类目</span></a><span class="entry-decollator"></span>
+              <a href="{url app=category&act=store}"><img alt="店铺类目" height="30px" src="{res file=images/catimg/categorys.png}" width="30px"/><br/> 
+              <span>店铺类目</span> </a><span class="entry-decollator"></span>   
+                <a href="{url app=member}"><img alt="个人中心" height="30" src="{res file=images/catimg/myhome.png}" width="30"/><br/> 
+                <span>个人中心</span> </a><span class="entry-decollator"></span>
+                <a href="{url app=nearstore&act=baidumap}"><img alt="附近商家" height="30" src="{res file=images/catimg/movie2.png}" width="30"/><br/>
+                <span>附近商家</span></a>
+
+                <!-- 为双11添加 -->     
+                <br/>
+                <a href="{url app=buyer_order}"><img alt="订单管理" height="30" src="{res file=images/catimg/recharge.png}" width="30"/><br/>
+              <span>订单管理</span></a><span class="entry-decollator"></span>
+                <a href="{url app=promotion}"><img alt="打折促销" height="30" src="{res file=images/catimg/tuan.png}" width="30"/><br/>
+                <span>打折促销</span></a><span class="entry-decollator"></span>     
+                <a href="{url app=search&act=groupbuy}"><img alt="团购" height="30" src="{res file=images/catimg/collect.png}" width="30"/><br/>
+                <span>团购</span></a><span class="entry-decollator"></span>
+                <a href="{url app=search&act=eggact}"><img alt="积分砸蛋" height="30" src="{res file=images/catimg/jipiao.png}"  width="30"/><br/>
+                <span>积分砸蛋</span></a><span class="entry-decollator"></span>
+    </div>
+
+            <div class="region miao">   
+                <div class="miao-title"><span>最新商品</span><span><a href="index.php?app=search&cate_id=1">更多商品</a></span></div>
+                <div class="miao-item">
+                {foreach from=$img_goods_list item=goods name=fe_groupbuy}
+                    <a href="{url app=goods&id=$goods.goods_id}">
+                        <img src="{$goods.default_image}"/>
+                        <p class="miao-item-title">{$goods.goods_name|truncate:10}</p>
+                        <p><span class="miao-item-newprice">￥{$goods.price|price}</span></p>
+                    </a>
+                {/foreach}
+                </div>
+            </div>
+
+            <div class="region focus">
+                <a class="tag11p" href="#">
+                    <img src="{res file=images/index/focus1.jpg}"/>
+                    <span class="focus-name">喵鲜生</span><br/>
+                    <span class="focus-info">进口食材<br>全场包邮</span>
+                </a>   
+                <a class="tag11p" href="#">
+                    <img src="{res file=images/index/focus2.jpg}"/>
+                    <span class="focus-name">大牌女装</span><br/>
+                    <span class="focus-info">女装频道<br> 新品首发</span>
+                </a>
+                <a class="tag11p" href="#">
+                    <img src="{res file=images/index/focus3.jpg}"/>
+                    <span class="focus-name">一周新发现</span><br/>
+                    <span class="focus-info">情人节约会<br>搭配、送礼指南！</span>
+                </a>
+                <a class="tag11p" href="#">
+                    <img src="{res file=images/index/focus4.jpg}"/>
+                    <span class="focus-name">天猫好券</span><br/>
+                    <span class="focus-info">精品优惠券<br>限量兑换</span>
+                </a>   
+                <a class="tag11p" href="#">
+                    <img src="{res file=images/index/focus5.jpg}"/>
+                    <span class="focus-name">品牌街</span><br/>
+                    <span class="focus-info">发现。品牌<br>汇聚国际大牌</span>
+                </a>
+                <a class="tag11p" href="#">
+                    <img src="{res file=images/index/focus6.jpg}"/>
+                    <span class="focus-name">周边游</span><br/>
+                    <span class="focus-info">最IN周边游，5折白菜价</span>
+                </a>  
+            </div>
+
+            <div class="region storey-tags">
+                <a href="#">led射灯</a><a href="#">卫浴</a><a href="#">床</a><a href="#">沙发</a><a href="#">柜子</a><a href="#">四件套</a><a href="#">秋冬被</a><a href="#">灯具</a>
+            </div>
+
+
+            <div class="grid-c module mr-t20"> 
+                <a href="#"><img height="75px" src="{res file=images/index/module.jpg}" width="300px"/></a> 
+            </div>
+
+
+            {include file='footer.html'}
+
+
+
+
+        </div>
+    </body>
+</html>

@@ -1,0 +1,65 @@
+{include file="header.html"}
+<div id="rightTop">
+    <p>{$lang.specialpage}</p>
+    <ul class="subnav">
+        <li><a class="btn3" href="index.php?module=specialpage">{$lang.manage_specialpage}</a></li>
+        <li><a class="btn3" href="index.php?module=specialpage&amp;act=add">{$lang.add_specialpage}</a></li>
+    </ul>
+</div>
+
+<div class="info">
+    <form method="post" enctype="multipart/form-data">
+            <table class="infoTable">
+            <tr>
+                <th class="paddingT15">
+                  {$lang.specialpage_name}:</th>
+                <td class="paddingT15 wordSpacing5">{$specialpage.name|escape}</td>
+            </tr>
+            <tr>
+                <th class="paddingT15">
+                    {$lang.notice_title}:</th>
+                <td class="paddingT15 wordSpacing5">
+                    <input class="infoTableInput2" id="notice_title" type="text" name="notice_title" value="&quot;{$specialpage.name|escape}&quot;{$lang.specialpage_enlist}" />
+                </td>
+            </tr>
+            <tr>
+                <th class="paddingT15">
+                    {$lang.sgrade}:</th>
+                <td class="paddingT15 wordSpacing5">
+                    {html_checkbox name=sgrades[] checked=$specialpage.sgrades options=$sgrades}
+                </td>
+            </tr>
+            <tr>
+                <th class="paddingT15">
+                    {$lang.notice_type}:</th>
+                <td class="paddingT15 wordSpacing5">
+                    <input name="notice_type" type="radio" value="message" checked="checked" />{$lang.message}
+                    <input name="notice_type" type="radio" value="email" />{$lang.email}
+                </td>
+            </tr>
+            <tr>
+                <th class="paddingT15">
+                    {$lang.notice_content}:</th>
+                <td class="paddingT15 wordSpacing5">
+                    <textarea class="infoTableInput2" style="width:400px; height:250px; " id="notice_content" type="text" name="notice_content">{$lang.specialpage_name}:{$specialpage.name|escape}
+
+{$lang.specialpage_description}:{$specialpage.description|escape}
+
+{$lang.specialpage_time}:{$specialpage.starttime|date:Y-m-d} {$lang.to} {$specialpage.endtime|date:Y-m-d}
+
+{$lang.specialpage_url}:{$site_url}/index.php?module=specialpage&amp;id={$smarty.get.id}
+
+{$lang.submit_goods_url}:{$site_url}/index.php?module=specialpage&amp;act=my_goods&amp;id={$smarty.get.id}</textarea>
+                </td>
+            </tr>
+        <tr>
+            <th></th>
+            <td class="ptb20">
+                <input class="formbtn" type="submit" name="Submit" value="{$lang.submit}" />
+                <input class="formbtn" type="reset" name="Submit2" value="{$lang.reset}" />
+            </td>
+        </tr>
+        </table>
+    </form>
+</div>
+{include file="footer.html"}

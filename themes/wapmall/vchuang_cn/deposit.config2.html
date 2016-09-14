@@ -1,0 +1,119 @@
+{include file="member.header.html"}
+
+<script type="text/javascript">
+$(function(){
+    $('#send_email').click(function(){
+		time(this, 60);
+		send_email();
+	});
+	
+	function time(o, wait) {
+		if (wait == 0) {
+			o.removeAttribute("disabled");			
+			o.value="{$lang.get_mail_captcha}";
+			wait = 60;
+		} else {
+			o.setAttribute("disabled", true);
+			o.value="{$lang.get_mail_captcha_again}(" + wait + "{$lang.miao_hou})";
+			wait--;
+			setTimeout(function() {
+				time(o, wait)
+			},
+			1000)
+		}
+	}
+	function send_email(){
+    	$.ajax({
+        	type:"POST",
+        	url:"index.php",
+        	data:'app=deposit&act=send_email&email2='+$("input[name='account']").val(),
+        	dataType:"json",
+        	success:function(data){
+           	 	if(data.done){
+            	alert(data.msg);
+            	}
+            	else{
+                	alert(data.msg);
+            	}
+        	},
+        	error: function(){alert('{$lang.mail_send_failure}');}
+    	});
+	}
+	
+});
+</script>
+
+
+<body class="gray" style="overflow-x:hidden;">
+    <div class="w320">
+        <div class="fixed">
+            <!---头部------>
+            <div class="header header2">
+                <a href="{url app=default}"
+                   class="back2_index"></a>
+                交易宝
+                <a href="{url app=my_favorite}" class="bookmark"></a>
+            </div>    
+        </div>
+<div style="clear:both"></div>
+          <div class="depos" style="margin-top:60px;">
+          <form method="post">
+          <div class="products">
+            <ul>
+                                <li>
+                                    <h2>账 户 名: </h2>
+                                    <div class="arrange"><input type="text" name="account" class="text width_normal" value="{$deposit_account.account}" {if $deposit_account} readonly="readonly"{/if} />  <span >请正确填写手机号/邮箱</span></div>
+                                </li>
+                                
+                                   <li>
+                                    <h2>真实姓名: </h2>
+                                    <div class="arrange"><input type="text" name="real_name" class="text width_normal" value="{$deposit_account.real_name}" />  </div>
+                                </li>
+                                
+                                
+                                   <li>
+                                    <h2>支付密码: </h2>
+                                    <div class="arrange"><input type="password" name="password" class="text width_normal" />  <span >付款的时候，需要输入支付密码才能付款成功</span></div>
+                                </li>
+                                
+                                
+                                   <li>
+                                    <h2>重复密码: </h2>
+                                    <div class="arrange"><input type="password" name="password_confirm" class="text width_normal" />  <span >确认您的密码</span></div>
+                                </li>
+                                
+                                   <li>
+                                    <h2>开启余额支付: </h2>
+                                    <div class="arrange">
+                                   &nbsp; &nbsp;<label><input type="radio" name="pay_status" {if $deposit_account.pay_status eq 'ON' || !$deposit_account} checked="checked" {/if}value="on" /> {$lang.yes}</label>
+                                    &nbsp; &nbsp; <label><input type="radio" name="pay_status" {if $deposit_account.pay_status eq 'OFF'} checked="checked"{/if} value="off" /> {$lang.no}</label>
+                               
+                                <span >通过此开关，可以设置您的账户余额资金是否可以用于支付，以保护您的资金安全</span></div>
+                                </li>
+                                
+                              <!--                                   <li>
+                                    <h2>手机/邮箱验证码: </h2>
+                                    <div class="arrange">                                	<input type="text" name="email_captcha" value="" class="text width_normal" />
+                                    <input type="button" id="send_email" value="{$lang.get_mail_captcha}" />
+                               
+                                <span ></span></div>
+                                </li>-->
+          
+          
+          </ul>
+          
+          <div class="issuance"><input type="submit" class="btn" value="提交"></div>
+          </div>              
+                  
+          </form>              
+       
+    </div>
+   
+   
+   </div>    
+
+
+
+
+
+{include file=footer.html}

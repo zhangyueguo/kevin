@@ -1,0 +1,137 @@
+﻿{include file=member.header.html}
+<script>
+$(function(){
+	$('#deposit-recharge').submit(function(){
+		if($(this).find('input[name="money"]').val()=='' || $(this).find('input[name="money"]').val() <= 0) {
+			alert('{$lang.recharge_money_error}');
+			return false;
+		}
+		if($(this).find('input[name="method"]:checked').val()=='offline' && $(this).find('input[name="bid"]').length <=0) {
+			alert('{$lang.recharge_bank_empty}');
+			return false;
+		}
+	});
+})
+</script>
+<body class="gray" style="overflow-x:hidden;">
+    <div class="w320">
+        <div class="fixed">
+            <!---头部------>
+            <div class="header header2">
+                <a href="{url app=default}"
+                   class="back2_index"></a>
+                交易宝
+                <a href="{url app=my_favorite}" class="bookmark"></a>
+            </div>    
+   </div>
+    <div class="public table deposit" style="margin-top:60px;">
+    
+       <div class="u_order" style="margin-top:15px;padding-bottom:20px;">
+        <div class="orderbox">
+    <div class="deposit-withdraw deposit-recharge">
+                	<div class="notice-word">可以通过线上或线下为自己的账户充值，线下充值需要管理员审核</div>
+                	<form method="post" id="deposit-recharge">
+                    	<div class="title clearfix">
+                        	<h2 class="float-left">充值到您的交易宝账户</h2>
+                            <div >
+                            &nbsp;	&nbsp;<a class="add-bank" href="{url app=bank&act=add&type=debit}">添加银行卡</a>
+                            </div>
+                        </div>
+                		<div class="form" style="padding-left:15px; padding-bottom:20px">
+                			<dl class="clearfix">
+                        		<dt>充值方式：</dt>
+                            	<dd class="clearfix" ectype="recharge-method">
+                                	<div class="method-each clearfix">
+                                    	<div class="radio float-left"><input name="method" type="radio" value="online" checked="checked" /></div>
+                                        <div class="name float-left">线上充值</div>
+                                    </div>                                    
+                                    <div class="method-each clearfix">
+                                    	<div class="radio float-left"><input name="method" type="radio" value="offline" /></div>
+                                        <div class="name float-left">线下汇款</div>
+                                    </div>
+                                </dd>
+                        	</dl>
+                            <div style="clear:both"></div>
+                            <dl class="bank-list clearfix" ectype="online">
+                        		<dt>充值渠道：</dt>
+                            	<dd>
+                                	<ul class="ui-list-icons clearfix">
+                                    	<input type="hidden" name="payment_code" value="alipay" />
+                                    	<li class="clearfix">
+											<input class="float-left" type="radio" name="defaultbank" id="alipay" value="alipay" checked="checked" />
+											<label class="float-left  icon-box current " for="alipay" >
+												<span class="icon-cashier icon-cashier-alipay" title="{$lang.alipay}">&nbsp;</span>
+											</label>
+										</li>
+                                    </ul>
+                                    <ul class="ui-list-icons clearfix" style="display:none">
+                                  		<!--{foreach from=$alipaybank item=bank key=key name=fe_bank}-->
+										<li class="clearfix">
+											<input class="float-left"  type="radio" name="defaultbank" id="{$key}" value="{$key}" />
+											<label class="float-left icon-box current " for="{$key}" >
+												<span class="icon-cashier icon-cashier-{$key}" title="{$bank}">&nbsp;<em class="qiye hidden">企业</em></span>
+											</label>
+										</li>
+                                        <!--{/foreach}-->
+                          			</ul>
+                                </dd>  
+                        	</dl>
+                            
+                            <dl class="clearfix" ectype="offline" style="display:none">
+                        		<dt>汇款银行：</dt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p><img src="http://bbs.0710tao.com/images/apug9yf26kuq209k80.png" alt="" width="300" height="300" /></p>
+                                
+                                <p>{$payment_info.payment_desc}</p>
+                            	<div style="clear:both"></div>
+                                <dd class="clearfix">
+                                	<!--{foreach from=$bank_list item=bank name=fe_bank}-->
+                                	<div class="bank-each clearfix {if $smarty.foreach.fe_bank.first} selected {/if}">
+                                    	<div class="radio float-left"><input name="bid" type="radio" value="{$bank.bid}" {if $smarty.foreach.fe_bank.first} checked="checked" {/if}/></div>
+                                        <div class="bank-name float-left">{$bank.bank_name}</div>
+                                        <div class="bank-num float-left">{$bank.num}</div>
+                                        <div class="action float-right">
+                                        	<a href="{url app=bank&act=edit&bid=$bank.bid}">{$lang.edit}</a>
+                                        </div>
+                                    </div>
+                                    <br />
+                                    <!--{foreachelse}-->
+									<div class="notice-word">您还没有设置银行信息，请先<a href="{url app=bank&act=add&type=debit}">添加银行卡</a></div>
+                                    <!--{/foreach}-->
+                                </dd>
+                        	</dl>
+                            
+                            <div style="clear:both"></div>
+                            <dl class="clearfix">
+                        		<dt>充值金额：</dt>
+                            	<dd><input type="text" name="money" class="text" value="" /> 元</dd>
+                        	</dl>
+                            <dl class="clearfix">
+                        		<dt>充值备注：</dt>
+                            	<dd><textarea name="remark" class="text"></textarea></dd>
+                        	</dl>
+                            <dl class="clearfix">
+                        		<dt>&nbsp;</dt>
+                            	<dd class="submit">
+                                	<span class="btn-alipay">
+                                		<input type="submit" value="下一步" />
+                                    </span>
+                                </dd>
+                        	</dl>
+                		</div>
+					</form>
+				</div>
+    
+    </div>
+    </div>
+    
+    
+    
+    
+    
+    </div>
+   
+   
+   
+   
+ </div>
+
+{include file=footer.html}

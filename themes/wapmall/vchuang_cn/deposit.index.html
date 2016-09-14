@@ -1,0 +1,130 @@
+{include file=member.header.html}
+
+
+<body class="gray" style="overflow-x:hidden;">
+    <div class="w320">
+        <div class="fixed">
+            <!---头部------>
+            <div class="header header2">
+                <a href="{url app=default}"
+                   class="back2_index"></a>
+                交易宝
+                <a href="{url app=my_favorite}" class="bookmark"></a>
+            </div>    
+   </div>
+   
+      <div class="public table deposit" style="margin-top:60px;">
+      
+      
+      <!--{if $deposit_account}-->
+            	<div class="deposit-account">
+                	<div class="account-info">
+                    	<h1>交易宝账户余额</h1>
+                        <div class="explain">余额支付[<em>?<span></span></em>]：
+                        	<!--{if $deposit_account.pay_status eq 'ON'}-->
+                            <a href="{url app=deposit&act=pay_status&status=off}" onClick="return confirm('点击后关闭余额支付功能，要确定么？')">已开启>></a>
+                            <!--{else}-->
+                            <a href="{url app=deposit&act=pay_status&status=on}" onClick="return confirm('点击后开启余额支付功能，要确定么？')">已关闭>></a>
+                            <!--{/if}-->
+                        </div>
+                		<div class="action">
+                        	<h2>账户名：{$deposit_account.account}</h2>
+                            
+                                  <p class="opr">   <a style="width:30%" href="{url app=deposit&act=recordlist}" class="white_btn">账户收支明细</a> </p>
+                         <!--   <a href="{url app=deposit&act=recordlist}">账户收支明细</a>-->
+                        </div>
+                        <div class="balanceNum">
+                    		<p class="opr"> <span class="white_btn" style="width:40%"> <em>{$deposit_account.money|default:0}</em>元可用{if $deposit_account.frozen gt 0}，    <b>  <a style="width:30%" class="white_btn" href="{url app=deposit&amp;act=frozenlist}">{$deposit_account.frozen}</a></b> >元不可用{/if}</span></p>
+                            <div class="balanceBtn">
+                            	<a href="{url app=deposit&act=recharge}" class="btn-alipay"><span>充值</span></a>
+                            	<a href="{url app=deposit&act=withdraw}" class="btn-alipay btn-alipay-white"><span>提现</span></a>
+                                <a href="{url app=deposit&act=transfer}" class="btn-alipay btn-alipay-white"><span>转账</span></a>
+                            </div>
+                    	</div>
+                    </div>
+                    <div class="tradelist">
+                    	<div class="title clearfix"><h1>最近10条收支记录</h1></div>
+                    	
+                        
+                        <div class="u_order" style="margin-top:15px;">
+                <!--{foreach from=$recordlist item=record}-->
+                    <div class="orderbox">
+                <div class="detail">
+                    <a href="{url app=deposit&act=record&tradesn=$record.tradesn}">流水帐号：{$recharge.tradesn} </a>
+                    <p>{if $record.flow eq 'income'}{$record.end_time|date:Y.m.d H.i.s}{else}{$record.pay_time|date:Y.m.d H.i.s}{/if}</p>
+                    <p>​名称： {$record.name} {if $record.remark}{$record.remark}{/if}</p>
+                    <p>对方:  {if $record.party_real_name}{$record.party_real_name}{elseif $record.purpose eq 'charge'}{$lang.platform}{else}{$record.payway}{/if}</p>
+                     <p>金额：{if $record.flow eq 'income'}<font color="#B20005">+{$record.amount}</font>
+                                    {else}
+                                   <font color="#B20005">-{$record.amount}</font>
+                                    {/if}</p>
+                 
+                     <p>状态：{$record.status_label}</p>
+                       
+                        <!--{if $record.refund}-->
+                        <p>{$lang.refund} - {$record.refund.remark} &nbsp;+{$record.refund.amount} </p>
+                         <!--{/if}-->
+                                   
+                </div>
+                
+                <p class="opr">
+                    <a href="{url app=deposit&act=record&tradesn=$record.tradesn}" class="white_btn">{$lang.detail}</a>
+
+                </p>
+                
+            
+            </div>
+                    <!--{foreachelse}-->
+                        <div class="notice-word mt10">没有任何充值记录。 <a href="{url app=deposit&act=recharge}">马上充值</a></div>
+                        <!--{/foreach}-->
+                    </div>
+                        
+                        
+                    </div>
+                      <div class="u_order" style="margin-top:15px;">
+                     <div class="orderbox orderbox2" >
+                    <div class="bank-info">
+                    	<h1>银行卡</h1><div class="explain">已绑定<span>{$bank_list.count|default:0}</span>张</div>
+                        <div class="action">
+                             <p class="opr">   <a style="width:30%" href="{url app=bank&act=add}" class="white_btn">+添加银行卡</a> </p>
+                        	<!--<a href="{url app=bank&act=add}">+添加银行卡</a>-->
+                        </div>
+                        <ul class="cards clearfix">
+                        	<!--{foreach from=$bank_list.list item=bank}-->
+                        	<li class="card">
+                            	<h2>{$bank.bank_name}</h2>
+                                <div class="number">{$bank.num}</div>
+                                <div class="handle clearfix">
+                                	<div class="card-type {$bank.type}"></div>
+                                    <div class="card-handle">
+                                    
+                                     <p class="opr">
+                    <a href="{url app=bank&act=edit&short_name=$bank.short_name}" class="white_btn">编辑</a>
+<a class="white_btn" href="{url app=bank&act=drop&bid=$bank.bid}" onClick="return confirm('删除后不可恢复，您确认吗？')">删除</a>
+                </p>
+                                    	<!--<a class="white_btn" href="{url app=bank&act=edit&short_name=$bank.short_name}">编辑</a>
+                                    	<a class="white_btn" href="{url app=bank&act=drop&bid=$bank.bid}" onClick="return confirm('删除后不可恢复，您确认吗？')">删除</a>-->
+                                    </div>
+                                </div>
+                            </li>
+                            <!--{/foreach}-->
+                            <li class="card add-card">
+                            	<a href="{url app=bank&act=add&type=debit}" title="添加银行卡（储蓄卡）"></a>
+                            </li>
+                            <li class="card add-card">
+                            	<a href="{url app=bank&act=add&type=credit}" title="添加银行卡（信用卡）"></a>
+                            </li>
+                        </ul>
+                    </div>
+                    </div>
+                    </div>
+                </div>
+				<!--{else}-->
+				<div class="notice-word">请先配置帐户，点击 <a href="{url app=deposit&act=config2}">立即配置</a></div>
+				<!--{/if}-->
+      
+      </div>
+      
+      </div>
+      
+      {include file=footer.html}

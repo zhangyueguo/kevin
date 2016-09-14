@@ -1,0 +1,89 @@
+{include file="header.html"}
+<script type="text/javascript">
+$(function(){
+    $('#add_time_from').datepicker({dateFormat: 'yy-mm-dd'});
+    $('#add_time_to').datepicker({dateFormat: 'yy-mm-dd'});
+});
+</script>
+<div class="main">
+	<div class="fixed-bar">
+		<div class="item-title">
+			<h3><a href="index.php?act=welcome" style="text-decoration:none;">{$setting.site_name}</a> &nbsp;>&nbsp;{$lang.consumer_service}&nbsp;&nbsp;>&nbsp;&nbsp;<!--{if $smarty.get.wait_verify}-->{$lang.verify_c_p_list}<!--{else}-->{$lang.c_p_list}<!--{/if}--></h3>
+		</div>
+	</div>
+	<div class="fixed-empty"></div>
+	<div class="mrightTop">
+	  <div class="fontl">
+		<form method="get" name="search_form">
+		   <div class="left">
+			  <input type="hidden" name="app" value="consumer_service" />
+			  <input type="hidden" name="act" value="index" />
+			  <input type="hidden" name="wait_verify" value="{$smarty.get.wait_verify}" />
+			  
+              
+              {$lang.add_time_from}:
+			  <input class="queryInput2" type="text" value="{$query.add_time_from}" id="add_time_from" name="add_time_from" class="pick_date" />
+			  {$lang.add_time_to}:<input class="queryInput2" type="text" value="{$query.add_time_to}" id="add_time_to" name="add_time_to" class="pick_date" />
+			   {$lang.store_name}:
+			   <input class="queryInput2" type="text" value="{$query.store_name}" name="store_name" />
+               
+          消保类型： <select name="type">
+               {foreach   from=$lang.c_s_type  key=key item=c_s_type  }
+               <option value="{$key}"  {if $type==$key} selected="selected" {/if}> {$c_s_type}</option>
+               
+               {/foreach}
+               </select>
+			   <a href="JavaScript:void(0);" class="btn-search" onclick="document.search_form.submit()">{$lang.query}</a>
+		  </div>
+		  <!--{if $filtered}-->
+		  <a class="left formbtn1" href="index.php?app=consumer_service&amp;type=$smarty.get.type<!--{if $smarty.get.wait_verify}-->&amp;wait_verify={$smarty.get.wait_verify}<!--{/if}-->">{$lang.cancel_query}</a>
+		  <!--{/if}-->
+		</form>
+	  </div>
+	  <div class="fontr">{include file=page.top.html} </div>
+	</div>
+	<div class="tdare">
+	  <table width="100%" cellspacing="0" class="dataTable">
+		<!--{if $c_s_list}-->
+		<tr class="tatr1">
+		  <td>{$lang.store_name} | {$lang.owner_name}</td>
+		  <td><span ectype="order_by" fieldname="c_s_item_name">{$lang.c_s_item_name}</span></td>
+		  <td><span ectype="order_by" fieldname="region_id">{$lang.deposit_quota}({$lang.deposit_unit})</span></td>
+		  <td class="table-center"><span ectype="order_by" fieldname="add_time">{$lang.add_time}</span></td>
+		  <td class="table-center">{$lang.state}</td>
+		  <td class="handler">{$lang.handler}</td>
+		</tr>
+		<!--{/if}-->
+		<!--{foreach from=$c_s_list item=c_s_item}-->
+		<tr class="tatr2">
+		  <td>{$c_s_item.store_name|escape} | {$c_s_item.owner_name|escape}</td>
+		  <td>{$lang.c_s_type.$c_s_item.c_s_type}</td>
+		  <td>{$c_s_item.deposit_quota}</td>
+		  <td class="table-center">{$c_s_item.add_time|date}</td>
+		  <td class="table-center">{$lang.state_type.$c_s_item.state}</td>
+		  <td class="handler">
+			<!--{if $smarty.get.wait_verify}-->
+			<a href="index.php?app=consumer_service&amp;act=view&amp;id={$c_s_item.c_id}">{$lang.view}</a>
+			<!--{elseif $c_s_item.state eq SERVICE_AGREE}-->
+			<a href="javascript:drop_confirm('{$lang.close_confirm}', 'index.php?app=consumer_service&amp;act=close&amp;id={$c_s_item.c_id}');">{$lang.close}</a>
+			<!--{else}-->
+			-
+			<!--{/if}-->
+			</td>
+		</tr>
+		<!--{foreachelse}-->
+		<tr class="no_data">
+		  <td colspan="12">{$lang.no_data}</td>
+		</tr>
+		<!--{/foreach}-->
+	  </table>
+	  <!--{if $c_s_list}-->
+	  <div id="dataFuncs">
+		<div class="pageLinks">{include file=page.bottom.html}</div>
+	  </div>
+	  <div class="clear"></div>
+	  <!--{/if}-->
+
+	</div>
+	{include file="footer.html"}
+</div>

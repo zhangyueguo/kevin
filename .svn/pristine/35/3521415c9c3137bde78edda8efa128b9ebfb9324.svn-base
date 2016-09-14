@@ -1,0 +1,30 @@
+{include file="header.html"}
+<div id="rightTop">
+    <p>{$lang.specialpage}</p>
+    <ul class="subnav">
+        <li><a class="btn3" href="index.php?module=specialpage">{$lang.manage_specialpage}</a></li>
+        <li><a class="btn3" href="index.php?module=specialpage&amp;act=add">{$lang.add_specialpage}</a></li>
+    </ul>
+</div>
+
+<div class="info">
+    <form method="post" enctype="multipart/form-data">
+            <table class="infoTable">
+            <tr>
+                <th class="paddingT15">
+                    {$lang.template_content}:</th>
+                <td class="paddingT15 wordSpacing5">
+                    <textarea class="infoTableInput2" style="width:500px; height:300px; " id="template_content" type="text" name="template_content">{$template_content}</textarea>
+                </td>
+            </tr>
+        <tr>
+            <th></th>
+            <td class="ptb20">
+                <input class="formbtn" type="submit" name="Submit" value="{$lang.submit}" />
+                <input class="formbtn" type="reset" name="Submit2" value="{$lang.reset}" />
+            </td>
+        </tr>
+        </table>
+    </form>
+</div>
+{include file="footer.html"}

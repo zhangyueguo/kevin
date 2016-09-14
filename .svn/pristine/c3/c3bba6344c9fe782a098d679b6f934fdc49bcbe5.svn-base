@@ -1,0 +1,12 @@
+<div class="submenu">
+        <ul class="tab">
+            <!--{foreach from=$_member_submenu item=_s_m name=member_submenu}-->
+            <!--{if $_curmenu eq $_s_m.name AND $_s_m.dustbin neq '1'}-->
+            <li class="active {if $smarty.foreach.member_submenu.first}first{/if}"><h2><a href="javascript:;">{$_s_m.text}</a></h2></li>
+            <!--{else}-->
+            <li class="normal {if $smarty.foreach.member_submenu.first}first{/if}"><h2><a href="{$_s_m.url}">{$_s_m.text}</a></h2></li>
+            <!--{/if}-->
+            <!--{/foreach}-->
+            <div class="dustbin"><a href="index.php?app=buyer_order&act=dustbin" {if $_s_m.dustbin eq '1'}style="color:#EE3000; text-decoration:none"{/if}>订单回收站</a></div>
+        </ul>
+</div>

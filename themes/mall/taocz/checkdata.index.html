@@ -1,0 +1,67 @@
+{include file=company.header.html}
+<style>
+    .borline td { padding:10px 0px; }
+    .ware_list th { text-align:left; }
+    .width4{width:80px;}
+</style>
+
+<div class="content">
+    <?php if($_GET['cid']){?>
+        <div>
+            <div>申请【企业】详细信息：</div>
+            <!--{foreach from=$info item=list}-->
+            <ul>
+                <li>
+                    <label>名称：</label>
+                    <input type="text" readonly="" value="{$list.companyname}">
+                </li>
+                <li>
+                    <label>单位地址：</label>
+                    <input type="text" readonly="" value="{$list.prinvce}省{$list.city}市{$list.country}区">
+                </li>
+                <li>
+                    <label>负责人：</label>
+                    <input type="text" readonly="" value="{$list.lxrname}">
+                </li>
+                <li>
+                    <label>固话：</label>
+                    <input type="text" readonly="" value="{$list.tel}">
+                </li>
+                <li>
+                    <label>手机：</label>
+                    <input type="text" readonly="" value="{$list.phone}">
+                </li>
+            </ul>
+            <!--{/foreach}-->
+        </div>
+    <?php }else if($_GET['pid']){?>
+        <div>
+            <div>申请【个人】详细信息：</div>
+            <!--{foreach from=$info item=list}-->
+            <ul>
+                <li>
+                    <label>真实姓名：</label>
+                    <input type="text" readonly="" value="{$list.real_name}">
+                </li>
+                <li>
+                    <label>身份证号：</label>
+                    <input type="text" readonly="" value="{$list.card}">
+                </li>
+                <li>
+                    <label>固话：</label>
+                    <input type="text" readonly="" value="{$list.phone_g}">
+                </li>
+                <li>
+                    <label>手机：</label>
+                    <input type="text" readonly="" value="{$list.phone}">
+                </li>
+            </ul>
+            <!--{/foreach}-->
+        </div>
+    <?php }?>
+</div>
+</div>
+<script type="text/javascript">
+    
+</script>
+{include file=footer.html}

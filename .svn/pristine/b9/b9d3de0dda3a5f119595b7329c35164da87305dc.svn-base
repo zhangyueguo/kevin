@@ -1,0 +1,38 @@
+<?php
+class CompanyApp extends CompanybaseApp
+{
+    protected $_feed_enabled = false;
+    public function __construct()
+    {
+        $this->CompanyApp();
+    }
+    public function CompanyApp()
+    {
+        parent::__construct();
+        $ms = & ms();
+        $this->_feed_enabled = $ms->feed->feed_enabled();
+        $this->assign('feed_enabled',$this->_feed_enabled);
+    }
+
+    public function index()
+    {
+        if(!IS_POST)
+        {
+            /* 当前位置 */
+            $this->_curlocal(LANG::get('member_center'),  'index.php?app=company',
+                LANG::get('basic'));
+
+           //企业中心菜单
+            $this->_curitem('overview');
+
+            /* 当前所处子菜单 */
+            $this->_curmenu('basic_information');
+
+            $this->display('company.index.html');
+        }
+
+    }
+
+}
+
+?>

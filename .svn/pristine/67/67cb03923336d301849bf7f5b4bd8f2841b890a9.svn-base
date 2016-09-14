@@ -1,0 +1,92 @@
+<script type="text/javascript">
+//<!CDATA[
+
+$('.checkall').click(function(){
+    $('.checkitem').attr('checked', this.checked);
+    $('.checkall').attr('checked', this.checked);
+});
+
+$(function(){
+    $('#query_goods').click(function(){
+        $('#result').html('');
+        $.getJSON('index.php?module=specialpage&act=query_goods&ajax=1',{
+            'id':{$smarty.get.id},
+            'keyword':$('#keyword').val(),
+            'sgcate_id':$('#sgcate_id').val()
+            },
+            function(data){
+                if(data.done){
+                    $.each(data.retval,function(i,item){
+                        $('#result').append('<tr><td><input name="goods_id[]" type="checkbox" class="checkitem" value=' + item.goods_id + ' /></td><td>' + item.goods_name +'</td><td>' + item.brand +'</td><td>' + item.price +'</td></tr>');
+                    });
+                }
+            });
+    });
+});
+
+//]]>
+</script>
+<ul class="tab">
+    <li class="active">{$lang.submit_goods}</li>
+</ul>
+<div class="eject_con">
+    <div class="add_float">
+        <div id="warning"></div>
+        <form method="POST" target="iframe_post" action="index.php?module=specialpage&act=submit_goods&id={$smarty.get.id}" id="submit_form">
+        <ul>
+            <li>
+                <h3>{$lang.keyword}: </h3>
+                <p><input id="keyword" type="text" class="text width11"/></p>
+            </li>
+            <li>
+                <h3>{$lang.sgcategory}: </h3>
+                <p><!--{if $goods._scates}-->
+                                    <!--{foreach from=$goods._scates item=sgcate}-->
+                                    <select id="sgcate_id" class="sgcategory">
+                                        <option value="0">{$lang.select_pls}</option>
+                                        {html_options options=$sgcategories selected=$sgcate.cate_id}
+                                    </select>
+                                    <!-- {/foreach} -->
+                                    <!--{else}-->
+                                    <select id="sgcate_id" class="sgcategory">
+                                        <option value="0">{$lang.select_pls}</option>
+                                        {html_options options=$sgcategories}
+                                    </select>
+                                    <!--{/if}-->
+                                    <input type="button" id="query_goods" class="btn" value="{$lang.query}" />
+                </p>
+            </li>
+            <li>
+                <p>
+                <span>({$lang.query_count_limit})</span>
+                </p>
+            </li>
+        </ul>
+        <div class="submit"></div>
+        <div style="width: 540px; height:200px; overflow:auto">
+              <table class="table">
+                  <thead id="result_head">
+                    <tr class="gray">
+                        <td width="20"><input id="all" type="checkbox" class="checkall" /></td>
+                        <td width="320">{$lang.specialpage_goods_name}</td>
+                        <td width="150">{$lang.specialpage_brand_name}</td>
+                        <td width="50">{$lang.specialpage_price}</td>
+                    <tr>
+                </thead>
+                <tbody id="result">
+                </tbody>
+              </table>
+          </div>
+
+          <ul style="margin-top: 10px; ">
+            <li>
+                <h3>{$lang.specialpage_cate}: </h3>
+                <p><select class="cate" name="category"><option value="">{$lang.select_pls}</option>{html_options output=$categories values=$categories}</select></p>
+            </li>
+        </ul>
+        <div class="submit">
+            <input class="btn" type="submit" value="{$lang.submit}"/>
+        </div>
+        </form>
+    </div>
+</div>

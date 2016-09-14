@@ -1,0 +1,124 @@
+{include file=company.header.html}
+<style>
+    .borline td { padding:10px 0px; }
+    .ware_list th { text-align:left; }
+</style>
+<script type="text/javascript">
+    //<!CDATA[
+    $(function(){
+        $('#profile_form').validate({
+            errorPlacement: function(error, element){
+                $(element).parent('span').parent('b').after(error);
+            },
+            rules : {
+                portrait : {
+                    accept   : 'gif|jpe?g|png'
+                }
+            },
+            messages : {
+                portrait  : {
+                    accept   : '{$lang.avatar}'
+                }
+            }
+        });
+        $('input[ectype="change_avatar"]').change(function(){
+
+            var src = getFullPath($(this)[0]);
+            $('img[ectype="avatar"]').attr('src', src);
+            $('input[ectype="change_avatar"]').removeAttr('name');
+            $(this).attr('name', 'portrait');
+        });
+    });
+
+    //]]>
+</script>
+<div class="content">
+    {include file=company.menu.html}
+    <div id="right">
+
+
+
+        <div class="submenu">
+            <ul class="tab">
+
+                <li class="active {if $smarty.foreach.member_submenu.first}first{/if}"><h2><a href="index.php?app=company&act=worker">员工列表</a></h2></li>
+
+                <li class="normal {if $smarty.foreach.member_submenu.first}first{/if}"><h2><a href="index.php?app=company&act=addsector">添加部门</a></h2></li>
+
+                <li class="normal {if $smarty.foreach.member_submenu.first}first{/if}"><h2><a href="index.php?app=company&act=addworker">添加员工</a></h2></li>
+
+                <div class="dustbin"><a href="index.php?app=buyer_order&act=dustbin" {if $_s_m.dustbin eq '1'}style="color:#EE3000; text-decoration:none"{/if}>订单回收站</a></div>
+            </ul>
+        </div>
+
+
+
+
+        <div class="wrap">
+            <div class="public">
+                <form method="post" enctype="multipart/form-data" id="profile_form">
+                    <div class="information">
+
+                        <div class="info individual">
+                            <table>
+                                <tr>
+                                    <!--<th class="width4">{$lang.company_name}: </th>-->
+                                    <th class="width4">员工姓名: </th>
+                                    <td><input type="text" class="text width_normal" name="worker_name" value="{$comworker.workername}" /></td>
+                                </tr>
+                                <tr>
+                                    <th>手机号:</th>
+                                    <td><input type="text" class="text width_normal" name="worker_phone" value="{$comworker.workerphone}" /></td>
+                                </tr>
+                                <tr>
+                                    <th>所在部门:</th>
+                                    <td class="paddingT15 wordSpacing5" >
+                                        <div id="region">
+                                            <!--<select name="sectname" style="">
+                                                <option value="">一部门</option>
+                                                <option value="">二部门</option>
+                                            </select>-->
+                                            <select id="parent_id" name="parent_id"><option value="0">上级分类</option>{html_options options=$parents selected=$comworker.sectid}</select>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <!--<th>{$lang.birthday}: </th>-->
+                                    <th>系统角色: </th>
+                                    <!--<td><input type="text" class="text width_normal" name="juese" id="birthday" value="{$comworker.juese}" /></td>-->
+                                    <td class="label">
+                                        <label><input type="radio" name="juese" value="0" {if $comworker.juese eq 0}checked="checked"{/if} />系统管理员</label>
+                                        <label><input type="radio" name="juese" value="1" {if $comworker.juese eq 1}checked="checked"{/if} />部门负责人</label>
+                                        <label><input type="radio" name="juese" value="2" {if $comworker.juese eq 2}checked="checked"{/if} />职工</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>状态:</th>
+                                    <!--<td> <input type="text" class="text width_normal" name="status" value="{$comworker.status}" /></td>-->
+                                    <td class="label">
+                                        <label><input type="radio" name="status" value="0" {if $comworker.status eq 0}checked="checked"{/if} /> 未激活</label>
+                                        <label><input type="radio" name="status" value="1" {if $comworker.status eq 1}checked="checked"{/if} />激活</label>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th></th>
+                                    <td><input type="submit" class="btn" value="提交" /></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="adorn_right1"></div>
+        <div class="adorn_right2"></div>
+        <div class="adorn_right3"></div>
+        <div class="adorn_right4"></div>
+    </div>
+    <div class="clear"></div>
+</div>
+</div>
+{include file=footer.html}

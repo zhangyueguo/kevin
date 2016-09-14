@@ -1,0 +1,13 @@
+<?php
+
+class CompanyModel extends BaseModel
+{
+    var $table = 'company';
+    var $prikey = 'id';
+    var $alias = 'co';
+    var $_name = 'company';
+
+    var $_relation = array(
+
+    );
+}

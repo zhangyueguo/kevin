@@ -1,0 +1,73 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+{$page_seo}
+<link href="{res file=css/common.css}" type="text/css" rel="stylesheet" />
+<link href="{res file=css/user.css}" type="text/css" rel="stylesheet" />
+<link href="{res file=css/order.css}" type="text/css" rel="stylesheet" />
+<script type="text/javascript">
+//<!CDATA[
+var SITE_URL = "{$site_url}";
+var REAL_SITE_URL = "{$real_site_url}";
+var PRICE_FORMAT = '{$price_format}';
+//]]>
+</script>
+<script type="text/javascript" src="index.php?act=jslang"></script>
+<script type="text/javascript" src="{lib file=jquery.js}" charset="utf-8"></script>
+<script type="text/javascript" src="{lib file=ecmall.js}" charset="utf-8"></script>
+<script type="text/javascript" src="{lib file=member.js}" charset="utf-8"></script>
+<script type="text/javascript">
+$(function(){
+    $('#left h1 span,h2.title a.fold').click(function(){
+        if($(this).hasClass('span_close')){
+            $(this).removeClass('span_close');
+            $(this).addClass('span_open');
+            this.title = 'open';
+            closeSubmenu($(this).parent());
+        }
+        else{
+            $(this).removeClass('span_open');
+            $(this).addClass('span_close');
+            this.title = 'close';
+            openSubmenu($(this).parent());
+        }
+    });
+
+    var span = $("#child_nav");
+    span.hover(function(){
+        $("#float_layer:not(:animated)").show();
+    }, function(){
+        $("#float_layer").hide();
+    });
+	
+	// tyioocom
+	$('.tsearch-tabs li').click(function(){
+		$(this).parent().find('li').each(function(){
+			$(this).attr('class','');
+		});
+		$(this).attr('class','tsearch-tabs-active');
+		$('.tsearch-panel input[name="act"]').val($(this).attr('ectype'));
+	});
+	$('.tsearch-panel #keyword').focus(function(){
+		$('.tsearch-panel label').hide();
+	}).blur(function(){
+		if($(this).val()==''){
+			$('.tsearch-panel label').show();
+		}
+	});
+	
+});
+function closeSubmenu(h1){
+    h1.next('ul').css('display', 'none');
+}
+function openSubmenu(h1){
+    h1.next('ul').css('display', '');
+}
+</script>
+{$_head_tags}
+</head>

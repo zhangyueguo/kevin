@@ -1,0 +1,58 @@
+{include file=member.header.html}
+<style>
+.member_no_records {border-top: 0px !important;}
+.table td{ padding-left: 5px; }
+</style>
+<div class="content">
+  <div class="totline"></div>
+  <div class="botline"></div>
+  {include file=member.menu.html}
+  <div id="right"> {include file=member.submenu.html}
+  
+  
+    <div class="wrap">
+      <div class="public_select table">
+        <div class="cpsa_services">
+          <div class="cpsa_msg">
+            <ul class="tips">
+              <li>{$lang.c_p_step2_notice1}</li>
+            </ul>
+          </div>
+          <br>
+          <div class="cpsa_vertify">
+		  <form method="post" id="form1">
+          <input type="hidden" name="c_s_type"  value="{$type}"  />
+          <input  type="hidden" name="deposit_quota"  value="{$deposit_quota}" />
+            <table>
+              <tbody>
+                <tr>
+                  <th>{$lang.my_money}：</th>
+                  <td>{$deposit_account.money|price}</td>
+                </tr>
+                <tr>
+                  <th>{$lang.frozen_cash_deposit}：</th>
+                  <td>{$deposit_quota|price}&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:red;">({$lang.frozen_cash_deposit_notice})</span></td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th></th>
+                  <td class="skin-gray"><div class="textarea_content">{$c_p_info.content}</div>
+                  </td>
+                </tr>
+              <th></th>
+                <td><input type="submit" value="{$lang.submit}" class="cpsa_submit"></td>
+                </tfoot>
+            </table>
+			</form>
+          </div>
+        </div>
+      </div>
+      <div class="wrap_bottom"></div>
+    </div>
+    <div class="clear"></div>
+
+  </div>
+  <div class="clear"></div>
+</div>
+{include file=footer.html}

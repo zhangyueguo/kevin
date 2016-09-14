@@ -1,0 +1,64 @@
+﻿{include file=member.header.html}
+<link href="/themes/wapmall/vchuang_cn/styles/default/css/user2.css" rel="stylesheet" type="text/css" />
+
+
+<body class="gray" style="overflow-x:hidden;">
+    <div class="w320">
+        <div class="fixed">
+            <!---头部------>
+            <div class="header header2">
+                <a href="{url app=default}"
+                   class="back2_index"></a>
+                交易宝
+                <a href="{url app=my_favorite}" class="bookmark"></a>
+            </div>    
+   </div>
+   
+   
+   <div class="public table bank" style="margin-top:60px;">
+            	<div class="bank-add">
+                	<div class="notice-word">当您申请提现时平台会向您这里设置的银行卡汇款，请确保您的银行卡是正确的。</div>
+                	<form method="post">
+                		<div class="form">
+                			<dl class="bank-list clearfix">
+                        		开户银行：<ul class="ui-list-icons clearfix">
+                                    	<!--{foreach from=$bank_inc item=bank key=key name=fe_bank}-->
+										<li>
+											<input type="radio" name="short_name" id="{$key}" value="{$key}" {if $smarty.foreach.fe_bank.first}checked="checked" {/if} {if $smarty.get.short_name eq $key} checked="checked" {/if}  />
+											<label class="  icon-box current " for="{$key}" >
+												<span class="icon-cashier icon-cashier-{$key}" title="{$bank}">&nbsp;</span>
+											</label>
+										</li>
+                                        <!--{/foreach}-->
+                          			</ul>
+                        	</dl>
+                            <dl class="clearfix">
+                        		卡 号：<input type="text" name="num" class="text width_normal" value="{$card.num}" />
+                        	</dl>
+                            <dl class="clearfix">
+                        		户 名：<input type="text" name="account_name" class="text width_normal" value="{$card.account_name}" />
+                        	</dl>
+                            <dl class="clearfix">
+                        		开户支行：<input type="text" name="open_bank" class="text width_normal" value="{$card.open_bank}" /><span class="gray">示例：XXX银行XXX支行</span>
+                        	</dl>
+                            <dl class="clearfix">
+                        		卡类型：<label><input type="radio" name="type" value="debit" {if $smarty.get.type eq 'debit' || $card.type eq 'debit'} checked="checked" {/if} />储蓄卡（借记卡）</label>
+                                    <label><input type="radio" name="type" value="credit" {if $smarty.get.type eq 'credit' || $card.type eq 'credit'} checked="checked" {/if} />信用卡（贷记卡）</label>
+                                
+                        	</dl>
+                            <dl class="clearfix">
+                        		验证码：<input type="text" name="captcha" class="text" id="captcha1" />
+                                    <a href="javascript:change_captcha($('#captcha'));" class="renewedly"><img id="captcha" src="index.php?app=captcha&amp;{$random_number}" /></a>
+                        	</dl>
+                             <div class="issuance"><input type="submit" class="btn" value="提交"></div>
+                		</div>
+					</form>
+				</div>
+            </div>
+   
+ 
+ 
+ </div>  
+
+
+{include file=footer.html}

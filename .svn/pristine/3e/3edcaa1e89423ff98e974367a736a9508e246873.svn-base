@@ -1,0 +1,217 @@
+Tue, 02 Aug 2016 10:24:28 +0800	[2]Cannot modify header information - headers already sent by (output started at E:\phpStudy\WWW\ecmall\eccore\controller\message.base.php:321)	\includes\libraries\session.lib.php	136
+Tue, 02 Aug 2016 10:25:40 +0800	[2]Cannot modify header information - headers already sent by (output started at E:\phpStudy\WWW\ecmall\eccore\controller\message.base.php:321)	\includes\libraries\session.lib.php	136
+Tue, 02 Aug 2016 10:26:55 +0800	[2]Cannot modify header information - headers already sent by (output started at E:\phpStudy\WWW\ecmall\eccore\controller\message.base.php:321)	\includes\libraries\session.lib.php	136
+Tue, 02 Aug 2016 10:27:01 +0800	[2]Cannot modify header information - headers already sent by (output started at E:\phpStudy\WWW\ecmall\eccore\controller\message.base.php:321)	\includes\libraries\session.lib.php	136
+Tue, 02 Aug 2016 10:27:17 +0800	[2]Cannot modify header information - headers already sent by (output started at E:\phpStudy\WWW\ecmall\eccore\controller\message.base.php:321)	\includes\libraries\session.lib.php	136
+Tue, 02 Aug 2016 10:30:16 +0800	[2]Cannot modify header information - headers already sent by (output started at E:\phpStudy\WWW\ecmall\eccore\controller\message.base.php:321)	\includes\libraries\session.lib.php	136
+Tue, 02 Aug 2016 10:33:26 +0800	[2]session_start(): Cannot send session cache limiter - headers already sent (output started at E:\phpStudy\WWW\ecmall\eccore\controller\message.base.php:321)	\includes\libraries\session.lib.php	404
+Tue, 02 Aug 2016 10:33:39 +0800	[2]session_start(): Cannot send session cache limiter - headers already sent (output started at E:\phpStudy\WWW\ecmall\eccore\controller\message.base.php:321)	\includes\libraries\session.lib.php	404
+Tue, 02 Aug 2016 10:33:44 +0800	[2]session_start(): Cannot send session cache limiter - headers already sent (output started at E:\phpStudy\WWW\ecmall\eccore\controller\message.base.php:321)	\includes\libraries\session.lib.php	404
+Tue, 02 Aug 2016 10:36:45 +0800	[2]session_start(): Cannot send session cache limiter - headers already sent (output started at E:\phpStudy\WWW\ecmall\eccore\controller\message.base.php:321)	\includes\libraries\session.lib.php	404
+Tue, 02 Aug 2016 10:38:17 +0800	[2]session_start(): Cannot send session cache limiter - headers already sent (output started at E:\phpStudy\WWW\ecmall\eccore\controller\message.base.php:321)	\includes\libraries\session.lib.php	404
+Tue, 02 Aug 2016 10:41:24 +0800	[2]session_start(): Cannot send session cache limiter - headers already sent (output started at E:\phpStudy\WWW\ecmall\eccore\controller\message.base.php:321)	\includes\libraries\session.lib.php	404
+Tue, 02 Aug 2016 10:41:36 +0800	[2]session_start(): Cannot send session cache limiter - headers already sent (output started at E:\phpStudy\WWW\ecmall\eccore\controller\message.base.php:321)	\includes\libraries\session.lib.php	404
+Tue, 02 Aug 2016 10:41:42 +0800	[2]session_start(): Cannot send session cache limiter - headers already sent (output started at E:\phpStudy\WWW\ecmall\eccore\controller\message.base.php:321)	\includes\libraries\session.lib.php	404
+Tue, 02 Aug 2016 10:54:52 +0800	[256]MySQL Error[1054]: Unknown column 'goods.default_image' in 'field list'
+MySQL Query:SELECT group_id, goods.default_image, group_name, gb.end_time, spec_price,gb.min_quantity,gb.store_id,s.store_name,gb.group_image,gb.group_id FROM ecm_groupbuy gb LEFT JOIN ecm_goods g ON gb.goods_id = g.goods_id LEFT JOIN ecm_store s ON gb.store_id = s.store_id WHERE gb.recommended=1 AND gb.state=1 AND gb.end_time>1470077692 ORDER BY group_id DESC LIMIT 2
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Tue, 02 Aug 2016 10:56:32 +0800	[256]MySQL Error[1051]: Unknown table 'this'
+MySQL Query:SELECT this.*,eggpresent.id FROM ecm_eggpresent eggpresent ORDER BY id DESC LIMIT 5
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Tue, 02 Aug 2016 10:57:23 +0800	[256]MySQL Error[1051]: Unknown table 'this'
+MySQL Query:SELECT this.*,eggpresent.id FROM ecm_eggpresent eggpresent ORDER BY id DESC LIMIT 5
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Tue, 02 Aug 2016 10:57:33 +0800	[256]MySQL Error[1051]: Unknown table 'this'
+MySQL Query:SELECT this.*,eggpresent.id FROM ecm_eggpresent eggpresent ORDER BY id DESC LIMIT 5
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Tue, 02 Aug 2016 10:57:59 +0800	[256]MySQL Error[1051]: Unknown table 'this'
+MySQL Query:SELECT this.*,eggpresent.id FROM ecm_eggpresent eggpresent ORDER BY id DESC LIMIT 5
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Tue, 02 Aug 2016 11:01:19 +0800	[2]preg_replace_callback(): Modifier /e cannot be used with replacement callback	\eccore\view\template.php	1398
+Tue, 02 Aug 2016 11:01:23 +0800	[2]preg_replace_callback(): Modifier /e cannot be used with replacement callback	\eccore\view\template.php	1398
+Tue, 02 Aug 2016 11:06:56 +0800	[2]preg_replace_callback(): Modifier /e cannot be used with replacement callback	\eccore\view\template.php	1398
+Tue, 02 Aug 2016 11:07:07 +0800	[2]preg_replace_callback(): Modifier /e cannot be used with replacement callback	\eccore\view\template.php	1398
+Tue, 02 Aug 2016 11:08:45 +0800	[2]preg_replace_callback(): Modifier /e cannot be used with replacement callback	\eccore\view\template.php	1398
+Tue, 02 Aug 2016 11:16:30 +0800	[2]preg_replace_callback(): Modifier /e cannot be used with replacement callback	\eccore\view\template.php	1398
+Tue, 02 Aug 2016 11:16:32 +0800	[2]preg_replace_callback(): Modifier /e cannot be used with replacement callback	\eccore\view\template.php	1398
+Tue, 02 Aug 2016 11:17:00 +0800	[2]preg_replace_callback(): Modifier /e cannot be used with replacement callback	\eccore\view\template.php	1397
+Tue, 02 Aug 2016 11:17:07 +0800	[2]preg_replace_callback(): Modifier /e cannot be used with replacement callback	\eccore\view\template.php	1397
+Tue, 02 Aug 2016 11:17:12 +0800	[2]preg_replace_callback(): Modifier /e cannot be used with replacement callback	\eccore\view\template.php	1397
+Tue, 02 Aug 2016 11:17:21 +0800	[2]preg_replace_callback(): Modifier /e cannot be used with replacement callback	\eccore\view\template.php	1397
+Tue, 02 Aug 2016 11:17:27 +0800	[2]preg_replace_callback(): Modifier /e cannot be used with replacement callback	\eccore\view\template.php	1397
+Tue, 02 Aug 2016 11:21:33 +0800	[2]preg_replace_callback(): Modifier /e cannot be used with replacement callback	\eccore\view\template.php	1396
+Tue, 02 Aug 2016 11:22:11 +0800	[2]preg_replace_callback(): Modifier /e cannot be used with replacement callback	\eccore\view\template.php	1396
+Tue, 02 Aug 2016 11:22:17 +0800	[2]preg_replace_callback(): Modifier /e cannot be used with replacement callback	\eccore\view\template.php	1396
+Tue, 02 Aug 2016 11:22:20 +0800	[2]preg_replace_callback(): Modifier /e cannot be used with replacement callback	\eccore\view\template.php	1396
+Tue, 02 Aug 2016 11:22:27 +0800	[2]preg_replace_callback(): Modifier /e cannot be used with replacement callback	\eccore\view\template.php	1396
+Tue, 02 Aug 2016 11:22:41 +0800	[2]preg_replace_callback(): Modifier /e cannot be used with replacement callback	\eccore\view\template.php	1396
+Tue, 02 Aug 2016 11:22:56 +0800	[2]preg_replace_callback(): Modifier /e cannot be used with replacement callback	\eccore\view\template.php	1396
+Tue, 02 Aug 2016 11:22:59 +0800	[2]preg_replace_callback(): Modifier /e cannot be used with replacement callback	\eccore\view\template.php	1396
+Tue, 02 Aug 2016 11:23:55 +0800	[2]mt_rand(): max(0) is smaller than min(1)	\includes\libraries\captcha.lib.php	274
+Tue, 02 Aug 2016 11:24:10 +0800	[2]preg_replace_callback(): Modifier /e cannot be used with replacement callback	\eccore\view\template.php	1396
+Tue, 02 Aug 2016 11:24:22 +0800	[2]mt_rand(): max(20) is smaller than min(21)	\includes\libraries\captcha.lib.php	288
+Tue, 02 Aug 2016 11:24:46 +0800	[2]mt_rand(): max(20) is smaller than min(21)	\includes\libraries\captcha.lib.php	288
+Tue, 02 Aug 2016 14:08:51 +0800	[2]preg_replace_callback(): Modifier /e cannot be used with replacement callback	\eccore\view\template.php	1401
+Tue, 02 Aug 2016 16:46:02 +0800	[2]preg_replace_callback(): Modifier /e cannot be used with replacement callback	\eccore\view\template.php	1401
+Tue, 02 Aug 2016 16:49:38 +0800	[2]preg_replace_callback(): Modifier /e cannot be used with replacement callback	\eccore\view\template.php	357
+Tue, 02 Aug 2016 16:49:42 +0800	[2]preg_replace_callback(): Modifier /e cannot be used with replacement callback	\eccore\view\template.php	357
+Tue, 02 Aug 2016 17:18:11 +0800	[256]MySQL Error[1054]: Unknown column 'goods.default_image' in 'field list'
+MySQL Query:SELECT group_id, goods.default_image, group_name, gb.end_time, spec_price,gb.min_quantity,gb.store_id,s.store_name,gb.group_image,gb.group_id FROM ecm_groupbuy gb LEFT JOIN ecm_goods g ON gb.goods_id = g.goods_id LEFT JOIN ecm_store s ON gb.store_id = s.store_id WHERE gb.recommended=1 AND gb.state=1 AND gb.end_time>1470100691 ORDER BY group_id DESC LIMIT 2
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Tue, 02 Aug 2016 17:18:13 +0800	[256]MySQL Error[1054]: Unknown column 'goods.default_image' in 'field list'
+MySQL Query:SELECT group_id, goods.default_image, group_name, gb.end_time, spec_price,gb.min_quantity,gb.store_id,s.store_name,gb.group_image,gb.group_id FROM ecm_groupbuy gb LEFT JOIN ecm_goods g ON gb.goods_id = g.goods_id LEFT JOIN ecm_store s ON gb.store_id = s.store_id WHERE gb.recommended=1 AND gb.state=1 AND gb.end_time>1470100693 ORDER BY group_id DESC LIMIT 2
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Tue, 02 Aug 2016 17:19:04 +0800	[256]MySQL Error[1051]: Unknown table 'this'
+MySQL Query:SELECT this.*,store.store_name,cart.rec_id FROM ecm_cart cart LEFT JOIN ecm_store s ON cart.store_id = s.store_id WHERE session_id = '7b6a7eb33e26d107880ee75ce3387303'
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Tue, 02 Aug 2016 17:19:05 +0800	[256]MySQL Error[1051]: Unknown table 'this'
+MySQL Query:SELECT this.*,store.store_name,cart.rec_id FROM ecm_cart cart LEFT JOIN ecm_store s ON cart.store_id = s.store_id WHERE session_id = '7b6a7eb33e26d107880ee75ce3387303'
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Tue, 02 Aug 2016 17:19:25 +0800	[256]MySQL Error[1054]: Unknown column 'goods.default_image' in 'field list'
+MySQL Query:SELECT group_id, goods.default_image, group_name, gb.end_time, spec_price,gb.min_quantity,gb.store_id,s.store_name,gb.group_image,gb.group_id FROM ecm_groupbuy gb LEFT JOIN ecm_goods g ON gb.goods_id = g.goods_id LEFT JOIN ecm_store s ON gb.store_id = s.store_id WHERE gb.recommended=1 AND gb.state=1 AND gb.end_time>1470100765 ORDER BY group_id DESC LIMIT 2
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Tue, 02 Aug 2016 17:19:26 +0800	[256]MySQL Error[1054]: Unknown column 'goods.default_image' in 'field list'
+MySQL Query:SELECT group_id, goods.default_image, group_name, gb.end_time, spec_price,gb.min_quantity,gb.store_id,s.store_name,gb.group_image,gb.group_id FROM ecm_groupbuy gb LEFT JOIN ecm_goods g ON gb.goods_id = g.goods_id LEFT JOIN ecm_store s ON gb.store_id = s.store_id WHERE gb.recommended=1 AND gb.state=1 AND gb.end_time>1470100766 ORDER BY group_id DESC LIMIT 2
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Tue, 02 Aug 2016 17:20:54 +0800	[256]MySQL Error[1051]: Unknown table 'this'
+MySQL Query:SELECT this.*,g.goods_id,g.goods_name,g.store_id,g.default_spec,g.price,g.default_image,ju.group_id FROM ecm_ju ju LEFT JOIN ecm_goods g ON ju.goods_id = g.goods_id LEFT JOIN ecm_ju_template jt ON ju.template_id = jt.template_id WHERE ju.status=1 AND jt.state=1 ORDER BY ju.recommend DESC,ju.channel ASC,ju.group_id DESC LIMIT 0,12
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Tue, 02 Aug 2016 17:20:55 +0800	[256]MySQL Error[1051]: Unknown table 'this'
+MySQL Query:SELECT this.*,g.goods_id,g.goods_name,g.store_id,g.default_spec,g.price,g.default_image,ju.group_id FROM ecm_ju ju LEFT JOIN ecm_goods g ON ju.goods_id = g.goods_id LEFT JOIN ecm_ju_template jt ON ju.template_id = jt.template_id WHERE ju.status=1 AND jt.state=1 ORDER BY ju.recommend DESC,ju.channel ASC,ju.group_id DESC LIMIT 0,12
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Tue, 02 Aug 2016 17:32:31 +0800	[256]MySQL Error[1051]: Unknown table 'this'
+MySQL Query:SELECT this.*,g.goods_id,g.goods_name,g.store_id,g.default_spec,g.price,g.default_image,ju.group_id FROM ecm_ju ju LEFT JOIN ecm_goods g ON ju.goods_id = g.goods_id LEFT JOIN ecm_ju_template jt ON ju.template_id = jt.template_id WHERE ju.status=1 AND jt.state=1 ORDER BY ju.recommend DESC,ju.channel ASC,ju.group_id DESC LIMIT 0,12
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Tue, 02 Aug 2016 17:32:32 +0800	[256]MySQL Error[1051]: Unknown table 'this'
+MySQL Query:SELECT this.*,g.goods_id,g.goods_name,g.store_id,g.default_spec,g.price,g.default_image,ju.group_id FROM ecm_ju ju LEFT JOIN ecm_goods g ON ju.goods_id = g.goods_id LEFT JOIN ecm_ju_template jt ON ju.template_id = jt.template_id WHERE ju.status=1 AND jt.state=1 ORDER BY ju.recommend DESC,ju.channel ASC,ju.group_id DESC LIMIT 0,12
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Tue, 02 Aug 2016 17:33:29 +0800	[256]MySQL Error[1051]: Unknown table 'this'
+MySQL Query:SELECT this.*,g.goods_id,g.goods_name,g.store_id,g.default_spec,g.price,g.default_image,ju.group_id FROM ecm_ju ju LEFT JOIN ecm_goods g ON ju.goods_id = g.goods_id LEFT JOIN ecm_ju_template jt ON ju.template_id = jt.template_id WHERE ju.status=1 AND jt.state=1 ORDER BY ju.recommend DESC,ju.channel ASC,ju.group_id DESC LIMIT 0,12
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Tue, 02 Aug 2016 17:33:30 +0800	[256]MySQL Error[1051]: Unknown table 'this'
+MySQL Query:SELECT this.*,g.goods_id,g.goods_name,g.store_id,g.default_spec,g.price,g.default_image,ju.group_id FROM ecm_ju ju LEFT JOIN ecm_goods g ON ju.goods_id = g.goods_id LEFT JOIN ecm_ju_template jt ON ju.template_id = jt.template_id WHERE ju.status=1 AND jt.state=1 ORDER BY ju.recommend DESC,ju.channel ASC,ju.group_id DESC LIMIT 0,12
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Tue, 02 Aug 2016 17:33:43 +0800	[256]MySQL Error[1051]: Unknown table 'this'
+MySQL Query:SELECT this.*,g.goods_id,g.goods_name,g.store_id,g.default_spec,g.price,g.default_image,ju.group_id FROM ecm_ju ju LEFT JOIN ecm_goods g ON ju.goods_id = g.goods_id LEFT JOIN ecm_ju_template jt ON ju.template_id = jt.template_id WHERE ju.status=1 AND jt.state=1 ORDER BY ju.recommend DESC,ju.channel ASC,ju.group_id DESC LIMIT 0,12
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Tue, 02 Aug 2016 17:33:44 +0800	[256]MySQL Error[1051]: Unknown table 'this'
+MySQL Query:SELECT this.*,g.goods_id,g.goods_name,g.store_id,g.default_spec,g.price,g.default_image,ju.group_id FROM ecm_ju ju LEFT JOIN ecm_goods g ON ju.goods_id = g.goods_id LEFT JOIN ecm_ju_template jt ON ju.template_id = jt.template_id WHERE ju.status=1 AND jt.state=1 ORDER BY ju.recommend DESC,ju.channel ASC,ju.group_id DESC LIMIT 0,12
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Tue, 02 Aug 2016 17:36:21 +0800	[256]MySQL Error[1051]: Unknown table 'this'
+MySQL Query:SELECT this.*,g.goods_id,g.goods_name,g.store_id,g.default_spec,g.price,g.default_image,ju.group_id FROM ecm_ju ju LEFT JOIN ecm_goods g ON ju.goods_id = g.goods_id LEFT JOIN ecm_ju_template jt ON ju.template_id = jt.template_id WHERE ju.status=1 AND jt.state=1 ORDER BY ju.recommend DESC,ju.channel ASC,ju.group_id DESC LIMIT 0,12
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Tue, 02 Aug 2016 17:36:22 +0800	[256]MySQL Error[1051]: Unknown table 'this'
+MySQL Query:SELECT this.*,g.goods_id,g.goods_name,g.store_id,g.default_spec,g.price,g.default_image,ju.group_id FROM ecm_ju ju LEFT JOIN ecm_goods g ON ju.goods_id = g.goods_id LEFT JOIN ecm_ju_template jt ON ju.template_id = jt.template_id WHERE ju.status=1 AND jt.state=1 ORDER BY ju.recommend DESC,ju.channel ASC,ju.group_id DESC LIMIT 0,12
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Tue, 02 Aug 2016 17:37:35 +0800	[256]MySQL Error[1051]: Unknown table 'this'
+MySQL Query:SELECT this.*,g.goods_id,g.goods_name,g.store_id,g.default_spec,g.price,g.default_image,ju.group_id FROM ecm_ju ju LEFT JOIN ecm_goods g ON ju.goods_id = g.goods_id LEFT JOIN ecm_ju_template jt ON ju.template_id = jt.template_id WHERE ju.status=1 AND jt.state=1 ORDER BY ju.recommend DESC,ju.channel ASC,ju.group_id DESC LIMIT 0,12
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Tue, 02 Aug 2016 17:37:36 +0800	[256]MySQL Error[1051]: Unknown table 'this'
+MySQL Query:SELECT this.*,g.goods_id,g.goods_name,g.store_id,g.default_spec,g.price,g.default_image,ju.group_id FROM ecm_ju ju LEFT JOIN ecm_goods g ON ju.goods_id = g.goods_id LEFT JOIN ecm_ju_template jt ON ju.template_id = jt.template_id WHERE ju.status=1 AND jt.state=1 ORDER BY ju.recommend DESC,ju.channel ASC,ju.group_id DESC LIMIT 0,12
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Tue, 02 Aug 2016 17:41:02 +0800	[256]MySQL Error[1051]: Unknown table 'this'
+MySQL Query:SELECT this.*,g.goods_id,g.goods_name,g.store_id,g.default_spec,g.price,g.default_image,ju.group_id FROM ecm_ju ju LEFT JOIN ecm_goods g ON ju.goods_id = g.goods_id LEFT JOIN ecm_ju_template jt ON ju.template_id = jt.template_id WHERE ju.status=1 AND jt.state=1 ORDER BY ju.recommend DESC,ju.channel ASC,ju.group_id DESC LIMIT 0,12
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Tue, 02 Aug 2016 17:45:15 +0800	[256]MySQL Error[1051]: Unknown table 'this'
+MySQL Query:SELECT this.*,g.goods_id,g.goods_name,g.store_id,g.default_spec,g.price,g.default_image,ju.group_id FROM ecm_ju ju LEFT JOIN ecm_goods g ON ju.goods_id = g.goods_id LEFT JOIN ecm_ju_template jt ON ju.template_id = jt.template_id WHERE ju.status=1 AND jt.state=1 ORDER BY ju.recommend DESC,ju.channel ASC,ju.group_id DESC LIMIT 0,12
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Tue, 02 Aug 2016 17:45:16 +0800	[256]MySQL Error[1051]: Unknown table 'this'
+MySQL Query:SELECT this.*,g.goods_id,g.goods_name,g.store_id,g.default_spec,g.price,g.default_image,ju.group_id FROM ecm_ju ju LEFT JOIN ecm_goods g ON ju.goods_id = g.goods_id LEFT JOIN ecm_ju_template jt ON ju.template_id = jt.template_id WHERE ju.status=1 AND jt.state=1 ORDER BY ju.recommend DESC,ju.channel ASC,ju.group_id DESC LIMIT 0,12
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Tue, 02 Aug 2016 17:52:21 +0800	[256]MySQL Error[1051]: Unknown table 'this'
+MySQL Query:SELECT this.*,g.goods_id,g.goods_name,g.store_id,g.default_spec,g.price,g.default_image,ju.group_id FROM ecm_ju ju LEFT JOIN ecm_goods g ON ju.goods_id = g.goods_id LEFT JOIN ecm_ju_template jt ON ju.template_id = jt.template_id WHERE ju.status=1 AND jt.state=1 ORDER BY ju.recommend DESC,ju.channel ASC,ju.group_id DESC LIMIT 0,12
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Tue, 02 Aug 2016 17:52:58 +0800	[256]MySQL Error[1051]: Unknown table 'this'
+MySQL Query:SELECT this.*,g.goods_id,g.goods_name,g.store_id,g.default_spec,g.price,g.default_image,ju.group_id FROM ecm_ju ju LEFT JOIN ecm_goods g ON ju.goods_id = g.goods_id LEFT JOIN ecm_ju_template jt ON ju.template_id = jt.template_id WHERE ju.status=1 AND jt.state=1 ORDER BY ju.recommend DESC,ju.channel ASC,ju.group_id DESC LIMIT 0,12
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Tue, 02 Aug 2016 17:53:12 +0800	[256]MySQL Error[1051]: Unknown table 'this'
+MySQL Query:SELECT this.*,g.goods_id,g.goods_name,g.store_id,g.default_spec,g.price,g.default_image,ju.group_id FROM ecm_ju ju LEFT JOIN ecm_goods g ON ju.goods_id = g.goods_id LEFT JOIN ecm_ju_template jt ON ju.template_id = jt.template_id WHERE ju.status=1 AND jt.state=1 ORDER BY ju.recommend DESC,ju.channel ASC,ju.group_id DESC LIMIT 0,12
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Tue, 02 Aug 2016 17:53:13 +0800	[256]MySQL Error[1051]: Unknown table 'this'
+MySQL Query:SELECT this.*,g.goods_id,g.goods_name,g.store_id,g.default_spec,g.price,g.default_image,ju.group_id FROM ecm_ju ju LEFT JOIN ecm_goods g ON ju.goods_id = g.goods_id LEFT JOIN ecm_ju_template jt ON ju.template_id = jt.template_id WHERE ju.status=1 AND jt.state=1 ORDER BY ju.recommend DESC,ju.channel ASC,ju.group_id DESC LIMIT 0,12
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Tue, 02 Aug 2016 17:55:18 +0800	[256]MySQL Error[1051]: Unknown table 'this'
+MySQL Query:SELECT this.*,g.goods_id,g.goods_name,g.store_id,g.default_spec,g.price,g.default_image,ju.group_id FROM ecm_ju ju LEFT JOIN ecm_goods g ON ju.goods_id = g.goods_id LEFT JOIN ecm_ju_template jt ON ju.template_id = jt.template_id WHERE ju.status=1 AND jt.state=1 ORDER BY ju.recommend DESC,ju.channel ASC,ju.group_id DESC LIMIT 0,12
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Tue, 02 Aug 2016 17:55:19 +0800	[256]MySQL Error[1051]: Unknown table 'this'
+MySQL Query:SELECT this.*,g.goods_id,g.goods_name,g.store_id,g.default_spec,g.price,g.default_image,ju.group_id FROM ecm_ju ju LEFT JOIN ecm_goods g ON ju.goods_id = g.goods_id LEFT JOIN ecm_ju_template jt ON ju.template_id = jt.template_id WHERE ju.status=1 AND jt.state=1 ORDER BY ju.recommend DESC,ju.channel ASC,ju.group_id DESC LIMIT 0,12
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Tue, 02 Aug 2016 17:56:23 +0800	[256]MySQL Error[1051]: Unknown table 'this'
+MySQL Query:SELECT this.*,g.goods_id,g.goods_name,g.store_id,g.default_spec,g.price,g.default_image,ju.group_id FROM ecm_ju ju LEFT JOIN ecm_goods g ON ju.goods_id = g.goods_id LEFT JOIN ecm_ju_template jt ON ju.template_id = jt.template_id WHERE ju.status=1 AND jt.state=1 ORDER BY ju.recommend DESC,ju.channel ASC,ju.group_id DESC LIMIT 0,12
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Tue, 02 Aug 2016 17:57:04 +0800	[256]MySQL Error[1051]: Unknown table 'this'
+MySQL Query:SELECT this.*,g.goods_id,g.goods_name,g.store_id,g.default_spec,g.price,g.default_image,ju.group_id FROM ecm_ju ju LEFT JOIN ecm_goods g ON ju.goods_id = g.goods_id LEFT JOIN ecm_ju_template jt ON ju.template_id = jt.template_id WHERE ju.status=1 AND jt.state=1 ORDER BY ju.recommend DESC,ju.channel ASC,ju.group_id DESC LIMIT 0,12
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Wed, 03 Aug 2016 09:26:57 +0800	[256]MySQL Error[1054]: Unknown column 'goods.default_image' in 'field list'
+MySQL Query:SELECT group_id, goods.default_image, group_name, gb.end_time, spec_price,gb.min_quantity,gb.store_id,s.store_name,gb.group_image,gb.group_id FROM ecm_groupbuy gb LEFT JOIN ecm_goods g ON gb.goods_id = g.goods_id LEFT JOIN ecm_store s ON gb.store_id = s.store_id WHERE gb.recommended=1 AND gb.state=1 AND gb.end_time>1470158817 ORDER BY group_id DESC LIMIT 2
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Wed, 03 Aug 2016 09:31:29 +0800	[256]MySQL Error[1051]: Unknown table 'this'
+MySQL Query:SELECT this.*,g.goods_id,g.goods_name,g.store_id,g.default_spec,g.price,g.default_image,ju.group_id FROM ecm_ju ju LEFT JOIN ecm_goods g ON ju.goods_id = g.goods_id LEFT JOIN ecm_ju_template jt ON ju.template_id = jt.template_id WHERE ju.status=1 AND jt.state=1 ORDER BY ju.recommend DESC,ju.channel ASC,ju.group_id DESC LIMIT 0,12
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Wed, 03 Aug 2016 10:28:46 +0800	[256]MySQL Error[1051]: Unknown table 'this'
+MySQL Query:SELECT this.*,g.goods_id,g.goods_name,g.store_id,g.default_spec,g.price,g.default_image,ju.group_id FROM ecm_ju ju LEFT JOIN ecm_goods g ON ju.goods_id = g.goods_id LEFT JOIN ecm_ju_template jt ON ju.template_id = jt.template_id WHERE ju.status=1 AND jt.state=1 ORDER BY ju.recommend DESC,ju.channel ASC,ju.group_id DESC LIMIT 0,12
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Wed, 03 Aug 2016 11:09:03 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '>_getFieldTable('this') . '.*',$this->_getFieldTable('g') . '.goods_id',$this->_' at line 1
+MySQL Query:SELECT $this->_getFieldTable('this') . '.*',$this->_getFieldTable('g') . '.goods_id',$this->_getFieldTable('g') . '.goods_name',$this->_getFieldTable('g') . '.store_id',$this->_getFieldTable('g') . '.default_spec',$this->_getFieldTable('g') . '.price',$this->_getFieldTable('g') . '.default_image',ju.group_id FROM ecm_ju ju LEFT JOIN ecm_goods g ON ju.goods_id = g.goods_id LEFT JOIN ecm_ju_template jt ON ju.template_id = jt.template_id WHERE ju.status=1 AND jt.state=1 ORDER BY $this->_getFieldTable('ju') . '.recommend' DESC,$this->_getFieldTable('ju') . '.channel' ASC,$this->_getFieldTable('ju') . '.group_id' DESC LIMIT 0,12
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Wed, 03 Aug 2016 11:09:54 +0800	[256]MySQL Error[1051]: Unknown table 'this'
+MySQL Query:SELECT this.*,g.goods_id,g.goods_name,g.store_id,g.default_spec,g.price,g.default_image,ju.group_id FROM ecm_ju ju LEFT JOIN ecm_goods g ON ju.goods_id = g.goods_id LEFT JOIN ecm_ju_template jt ON ju.template_id = jt.template_id WHERE ju.status=1 AND jt.state=1 ORDER BY ju.recommend DESC,ju.channel ASC,ju.group_id DESC LIMIT 0,12
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Thu, 04 Aug 2016 08:45:45 +0800	[256]MySQL Error[1054]: Unknown column 'goods.default_image' in 'field list'
+MySQL Query:SELECT group_id, goods.default_image, group_name, gb.end_time, spec_price,gb.min_quantity,gb.store_id,s.store_name,gb.group_image,gb.group_id FROM ecm_groupbuy gb LEFT JOIN ecm_goods g ON gb.goods_id = g.goods_id LEFT JOIN ecm_store s ON gb.store_id = s.store_id WHERE gb.recommended=1 AND gb.state=1 AND gb.end_time>1470242745 ORDER BY group_id DESC LIMIT 2
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Thu, 04 Aug 2016 08:46:51 +0800	[256]MySQL Error[1054]: Unknown column 'goods.default_image' in 'field list'
+MySQL Query:SELECT group_id, goods.default_image, group_name, gb.end_time, spec_price,gb.min_quantity,gb.store_id,s.store_name,gb.group_image,gb.group_id FROM ecm_groupbuy gb LEFT JOIN ecm_goods g ON gb.goods_id = g.goods_id LEFT JOIN ecm_store s ON gb.store_id = s.store_id WHERE gb.recommended=1 AND gb.state=1 AND gb.end_time>1470242811 ORDER BY group_id DESC LIMIT 2
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Thu, 04 Aug 2016 08:53:28 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '>_getFieldTable('gb') . '.*',$this->_getFieldTable('g') . '.default_image',$this' at line 1
+MySQL Query:SELECT $this->_getFieldTable('gb') . '.*',$this->_getFieldTable('g') . '.default_image',$this->_getFieldTable('g') . '.price',default_spec,$this->_getFieldTable('s') . '.store_name',gb.group_id FROM ecm_groupbuy gb LEFT JOIN ecm_store s ON gb.store_id = s.store_id LEFT JOIN ecm_goods g ON gb.goods_id = g.goods_id WHERE 1=1 ORDER BY group_id desc LIMIT 0,40
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Thu, 04 Aug 2016 08:55:25 +0800	[256]MySQL Error[1054]: Unknown column 'goods.default_image' in 'field list'
+MySQL Query:SELECT group_id, goods.default_image, group_name, gb.end_time, spec_price,gb.min_quantity,gb.store_id,s.store_name,gb.group_image,gb.group_id FROM ecm_groupbuy gb LEFT JOIN ecm_goods g ON gb.goods_id = g.goods_id LEFT JOIN ecm_store s ON gb.store_id = s.store_id WHERE gb.recommended=1 AND gb.state=1 AND gb.end_time>1470243325 ORDER BY group_id DESC LIMIT 2
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Thu, 04 Aug 2016 08:57:09 +0800	[256]MySQL Error[1054]: Unknown column 'goods.default_image' in 'field list'
+MySQL Query:SELECT group_id, goods.default_image, group_name, gb.end_time, spec_price,gb.min_quantity,gb.store_id,s.store_name,gb.group_image,gb.group_id FROM ecm_groupbuy gb LEFT JOIN ecm_goods g ON gb.goods_id = g.goods_id LEFT JOIN ecm_store s ON gb.store_id = s.store_id WHERE gb.recommended=1 AND gb.state=1 AND gb.end_time>1470243429 ORDER BY group_id DESC LIMIT 2
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Thu, 04 Aug 2016 09:01:26 +0800	[256]MySQL Error[1054]: Unknown column 'goods.default_image' in 'field list'
+MySQL Query:SELECT group_id, goods.default_image, group_name, gb.end_time, spec_price,gb.min_quantity,gb.store_id,s.store_name,gb.group_image,gb.group_id FROM ecm_groupbuy gb LEFT JOIN ecm_goods g ON gb.goods_id = g.goods_id LEFT JOIN ecm_store s ON gb.store_id = s.store_id WHERE gb.recommended=1 AND gb.state=1 AND gb.end_time>1470243686 ORDER BY group_id DESC LIMIT 2
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Thu, 04 Aug 2016 09:02:39 +0800	[256]MySQL Error[1054]: Unknown column 'goods.default_image' in 'field list'
+MySQL Query:SELECT group_id, goods.default_image, group_name, gb.end_time, spec_price,gb.min_quantity,gb.store_id,s.store_name,gb.group_image,gb.group_id FROM ecm_groupbuy gb LEFT JOIN ecm_goods g ON gb.goods_id = g.goods_id LEFT JOIN ecm_store s ON gb.store_id = s.store_id WHERE gb.recommended=1 AND gb.state=1 AND gb.end_time>1470243759 ORDER BY group_id DESC LIMIT 2
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Thu, 04 Aug 2016 09:02:56 +0800	[256]MySQL Error[1054]: Unknown column 'goods.default_image' in 'field list'
+MySQL Query:SELECT group_id, goods.default_image, group_name, gb.end_time, spec_price,gb.min_quantity,gb.store_id,s.store_name,gb.group_image,gb.group_id FROM ecm_groupbuy gb LEFT JOIN ecm_goods g ON gb.goods_id = g.goods_id LEFT JOIN ecm_store s ON gb.store_id = s.store_id WHERE gb.recommended=1 AND gb.state=1 AND gb.end_time>1470243776 ORDER BY group_id DESC LIMIT 2
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Thu, 04 Aug 2016 09:06:05 +0800	[256]MySQL Error[1054]: Unknown column 'goods.default_image' in 'field list'
+MySQL Query:SELECT group_id, goods.default_image, group_name, gb.end_time, spec_price,gb.min_quantity,gb.store_id,s.store_name,gb.group_image,gb.group_id FROM ecm_groupbuy gb LEFT JOIN ecm_goods g ON gb.goods_id = g.goods_id LEFT JOIN ecm_store s ON gb.store_id = s.store_id WHERE gb.recommended=1 AND gb.state=1 AND gb.end_time>1470243965 ORDER BY group_id DESC LIMIT 2
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Fri, 12 Aug 2016 14:31:25 +0800	[2]mt_rand(): max(20) is smaller than min(21)	\includes\libraries\captcha.lib.php	288
+Fri, 12 Aug 2016 14:31:33 +0800	[2]mt_rand(): max(20) is smaller than min(21)	\includes\libraries\captcha.lib.php	288
+Fri, 12 Aug 2016 14:31:33 +0800	[2]mt_rand(): max(20) is smaller than min(21)	\includes\libraries\captcha.lib.php	288
+Fri, 12 Aug 2016 16:52:52 +0800	[256]MySQL Error[1146]: Table 'ecmail.ecm_' doesn't exist
+MySQL Query:SELECT COUNT(*) as c FROM ecm_ order_alias WHERE buyer_id=3 AND del_status not in(-1,-2)
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[456]	\eccore\model\mysql.php	287
+Fri, 12 Aug 2016 16:53:31 +0800	[256]MySQL Error[1146]: Table 'ecmail.ecm_orders' doesn't exist
+MySQL Query:SELECT COUNT(*) as c FROM ecm_orders order_alias WHERE buyer_id=3 AND del_status not in(-1,-2)
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[456]	\eccore\model\mysql.php	287
+Fri, 12 Aug 2016 16:54:13 +0800	[256]MySQL Error[1146]: Table 'ecmail.ecm_' doesn't exist
+MySQL Query:SELECT COUNT(*) as c FROM ecm_ order_alias WHERE buyer_id=3 AND del_status not in(-1,-2)
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[456]	\eccore\model\mysql.php	287
+Fri, 12 Aug 2016 16:54:18 +0800	[256]MySQL Error[1146]: Table 'ecmail.ecm_' doesn't exist
+MySQL Query:SELECT COUNT(*) as c FROM ecm_ order_alias WHERE buyer_id=3 AND del_status not in(-1,-2)
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[456]	\eccore\model\mysql.php	287
+Fri, 12 Aug 2016 16:54:20 +0800	[256]MySQL Error[1146]: Table 'ecmail.ecm_' doesn't exist
+MySQL Query:SELECT COUNT(*) as c FROM ecm_ order_alias WHERE buyer_id=3 AND del_status not in(-1,-2)
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[456]	\eccore\model\mysql.php	287
+Fri, 12 Aug 2016 16:54:49 +0800	[256]MySQL Error[1146]: Table 'ecmail.ecm_' doesn't exist
+MySQL Query:SELECT COUNT(*) as c FROM ecm_ order_alias WHERE buyer_id=3 AND del_status not in(-1,-2)
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[456]	\eccore\model\mysql.php	287
+Fri, 12 Aug 2016 16:55:57 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND del_status not in(-1,-2)' at line 1
+MySQL Query:SELECT COUNT(*) as c FROM ecm_order order_alias WHERE  AND del_status not in(-1,-2)
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[456]	\eccore\model\mysql.php	287
+Sat, 13 Aug 2016 16:07:34 +0800	[2]Invalid argument supplied for foreach()	\app\my_invoice.app.php	78
+Sat, 13 Aug 2016 16:42:58 +0800	[2]Invalid argument supplied for foreach()	\app\my_invoice.app.php	77
+Mon, 15 Aug 2016 14:27:07 +0800	[256]MySQL Error[1054]: Unknown column 'invoice_tid' in 'field list'
+MySQL Query:INSERT INTO ecm_invoice(order_id,invoice_tid,type,status,apply_date,apply_uid) VALUES('2','','1','1','1471242427','3')
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\model.base.php[299]	\eccore\model\mysql.php	287
+Mon, 15 Aug 2016 16:06:54 +0800	[2]mt_rand(): max(20) is smaller than min(21)	\includes\libraries\captcha.lib.php	288
+Mon, 15 Aug 2016 16:07:53 +0800	[2]mt_rand(): max(0) is smaller than min(1)	\includes\libraries\captcha.lib.php	274

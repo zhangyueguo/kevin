@@ -1,0 +1,685 @@
+Tue, 02 Aug 2016 10:24:28 +0800	[2]Cannot modify header information - headers already sent by (output started at E:\phpStudy\WWW\ecmall\eccore\controller\message.base.php:321)	\includes\libraries\session.lib.php	136
+Tue, 02 Aug 2016 10:25:40 +0800	[2]Cannot modify header information - headers already sent by (output started at E:\phpStudy\WWW\ecmall\eccore\controller\message.base.php:321)	\includes\libraries\session.lib.php	136
+Tue, 02 Aug 2016 10:26:55 +0800	[2]Cannot modify header information - headers already sent by (output started at E:\phpStudy\WWW\ecmall\eccore\controller\message.base.php:321)	\includes\libraries\session.lib.php	136
+Tue, 02 Aug 2016 10:27:01 +0800	[2]Cannot modify header information - headers already sent by (output started at E:\phpStudy\WWW\ecmall\eccore\controller\message.base.php:321)	\includes\libraries\session.lib.php	136
+Tue, 02 Aug 2016 10:27:17 +0800	[2]Cannot modify header information - headers already sent by (output started at E:\phpStudy\WWW\ecmall\eccore\controller\message.base.php:321)	\includes\libraries\session.lib.php	136
+Tue, 02 Aug 2016 10:30:16 +0800	[2]Cannot modify header information - headers already sent by (output started at E:\phpStudy\WWW\ecmall\eccore\controller\message.base.php:321)	\includes\libraries\session.lib.php	136
+Tue, 02 Aug 2016 10:33:26 +0800	[2]session_start(): Cannot send session cache limiter - headers already sent (output started at E:\phpStudy\WWW\ecmall\eccore\controller\message.base.php:321)	\includes\libraries\session.lib.php	404
+Tue, 02 Aug 2016 10:33:39 +0800	[2]session_start(): Cannot send session cache limiter - headers already sent (output started at E:\phpStudy\WWW\ecmall\eccore\controller\message.base.php:321)	\includes\libraries\session.lib.php	404
+Tue, 02 Aug 2016 10:33:44 +0800	[2]session_start(): Cannot send session cache limiter - headers already sent (output started at E:\phpStudy\WWW\ecmall\eccore\controller\message.base.php:321)	\includes\libraries\session.lib.php	404
+Tue, 02 Aug 2016 10:36:45 +0800	[2]session_start(): Cannot send session cache limiter - headers already sent (output started at E:\phpStudy\WWW\ecmall\eccore\controller\message.base.php:321)	\includes\libraries\session.lib.php	404
+Tue, 02 Aug 2016 10:38:17 +0800	[2]session_start(): Cannot send session cache limiter - headers already sent (output started at E:\phpStudy\WWW\ecmall\eccore\controller\message.base.php:321)	\includes\libraries\session.lib.php	404
+Tue, 02 Aug 2016 10:41:24 +0800	[2]session_start(): Cannot send session cache limiter - headers already sent (output started at E:\phpStudy\WWW\ecmall\eccore\controller\message.base.php:321)	\includes\libraries\session.lib.php	404
+Tue, 02 Aug 2016 10:41:36 +0800	[2]session_start(): Cannot send session cache limiter - headers already sent (output started at E:\phpStudy\WWW\ecmall\eccore\controller\message.base.php:321)	\includes\libraries\session.lib.php	404
+Tue, 02 Aug 2016 10:41:42 +0800	[2]session_start(): Cannot send session cache limiter - headers already sent (output started at E:\phpStudy\WWW\ecmall\eccore\controller\message.base.php:321)	\includes\libraries\session.lib.php	404
+Tue, 02 Aug 2016 10:54:52 +0800	[256]MySQL Error[1054]: Unknown column 'goods.default_image' in 'field list'
+MySQL Query:SELECT group_id, goods.default_image, group_name, gb.end_time, spec_price,gb.min_quantity,gb.store_id,s.store_name,gb.group_image,gb.group_id FROM ecm_groupbuy gb LEFT JOIN ecm_goods g ON gb.goods_id = g.goods_id LEFT JOIN ecm_store s ON gb.store_id = s.store_id WHERE gb.recommended=1 AND gb.state=1 AND gb.end_time>1470077692 ORDER BY group_id DESC LIMIT 2
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Tue, 02 Aug 2016 10:56:32 +0800	[256]MySQL Error[1051]: Unknown table 'this'
+MySQL Query:SELECT this.*,eggpresent.id FROM ecm_eggpresent eggpresent ORDER BY id DESC LIMIT 5
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Tue, 02 Aug 2016 10:57:23 +0800	[256]MySQL Error[1051]: Unknown table 'this'
+MySQL Query:SELECT this.*,eggpresent.id FROM ecm_eggpresent eggpresent ORDER BY id DESC LIMIT 5
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Tue, 02 Aug 2016 10:57:33 +0800	[256]MySQL Error[1051]: Unknown table 'this'
+MySQL Query:SELECT this.*,eggpresent.id FROM ecm_eggpresent eggpresent ORDER BY id DESC LIMIT 5
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Tue, 02 Aug 2016 10:57:59 +0800	[256]MySQL Error[1051]: Unknown table 'this'
+MySQL Query:SELECT this.*,eggpresent.id FROM ecm_eggpresent eggpresent ORDER BY id DESC LIMIT 5
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Tue, 02 Aug 2016 11:01:19 +0800	[2]preg_replace_callback(): Modifier /e cannot be used with replacement callback	\eccore\view\template.php	1398
+Tue, 02 Aug 2016 11:01:23 +0800	[2]preg_replace_callback(): Modifier /e cannot be used with replacement callback	\eccore\view\template.php	1398
+Tue, 02 Aug 2016 11:06:56 +0800	[2]preg_replace_callback(): Modifier /e cannot be used with replacement callback	\eccore\view\template.php	1398
+Tue, 02 Aug 2016 11:07:07 +0800	[2]preg_replace_callback(): Modifier /e cannot be used with replacement callback	\eccore\view\template.php	1398
+Tue, 02 Aug 2016 11:08:45 +0800	[2]preg_replace_callback(): Modifier /e cannot be used with replacement callback	\eccore\view\template.php	1398
+Tue, 02 Aug 2016 11:16:30 +0800	[2]preg_replace_callback(): Modifier /e cannot be used with replacement callback	\eccore\view\template.php	1398
+Tue, 02 Aug 2016 11:16:32 +0800	[2]preg_replace_callback(): Modifier /e cannot be used with replacement callback	\eccore\view\template.php	1398
+Tue, 02 Aug 2016 11:17:00 +0800	[2]preg_replace_callback(): Modifier /e cannot be used with replacement callback	\eccore\view\template.php	1397
+Tue, 02 Aug 2016 11:17:07 +0800	[2]preg_replace_callback(): Modifier /e cannot be used with replacement callback	\eccore\view\template.php	1397
+Tue, 02 Aug 2016 11:17:12 +0800	[2]preg_replace_callback(): Modifier /e cannot be used with replacement callback	\eccore\view\template.php	1397
+Tue, 02 Aug 2016 11:17:21 +0800	[2]preg_replace_callback(): Modifier /e cannot be used with replacement callback	\eccore\view\template.php	1397
+Tue, 02 Aug 2016 11:17:27 +0800	[2]preg_replace_callback(): Modifier /e cannot be used with replacement callback	\eccore\view\template.php	1397
+Tue, 02 Aug 2016 11:21:33 +0800	[2]preg_replace_callback(): Modifier /e cannot be used with replacement callback	\eccore\view\template.php	1396
+Tue, 02 Aug 2016 11:22:11 +0800	[2]preg_replace_callback(): Modifier /e cannot be used with replacement callback	\eccore\view\template.php	1396
+Tue, 02 Aug 2016 11:22:17 +0800	[2]preg_replace_callback(): Modifier /e cannot be used with replacement callback	\eccore\view\template.php	1396
+Tue, 02 Aug 2016 11:22:20 +0800	[2]preg_replace_callback(): Modifier /e cannot be used with replacement callback	\eccore\view\template.php	1396
+Tue, 02 Aug 2016 11:22:27 +0800	[2]preg_replace_callback(): Modifier /e cannot be used with replacement callback	\eccore\view\template.php	1396
+Tue, 02 Aug 2016 11:22:41 +0800	[2]preg_replace_callback(): Modifier /e cannot be used with replacement callback	\eccore\view\template.php	1396
+Tue, 02 Aug 2016 11:22:56 +0800	[2]preg_replace_callback(): Modifier /e cannot be used with replacement callback	\eccore\view\template.php	1396
+Tue, 02 Aug 2016 11:22:59 +0800	[2]preg_replace_callback(): Modifier /e cannot be used with replacement callback	\eccore\view\template.php	1396
+Tue, 02 Aug 2016 11:23:55 +0800	[2]mt_rand(): max(0) is smaller than min(1)	\includes\libraries\captcha.lib.php	274
+Tue, 02 Aug 2016 11:24:10 +0800	[2]preg_replace_callback(): Modifier /e cannot be used with replacement callback	\eccore\view\template.php	1396
+Tue, 02 Aug 2016 11:24:22 +0800	[2]mt_rand(): max(20) is smaller than min(21)	\includes\libraries\captcha.lib.php	288
+Tue, 02 Aug 2016 11:24:46 +0800	[2]mt_rand(): max(20) is smaller than min(21)	\includes\libraries\captcha.lib.php	288
+Tue, 02 Aug 2016 14:08:51 +0800	[2]preg_replace_callback(): Modifier /e cannot be used with replacement callback	\eccore\view\template.php	1401
+Tue, 02 Aug 2016 16:46:02 +0800	[2]preg_replace_callback(): Modifier /e cannot be used with replacement callback	\eccore\view\template.php	1401
+Tue, 02 Aug 2016 16:49:38 +0800	[2]preg_replace_callback(): Modifier /e cannot be used with replacement callback	\eccore\view\template.php	357
+Tue, 02 Aug 2016 16:49:42 +0800	[2]preg_replace_callback(): Modifier /e cannot be used with replacement callback	\eccore\view\template.php	357
+Tue, 02 Aug 2016 17:18:11 +0800	[256]MySQL Error[1054]: Unknown column 'goods.default_image' in 'field list'
+MySQL Query:SELECT group_id, goods.default_image, group_name, gb.end_time, spec_price,gb.min_quantity,gb.store_id,s.store_name,gb.group_image,gb.group_id FROM ecm_groupbuy gb LEFT JOIN ecm_goods g ON gb.goods_id = g.goods_id LEFT JOIN ecm_store s ON gb.store_id = s.store_id WHERE gb.recommended=1 AND gb.state=1 AND gb.end_time>1470100691 ORDER BY group_id DESC LIMIT 2
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Tue, 02 Aug 2016 17:18:13 +0800	[256]MySQL Error[1054]: Unknown column 'goods.default_image' in 'field list'
+MySQL Query:SELECT group_id, goods.default_image, group_name, gb.end_time, spec_price,gb.min_quantity,gb.store_id,s.store_name,gb.group_image,gb.group_id FROM ecm_groupbuy gb LEFT JOIN ecm_goods g ON gb.goods_id = g.goods_id LEFT JOIN ecm_store s ON gb.store_id = s.store_id WHERE gb.recommended=1 AND gb.state=1 AND gb.end_time>1470100693 ORDER BY group_id DESC LIMIT 2
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Tue, 02 Aug 2016 17:19:04 +0800	[256]MySQL Error[1051]: Unknown table 'this'
+MySQL Query:SELECT this.*,store.store_name,cart.rec_id FROM ecm_cart cart LEFT JOIN ecm_store s ON cart.store_id = s.store_id WHERE session_id = '7b6a7eb33e26d107880ee75ce3387303'
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Tue, 02 Aug 2016 17:19:05 +0800	[256]MySQL Error[1051]: Unknown table 'this'
+MySQL Query:SELECT this.*,store.store_name,cart.rec_id FROM ecm_cart cart LEFT JOIN ecm_store s ON cart.store_id = s.store_id WHERE session_id = '7b6a7eb33e26d107880ee75ce3387303'
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Tue, 02 Aug 2016 17:19:25 +0800	[256]MySQL Error[1054]: Unknown column 'goods.default_image' in 'field list'
+MySQL Query:SELECT group_id, goods.default_image, group_name, gb.end_time, spec_price,gb.min_quantity,gb.store_id,s.store_name,gb.group_image,gb.group_id FROM ecm_groupbuy gb LEFT JOIN ecm_goods g ON gb.goods_id = g.goods_id LEFT JOIN ecm_store s ON gb.store_id = s.store_id WHERE gb.recommended=1 AND gb.state=1 AND gb.end_time>1470100765 ORDER BY group_id DESC LIMIT 2
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Tue, 02 Aug 2016 17:19:26 +0800	[256]MySQL Error[1054]: Unknown column 'goods.default_image' in 'field list'
+MySQL Query:SELECT group_id, goods.default_image, group_name, gb.end_time, spec_price,gb.min_quantity,gb.store_id,s.store_name,gb.group_image,gb.group_id FROM ecm_groupbuy gb LEFT JOIN ecm_goods g ON gb.goods_id = g.goods_id LEFT JOIN ecm_store s ON gb.store_id = s.store_id WHERE gb.recommended=1 AND gb.state=1 AND gb.end_time>1470100766 ORDER BY group_id DESC LIMIT 2
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Tue, 02 Aug 2016 17:20:54 +0800	[256]MySQL Error[1051]: Unknown table 'this'
+MySQL Query:SELECT this.*,g.goods_id,g.goods_name,g.store_id,g.default_spec,g.price,g.default_image,ju.group_id FROM ecm_ju ju LEFT JOIN ecm_goods g ON ju.goods_id = g.goods_id LEFT JOIN ecm_ju_template jt ON ju.template_id = jt.template_id WHERE ju.status=1 AND jt.state=1 ORDER BY ju.recommend DESC,ju.channel ASC,ju.group_id DESC LIMIT 0,12
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Tue, 02 Aug 2016 17:20:55 +0800	[256]MySQL Error[1051]: Unknown table 'this'
+MySQL Query:SELECT this.*,g.goods_id,g.goods_name,g.store_id,g.default_spec,g.price,g.default_image,ju.group_id FROM ecm_ju ju LEFT JOIN ecm_goods g ON ju.goods_id = g.goods_id LEFT JOIN ecm_ju_template jt ON ju.template_id = jt.template_id WHERE ju.status=1 AND jt.state=1 ORDER BY ju.recommend DESC,ju.channel ASC,ju.group_id DESC LIMIT 0,12
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Tue, 02 Aug 2016 17:32:31 +0800	[256]MySQL Error[1051]: Unknown table 'this'
+MySQL Query:SELECT this.*,g.goods_id,g.goods_name,g.store_id,g.default_spec,g.price,g.default_image,ju.group_id FROM ecm_ju ju LEFT JOIN ecm_goods g ON ju.goods_id = g.goods_id LEFT JOIN ecm_ju_template jt ON ju.template_id = jt.template_id WHERE ju.status=1 AND jt.state=1 ORDER BY ju.recommend DESC,ju.channel ASC,ju.group_id DESC LIMIT 0,12
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Tue, 02 Aug 2016 17:32:32 +0800	[256]MySQL Error[1051]: Unknown table 'this'
+MySQL Query:SELECT this.*,g.goods_id,g.goods_name,g.store_id,g.default_spec,g.price,g.default_image,ju.group_id FROM ecm_ju ju LEFT JOIN ecm_goods g ON ju.goods_id = g.goods_id LEFT JOIN ecm_ju_template jt ON ju.template_id = jt.template_id WHERE ju.status=1 AND jt.state=1 ORDER BY ju.recommend DESC,ju.channel ASC,ju.group_id DESC LIMIT 0,12
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Tue, 02 Aug 2016 17:33:29 +0800	[256]MySQL Error[1051]: Unknown table 'this'
+MySQL Query:SELECT this.*,g.goods_id,g.goods_name,g.store_id,g.default_spec,g.price,g.default_image,ju.group_id FROM ecm_ju ju LEFT JOIN ecm_goods g ON ju.goods_id = g.goods_id LEFT JOIN ecm_ju_template jt ON ju.template_id = jt.template_id WHERE ju.status=1 AND jt.state=1 ORDER BY ju.recommend DESC,ju.channel ASC,ju.group_id DESC LIMIT 0,12
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Tue, 02 Aug 2016 17:33:30 +0800	[256]MySQL Error[1051]: Unknown table 'this'
+MySQL Query:SELECT this.*,g.goods_id,g.goods_name,g.store_id,g.default_spec,g.price,g.default_image,ju.group_id FROM ecm_ju ju LEFT JOIN ecm_goods g ON ju.goods_id = g.goods_id LEFT JOIN ecm_ju_template jt ON ju.template_id = jt.template_id WHERE ju.status=1 AND jt.state=1 ORDER BY ju.recommend DESC,ju.channel ASC,ju.group_id DESC LIMIT 0,12
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Tue, 02 Aug 2016 17:33:43 +0800	[256]MySQL Error[1051]: Unknown table 'this'
+MySQL Query:SELECT this.*,g.goods_id,g.goods_name,g.store_id,g.default_spec,g.price,g.default_image,ju.group_id FROM ecm_ju ju LEFT JOIN ecm_goods g ON ju.goods_id = g.goods_id LEFT JOIN ecm_ju_template jt ON ju.template_id = jt.template_id WHERE ju.status=1 AND jt.state=1 ORDER BY ju.recommend DESC,ju.channel ASC,ju.group_id DESC LIMIT 0,12
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Tue, 02 Aug 2016 17:33:44 +0800	[256]MySQL Error[1051]: Unknown table 'this'
+MySQL Query:SELECT this.*,g.goods_id,g.goods_name,g.store_id,g.default_spec,g.price,g.default_image,ju.group_id FROM ecm_ju ju LEFT JOIN ecm_goods g ON ju.goods_id = g.goods_id LEFT JOIN ecm_ju_template jt ON ju.template_id = jt.template_id WHERE ju.status=1 AND jt.state=1 ORDER BY ju.recommend DESC,ju.channel ASC,ju.group_id DESC LIMIT 0,12
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Tue, 02 Aug 2016 17:36:21 +0800	[256]MySQL Error[1051]: Unknown table 'this'
+MySQL Query:SELECT this.*,g.goods_id,g.goods_name,g.store_id,g.default_spec,g.price,g.default_image,ju.group_id FROM ecm_ju ju LEFT JOIN ecm_goods g ON ju.goods_id = g.goods_id LEFT JOIN ecm_ju_template jt ON ju.template_id = jt.template_id WHERE ju.status=1 AND jt.state=1 ORDER BY ju.recommend DESC,ju.channel ASC,ju.group_id DESC LIMIT 0,12
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Tue, 02 Aug 2016 17:36:22 +0800	[256]MySQL Error[1051]: Unknown table 'this'
+MySQL Query:SELECT this.*,g.goods_id,g.goods_name,g.store_id,g.default_spec,g.price,g.default_image,ju.group_id FROM ecm_ju ju LEFT JOIN ecm_goods g ON ju.goods_id = g.goods_id LEFT JOIN ecm_ju_template jt ON ju.template_id = jt.template_id WHERE ju.status=1 AND jt.state=1 ORDER BY ju.recommend DESC,ju.channel ASC,ju.group_id DESC LIMIT 0,12
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Tue, 02 Aug 2016 17:37:35 +0800	[256]MySQL Error[1051]: Unknown table 'this'
+MySQL Query:SELECT this.*,g.goods_id,g.goods_name,g.store_id,g.default_spec,g.price,g.default_image,ju.group_id FROM ecm_ju ju LEFT JOIN ecm_goods g ON ju.goods_id = g.goods_id LEFT JOIN ecm_ju_template jt ON ju.template_id = jt.template_id WHERE ju.status=1 AND jt.state=1 ORDER BY ju.recommend DESC,ju.channel ASC,ju.group_id DESC LIMIT 0,12
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Tue, 02 Aug 2016 17:37:36 +0800	[256]MySQL Error[1051]: Unknown table 'this'
+MySQL Query:SELECT this.*,g.goods_id,g.goods_name,g.store_id,g.default_spec,g.price,g.default_image,ju.group_id FROM ecm_ju ju LEFT JOIN ecm_goods g ON ju.goods_id = g.goods_id LEFT JOIN ecm_ju_template jt ON ju.template_id = jt.template_id WHERE ju.status=1 AND jt.state=1 ORDER BY ju.recommend DESC,ju.channel ASC,ju.group_id DESC LIMIT 0,12
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Tue, 02 Aug 2016 17:41:02 +0800	[256]MySQL Error[1051]: Unknown table 'this'
+MySQL Query:SELECT this.*,g.goods_id,g.goods_name,g.store_id,g.default_spec,g.price,g.default_image,ju.group_id FROM ecm_ju ju LEFT JOIN ecm_goods g ON ju.goods_id = g.goods_id LEFT JOIN ecm_ju_template jt ON ju.template_id = jt.template_id WHERE ju.status=1 AND jt.state=1 ORDER BY ju.recommend DESC,ju.channel ASC,ju.group_id DESC LIMIT 0,12
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Tue, 02 Aug 2016 17:45:15 +0800	[256]MySQL Error[1051]: Unknown table 'this'
+MySQL Query:SELECT this.*,g.goods_id,g.goods_name,g.store_id,g.default_spec,g.price,g.default_image,ju.group_id FROM ecm_ju ju LEFT JOIN ecm_goods g ON ju.goods_id = g.goods_id LEFT JOIN ecm_ju_template jt ON ju.template_id = jt.template_id WHERE ju.status=1 AND jt.state=1 ORDER BY ju.recommend DESC,ju.channel ASC,ju.group_id DESC LIMIT 0,12
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Tue, 02 Aug 2016 17:45:16 +0800	[256]MySQL Error[1051]: Unknown table 'this'
+MySQL Query:SELECT this.*,g.goods_id,g.goods_name,g.store_id,g.default_spec,g.price,g.default_image,ju.group_id FROM ecm_ju ju LEFT JOIN ecm_goods g ON ju.goods_id = g.goods_id LEFT JOIN ecm_ju_template jt ON ju.template_id = jt.template_id WHERE ju.status=1 AND jt.state=1 ORDER BY ju.recommend DESC,ju.channel ASC,ju.group_id DESC LIMIT 0,12
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Tue, 02 Aug 2016 17:52:21 +0800	[256]MySQL Error[1051]: Unknown table 'this'
+MySQL Query:SELECT this.*,g.goods_id,g.goods_name,g.store_id,g.default_spec,g.price,g.default_image,ju.group_id FROM ecm_ju ju LEFT JOIN ecm_goods g ON ju.goods_id = g.goods_id LEFT JOIN ecm_ju_template jt ON ju.template_id = jt.template_id WHERE ju.status=1 AND jt.state=1 ORDER BY ju.recommend DESC,ju.channel ASC,ju.group_id DESC LIMIT 0,12
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Tue, 02 Aug 2016 17:52:58 +0800	[256]MySQL Error[1051]: Unknown table 'this'
+MySQL Query:SELECT this.*,g.goods_id,g.goods_name,g.store_id,g.default_spec,g.price,g.default_image,ju.group_id FROM ecm_ju ju LEFT JOIN ecm_goods g ON ju.goods_id = g.goods_id LEFT JOIN ecm_ju_template jt ON ju.template_id = jt.template_id WHERE ju.status=1 AND jt.state=1 ORDER BY ju.recommend DESC,ju.channel ASC,ju.group_id DESC LIMIT 0,12
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Tue, 02 Aug 2016 17:53:12 +0800	[256]MySQL Error[1051]: Unknown table 'this'
+MySQL Query:SELECT this.*,g.goods_id,g.goods_name,g.store_id,g.default_spec,g.price,g.default_image,ju.group_id FROM ecm_ju ju LEFT JOIN ecm_goods g ON ju.goods_id = g.goods_id LEFT JOIN ecm_ju_template jt ON ju.template_id = jt.template_id WHERE ju.status=1 AND jt.state=1 ORDER BY ju.recommend DESC,ju.channel ASC,ju.group_id DESC LIMIT 0,12
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Tue, 02 Aug 2016 17:53:13 +0800	[256]MySQL Error[1051]: Unknown table 'this'
+MySQL Query:SELECT this.*,g.goods_id,g.goods_name,g.store_id,g.default_spec,g.price,g.default_image,ju.group_id FROM ecm_ju ju LEFT JOIN ecm_goods g ON ju.goods_id = g.goods_id LEFT JOIN ecm_ju_template jt ON ju.template_id = jt.template_id WHERE ju.status=1 AND jt.state=1 ORDER BY ju.recommend DESC,ju.channel ASC,ju.group_id DESC LIMIT 0,12
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Tue, 02 Aug 2016 17:55:18 +0800	[256]MySQL Error[1051]: Unknown table 'this'
+MySQL Query:SELECT this.*,g.goods_id,g.goods_name,g.store_id,g.default_spec,g.price,g.default_image,ju.group_id FROM ecm_ju ju LEFT JOIN ecm_goods g ON ju.goods_id = g.goods_id LEFT JOIN ecm_ju_template jt ON ju.template_id = jt.template_id WHERE ju.status=1 AND jt.state=1 ORDER BY ju.recommend DESC,ju.channel ASC,ju.group_id DESC LIMIT 0,12
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Tue, 02 Aug 2016 17:55:19 +0800	[256]MySQL Error[1051]: Unknown table 'this'
+MySQL Query:SELECT this.*,g.goods_id,g.goods_name,g.store_id,g.default_spec,g.price,g.default_image,ju.group_id FROM ecm_ju ju LEFT JOIN ecm_goods g ON ju.goods_id = g.goods_id LEFT JOIN ecm_ju_template jt ON ju.template_id = jt.template_id WHERE ju.status=1 AND jt.state=1 ORDER BY ju.recommend DESC,ju.channel ASC,ju.group_id DESC LIMIT 0,12
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Tue, 02 Aug 2016 17:56:23 +0800	[256]MySQL Error[1051]: Unknown table 'this'
+MySQL Query:SELECT this.*,g.goods_id,g.goods_name,g.store_id,g.default_spec,g.price,g.default_image,ju.group_id FROM ecm_ju ju LEFT JOIN ecm_goods g ON ju.goods_id = g.goods_id LEFT JOIN ecm_ju_template jt ON ju.template_id = jt.template_id WHERE ju.status=1 AND jt.state=1 ORDER BY ju.recommend DESC,ju.channel ASC,ju.group_id DESC LIMIT 0,12
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Tue, 02 Aug 2016 17:57:04 +0800	[256]MySQL Error[1051]: Unknown table 'this'
+MySQL Query:SELECT this.*,g.goods_id,g.goods_name,g.store_id,g.default_spec,g.price,g.default_image,ju.group_id FROM ecm_ju ju LEFT JOIN ecm_goods g ON ju.goods_id = g.goods_id LEFT JOIN ecm_ju_template jt ON ju.template_id = jt.template_id WHERE ju.status=1 AND jt.state=1 ORDER BY ju.recommend DESC,ju.channel ASC,ju.group_id DESC LIMIT 0,12
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Wed, 03 Aug 2016 09:26:57 +0800	[256]MySQL Error[1054]: Unknown column 'goods.default_image' in 'field list'
+MySQL Query:SELECT group_id, goods.default_image, group_name, gb.end_time, spec_price,gb.min_quantity,gb.store_id,s.store_name,gb.group_image,gb.group_id FROM ecm_groupbuy gb LEFT JOIN ecm_goods g ON gb.goods_id = g.goods_id LEFT JOIN ecm_store s ON gb.store_id = s.store_id WHERE gb.recommended=1 AND gb.state=1 AND gb.end_time>1470158817 ORDER BY group_id DESC LIMIT 2
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Wed, 03 Aug 2016 09:31:29 +0800	[256]MySQL Error[1051]: Unknown table 'this'
+MySQL Query:SELECT this.*,g.goods_id,g.goods_name,g.store_id,g.default_spec,g.price,g.default_image,ju.group_id FROM ecm_ju ju LEFT JOIN ecm_goods g ON ju.goods_id = g.goods_id LEFT JOIN ecm_ju_template jt ON ju.template_id = jt.template_id WHERE ju.status=1 AND jt.state=1 ORDER BY ju.recommend DESC,ju.channel ASC,ju.group_id DESC LIMIT 0,12
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Wed, 03 Aug 2016 10:28:46 +0800	[256]MySQL Error[1051]: Unknown table 'this'
+MySQL Query:SELECT this.*,g.goods_id,g.goods_name,g.store_id,g.default_spec,g.price,g.default_image,ju.group_id FROM ecm_ju ju LEFT JOIN ecm_goods g ON ju.goods_id = g.goods_id LEFT JOIN ecm_ju_template jt ON ju.template_id = jt.template_id WHERE ju.status=1 AND jt.state=1 ORDER BY ju.recommend DESC,ju.channel ASC,ju.group_id DESC LIMIT 0,12
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Wed, 03 Aug 2016 11:09:03 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '>_getFieldTable('this') . '.*',$this->_getFieldTable('g') . '.goods_id',$this->_' at line 1
+MySQL Query:SELECT $this->_getFieldTable('this') . '.*',$this->_getFieldTable('g') . '.goods_id',$this->_getFieldTable('g') . '.goods_name',$this->_getFieldTable('g') . '.store_id',$this->_getFieldTable('g') . '.default_spec',$this->_getFieldTable('g') . '.price',$this->_getFieldTable('g') . '.default_image',ju.group_id FROM ecm_ju ju LEFT JOIN ecm_goods g ON ju.goods_id = g.goods_id LEFT JOIN ecm_ju_template jt ON ju.template_id = jt.template_id WHERE ju.status=1 AND jt.state=1 ORDER BY $this->_getFieldTable('ju') . '.recommend' DESC,$this->_getFieldTable('ju') . '.channel' ASC,$this->_getFieldTable('ju') . '.group_id' DESC LIMIT 0,12
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Wed, 03 Aug 2016 11:09:54 +0800	[256]MySQL Error[1051]: Unknown table 'this'
+MySQL Query:SELECT this.*,g.goods_id,g.goods_name,g.store_id,g.default_spec,g.price,g.default_image,ju.group_id FROM ecm_ju ju LEFT JOIN ecm_goods g ON ju.goods_id = g.goods_id LEFT JOIN ecm_ju_template jt ON ju.template_id = jt.template_id WHERE ju.status=1 AND jt.state=1 ORDER BY ju.recommend DESC,ju.channel ASC,ju.group_id DESC LIMIT 0,12
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Thu, 04 Aug 2016 08:45:45 +0800	[256]MySQL Error[1054]: Unknown column 'goods.default_image' in 'field list'
+MySQL Query:SELECT group_id, goods.default_image, group_name, gb.end_time, spec_price,gb.min_quantity,gb.store_id,s.store_name,gb.group_image,gb.group_id FROM ecm_groupbuy gb LEFT JOIN ecm_goods g ON gb.goods_id = g.goods_id LEFT JOIN ecm_store s ON gb.store_id = s.store_id WHERE gb.recommended=1 AND gb.state=1 AND gb.end_time>1470242745 ORDER BY group_id DESC LIMIT 2
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Thu, 04 Aug 2016 08:46:51 +0800	[256]MySQL Error[1054]: Unknown column 'goods.default_image' in 'field list'
+MySQL Query:SELECT group_id, goods.default_image, group_name, gb.end_time, spec_price,gb.min_quantity,gb.store_id,s.store_name,gb.group_image,gb.group_id FROM ecm_groupbuy gb LEFT JOIN ecm_goods g ON gb.goods_id = g.goods_id LEFT JOIN ecm_store s ON gb.store_id = s.store_id WHERE gb.recommended=1 AND gb.state=1 AND gb.end_time>1470242811 ORDER BY group_id DESC LIMIT 2
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Thu, 04 Aug 2016 08:53:28 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '>_getFieldTable('gb') . '.*',$this->_getFieldTable('g') . '.default_image',$this' at line 1
+MySQL Query:SELECT $this->_getFieldTable('gb') . '.*',$this->_getFieldTable('g') . '.default_image',$this->_getFieldTable('g') . '.price',default_spec,$this->_getFieldTable('s') . '.store_name',gb.group_id FROM ecm_groupbuy gb LEFT JOIN ecm_store s ON gb.store_id = s.store_id LEFT JOIN ecm_goods g ON gb.goods_id = g.goods_id WHERE 1=1 ORDER BY group_id desc LIMIT 0,40
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Thu, 04 Aug 2016 08:55:25 +0800	[256]MySQL Error[1054]: Unknown column 'goods.default_image' in 'field list'
+MySQL Query:SELECT group_id, goods.default_image, group_name, gb.end_time, spec_price,gb.min_quantity,gb.store_id,s.store_name,gb.group_image,gb.group_id FROM ecm_groupbuy gb LEFT JOIN ecm_goods g ON gb.goods_id = g.goods_id LEFT JOIN ecm_store s ON gb.store_id = s.store_id WHERE gb.recommended=1 AND gb.state=1 AND gb.end_time>1470243325 ORDER BY group_id DESC LIMIT 2
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Thu, 04 Aug 2016 08:57:09 +0800	[256]MySQL Error[1054]: Unknown column 'goods.default_image' in 'field list'
+MySQL Query:SELECT group_id, goods.default_image, group_name, gb.end_time, spec_price,gb.min_quantity,gb.store_id,s.store_name,gb.group_image,gb.group_id FROM ecm_groupbuy gb LEFT JOIN ecm_goods g ON gb.goods_id = g.goods_id LEFT JOIN ecm_store s ON gb.store_id = s.store_id WHERE gb.recommended=1 AND gb.state=1 AND gb.end_time>1470243429 ORDER BY group_id DESC LIMIT 2
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Thu, 04 Aug 2016 09:01:26 +0800	[256]MySQL Error[1054]: Unknown column 'goods.default_image' in 'field list'
+MySQL Query:SELECT group_id, goods.default_image, group_name, gb.end_time, spec_price,gb.min_quantity,gb.store_id,s.store_name,gb.group_image,gb.group_id FROM ecm_groupbuy gb LEFT JOIN ecm_goods g ON gb.goods_id = g.goods_id LEFT JOIN ecm_store s ON gb.store_id = s.store_id WHERE gb.recommended=1 AND gb.state=1 AND gb.end_time>1470243686 ORDER BY group_id DESC LIMIT 2
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Thu, 04 Aug 2016 09:02:39 +0800	[256]MySQL Error[1054]: Unknown column 'goods.default_image' in 'field list'
+MySQL Query:SELECT group_id, goods.default_image, group_name, gb.end_time, spec_price,gb.min_quantity,gb.store_id,s.store_name,gb.group_image,gb.group_id FROM ecm_groupbuy gb LEFT JOIN ecm_goods g ON gb.goods_id = g.goods_id LEFT JOIN ecm_store s ON gb.store_id = s.store_id WHERE gb.recommended=1 AND gb.state=1 AND gb.end_time>1470243759 ORDER BY group_id DESC LIMIT 2
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Thu, 04 Aug 2016 09:02:56 +0800	[256]MySQL Error[1054]: Unknown column 'goods.default_image' in 'field list'
+MySQL Query:SELECT group_id, goods.default_image, group_name, gb.end_time, spec_price,gb.min_quantity,gb.store_id,s.store_name,gb.group_image,gb.group_id FROM ecm_groupbuy gb LEFT JOIN ecm_goods g ON gb.goods_id = g.goods_id LEFT JOIN ecm_store s ON gb.store_id = s.store_id WHERE gb.recommended=1 AND gb.state=1 AND gb.end_time>1470243776 ORDER BY group_id DESC LIMIT 2
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Thu, 04 Aug 2016 09:06:05 +0800	[256]MySQL Error[1054]: Unknown column 'goods.default_image' in 'field list'
+MySQL Query:SELECT group_id, goods.default_image, group_name, gb.end_time, spec_price,gb.min_quantity,gb.store_id,s.store_name,gb.group_image,gb.group_id FROM ecm_groupbuy gb LEFT JOIN ecm_goods g ON gb.goods_id = g.goods_id LEFT JOIN ecm_store s ON gb.store_id = s.store_id WHERE gb.recommended=1 AND gb.state=1 AND gb.end_time>1470243965 ORDER BY group_id DESC LIMIT 2
+Wrong File:  E:\phpStudy\WWW\ecmall\eccore\model\mysql.php[534]	\eccore\model\mysql.php	286
+Fri, 12 Aug 2016 14:31:25 +0800	[2]mt_rand(): max(20) is smaller than min(21)	\includes\libraries\captcha.lib.php	288
+Fri, 12 Aug 2016 14:31:33 +0800	[2]mt_rand(): max(20) is smaller than min(21)	\includes\libraries\captcha.lib.php	288
+Fri, 12 Aug 2016 14:31:33 +0800	[2]mt_rand(): max(20) is smaller than min(21)	\includes\libraries\captcha.lib.php	288
+Fri, 12 Aug 2016 16:52:52 +0800	[256]MySQL Error[1146]: Table 'ecmail.ecm_' doesn't exist
+MySQL Query:SELECT COUNT(*) as c FROM ecm_ order_alias WHERE buyer_id=3 AND del_status not in(-1,-2)
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[456]	\eccore\model\mysql.php	287
+Fri, 12 Aug 2016 16:53:31 +0800	[256]MySQL Error[1146]: Table 'ecmail.ecm_orders' doesn't exist
+MySQL Query:SELECT COUNT(*) as c FROM ecm_orders order_alias WHERE buyer_id=3 AND del_status not in(-1,-2)
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[456]	\eccore\model\mysql.php	287
+Fri, 12 Aug 2016 16:54:13 +0800	[256]MySQL Error[1146]: Table 'ecmail.ecm_' doesn't exist
+MySQL Query:SELECT COUNT(*) as c FROM ecm_ order_alias WHERE buyer_id=3 AND del_status not in(-1,-2)
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[456]	\eccore\model\mysql.php	287
+Fri, 12 Aug 2016 16:54:18 +0800	[256]MySQL Error[1146]: Table 'ecmail.ecm_' doesn't exist
+MySQL Query:SELECT COUNT(*) as c FROM ecm_ order_alias WHERE buyer_id=3 AND del_status not in(-1,-2)
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[456]	\eccore\model\mysql.php	287
+Fri, 12 Aug 2016 16:54:20 +0800	[256]MySQL Error[1146]: Table 'ecmail.ecm_' doesn't exist
+MySQL Query:SELECT COUNT(*) as c FROM ecm_ order_alias WHERE buyer_id=3 AND del_status not in(-1,-2)
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[456]	\eccore\model\mysql.php	287
+Fri, 12 Aug 2016 16:54:49 +0800	[256]MySQL Error[1146]: Table 'ecmail.ecm_' doesn't exist
+MySQL Query:SELECT COUNT(*) as c FROM ecm_ order_alias WHERE buyer_id=3 AND del_status not in(-1,-2)
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[456]	\eccore\model\mysql.php	287
+Fri, 12 Aug 2016 16:55:57 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND del_status not in(-1,-2)' at line 1
+MySQL Query:SELECT COUNT(*) as c FROM ecm_order order_alias WHERE  AND del_status not in(-1,-2)
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[456]	\eccore\model\mysql.php	287
+Sat, 13 Aug 2016 16:07:34 +0800	[2]Invalid argument supplied for foreach()	\app\my_invoice.app.php	78
+Sat, 13 Aug 2016 16:42:58 +0800	[2]Invalid argument supplied for foreach()	\app\my_invoice.app.php	77
+Mon, 15 Aug 2016 14:27:07 +0800	[256]MySQL Error[1054]: Unknown column 'invoice_tid' in 'field list'
+MySQL Query:INSERT INTO ecm_invoice(order_id,invoice_tid,type,status,apply_date,apply_uid) VALUES('2','','1','1','1471242427','3')
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\model.base.php[299]	\eccore\model\mysql.php	287
+Mon, 15 Aug 2016 16:06:54 +0800	[2]mt_rand(): max(20) is smaller than min(21)	\includes\libraries\captcha.lib.php	288
+Mon, 15 Aug 2016 16:07:53 +0800	[2]mt_rand(): max(0) is smaller than min(1)	\includes\libraries\captcha.lib.php	274
+Tue, 16 Aug 2016 13:57:58 +0800	[2]mt_rand(): max(20) is smaller than min(21)	\includes\libraries\captcha.lib.php	288
+Tue, 16 Aug 2016 13:58:08 +0800	[2]mt_rand(): max(20) is smaller than min(21)	\includes\libraries\captcha.lib.php	288
+Tue, 16 Aug 2016 14:19:19 +0800	[2]mt_rand(): max(20) is smaller than min(21)	\includes\libraries\captcha.lib.php	288
+Tue, 16 Aug 2016 14:19:27 +0800	[2]mt_rand(): max(20) is smaller than min(21)	\includes\libraries\captcha.lib.php	288
+Tue, 16 Aug 2016 14:19:28 +0800	[2]mt_rand(): max(20) is smaller than min(21)	\includes\libraries\captcha.lib.php	288
+Tue, 16 Aug 2016 14:19:29 +0800	[2]mt_rand(): max(20) is smaller than min(21)	\includes\libraries\captcha.lib.php	288
+Tue, 16 Aug 2016 14:19:30 +0800	[2]mt_rand(): max(20) is smaller than min(21)	\includes\libraries\captcha.lib.php	288
+Tue, 16 Aug 2016 14:19:31 +0800	[2]mt_rand(): max(0) is smaller than min(1)	\includes\libraries\captcha.lib.php	274
+Tue, 16 Aug 2016 14:19:35 +0800	[2]mt_rand(): max(0) is smaller than min(1)	\includes\libraries\captcha.lib.php	274
+Tue, 16 Aug 2016 14:19:40 +0800	[2]mt_rand(): max(0) is smaller than min(1)	\includes\libraries\captcha.lib.php	274
+Tue, 16 Aug 2016 14:19:41 +0800	[2]mt_rand(): max(20) is smaller than min(21)	\includes\libraries\captcha.lib.php	288
+Tue, 16 Aug 2016 14:19:42 +0800	[2]mt_rand(): max(20) is smaller than min(21)	\includes\libraries\captcha.lib.php	288
+Tue, 16 Aug 2016 14:19:44 +0800	[2]mt_rand(): max(20) is smaller than min(21)	\includes\libraries\captcha.lib.php	288
+Tue, 16 Aug 2016 14:19:44 +0800	[2]mt_rand(): max(20) is smaller than min(21)	\includes\libraries\captcha.lib.php	288
+Tue, 16 Aug 2016 14:19:45 +0800	[2]mt_rand(): max(0) is smaller than min(1)	\includes\libraries\captcha.lib.php	274
+Tue, 16 Aug 2016 14:19:54 +0800	[2]mt_rand(): max(20) is smaller than min(21)	\includes\libraries\captcha.lib.php	288
+Tue, 16 Aug 2016 14:19:56 +0800	[2]mt_rand(): max(20) is smaller than min(21)	\includes\libraries\captcha.lib.php	288
+Tue, 16 Aug 2016 14:19:57 +0800	[2]mt_rand(): max(20) is smaller than min(21)	\includes\libraries\captcha.lib.php	288
+Tue, 16 Aug 2016 14:21:08 +0800	[2]mt_rand(): max(20) is smaller than min(21)	\includes\libraries\captcha.lib.php	288
+Tue, 16 Aug 2016 14:27:17 +0800	[2]mt_rand(): max(20) is smaller than min(21)	\includes\libraries\captcha.lib.php	288
+Tue, 16 Aug 2016 15:10:39 +0800	[2]mt_rand(): max(20) is smaller than min(21)	\includes\libraries\captcha.lib.php	288
+Tue, 16 Aug 2016 15:44:57 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+MySQL Query:SELECT *,inv.id FROM ecm_invoice_template inv WHERE uid = 3 AND id = 
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[537]	\eccore\model\mysql.php	287
+Tue, 16 Aug 2016 15:45:54 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+MySQL Query:SELECT *,inv.id FROM ecm_invoice_template inv WHERE uid = 3 AND id = 
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[537]	\eccore\model\mysql.php	287
+Tue, 16 Aug 2016 15:46:34 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+MySQL Query:SELECT *,inv.id FROM ecm_invoice_template inv WHERE uid = 3 AND id = 
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[537]	\eccore\model\mysql.php	287
+Tue, 16 Aug 2016 16:24:20 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+MySQL Query:SELECT *,inv.id FROM ecm_invoice_template inv WHERE uid = 3 AND id = 
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[537]	\eccore\model\mysql.php	287
+Wed, 17 Aug 2016 09:45:47 +0800	[256]MySQL Error[1054]: Unknown column 'uer_id' in 'where clause'
+MySQL Query:SELECT *,cw.id FROM ecm_comworker cw WHERE uer_id = 3
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[537]	\eccore\model\mysql.php	287
+Wed, 17 Aug 2016 09:46:12 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0) VALUES('')' at line 1
+MySQL Query:INSERT INTO ecm_comworker(0) VALUES('')
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\model.base.php[298]	\eccore\model\mysql.php	287
+Wed, 17 Aug 2016 09:46:21 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0) VALUES('')' at line 1
+MySQL Query:INSERT INTO ecm_comworker(0) VALUES('')
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\model.base.php[298]	\eccore\model\mysql.php	287
+Wed, 17 Aug 2016 09:47:53 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0) VALUES('')' at line 1
+MySQL Query:INSERT INTO ecm_comworker(0) VALUES('')
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\model.base.php[298]	\eccore\model\mysql.php	287
+Wed, 17 Aug 2016 09:47:54 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0) VALUES('')' at line 1
+MySQL Query:INSERT INTO ecm_comworker(0) VALUES('')
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\model.base.php[298]	\eccore\model\mysql.php	287
+Wed, 17 Aug 2016 09:48:15 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0) VALUES('')' at line 1
+MySQL Query:INSERT INTO ecm_comworker(0) VALUES('')
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\model.base.php[298]	\eccore\model\mysql.php	287
+Wed, 17 Aug 2016 09:48:29 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0) VALUES('')' at line 1
+MySQL Query:INSERT INTO ecm_comworker(0) VALUES('')
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\model.base.php[298]	\eccore\model\mysql.php	287
+Wed, 17 Aug 2016 11:31:03 +0800	[2]mt_rand(): max(0) is smaller than min(1)	\includes\libraries\captcha.lib.php	274
+Wed, 17 Aug 2016 11:31:07 +0800	[2]mt_rand(): max(20) is smaller than min(21)	\includes\libraries\captcha.lib.php	288
+Wed, 17 Aug 2016 14:01:49 +0800	[2]mt_rand(): max(20) is smaller than min(21)	\includes\libraries\captcha.lib.php	288
+Thu, 18 Aug 2016 15:46:52 +0800	[2]include(E:\phpStudy\WWW\pecmall\temp\caches\0492\f470509413f460b28143076fe58daa6e.cache.php): failed to open stream: Permission denied	\includes\libraries\cache.lib.php	90
+Thu, 18 Aug 2016 17:27:05 +0800	[2]include(E:\phpStudy\WWW\pecmall\temp\caches\0492\f470509413f460b28143076fe58daa6e.cache.php): failed to open stream: Permission denied	\includes\libraries\cache.lib.php	90
+Fri, 19 Aug 2016 10:23:29 +0800	[2]filemtime(): stat failed for E:\phpStudy\WWW\pecmall/data/crond.lock	\includes\libraries\cron.lib.php	132
+Fri, 19 Aug 2016 10:48:17 +0800	[256]MySQL Error[1052]: Column 'email' in field list is ambiguous
+MySQL Query:SELECT email, password, real_name, logins, ugrade, portrait, store_id, state, sgrade , feed_config,member.user_id FROM ecm_member member LEFT JOIN ecm_store s ON member.user_id=s.store_id WHERE member.user_id = '2'
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[537]	\eccore\model\mysql.php	287
+Fri, 19 Aug 2016 10:48:24 +0800	[256]MySQL Error[1052]: Column 'email' in field list is ambiguous
+MySQL Query:SELECT email, password, real_name, logins, ugrade, portrait, store_id, state, sgrade , feed_config,member.user_id FROM ecm_member member LEFT JOIN ecm_store s ON member.user_id=s.store_id WHERE member.user_id = '2'
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[537]	\eccore\model\mysql.php	287
+Fri, 19 Aug 2016 10:48:28 +0800	[256]MySQL Error[1052]: Column 'email' in field list is ambiguous
+MySQL Query:SELECT email, password, real_name, logins, ugrade, portrait, store_id, state, sgrade , feed_config,member.user_id FROM ecm_member member LEFT JOIN ecm_store s ON member.user_id=s.store_id WHERE member.user_id = '2'
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[537]	\eccore\model\mysql.php	287
+Fri, 19 Aug 2016 10:48:43 +0800	[256]MySQL Error[1052]: Column 'email' in field list is ambiguous
+MySQL Query:SELECT email, password, real_name, logins, ugrade, portrait, store_id, state, sgrade , feed_config,member.user_id FROM ecm_member member LEFT JOIN ecm_store s ON member.user_id=s.store_id WHERE member.user_id = '2'
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[537]	\eccore\model\mysql.php	287
+Fri, 19 Aug 2016 10:48:47 +0800	[256]MySQL Error[1052]: Column 'email' in field list is ambiguous
+MySQL Query:SELECT email, password, real_name, logins, ugrade, portrait, store_id, state, sgrade , feed_config,member.user_id FROM ecm_member member LEFT JOIN ecm_store s ON member.user_id=s.store_id WHERE member.user_id = '2'
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[537]	\eccore\model\mysql.php	287
+Fri, 19 Aug 2016 10:49:38 +0800	[256]MySQL Error[1052]: Column 'email' in field list is ambiguous
+MySQL Query:SELECT email, password, real_name, logins, ugrade, portrait, store_id, state, sgrade , feed_config,member.user_id FROM ecm_member member LEFT JOIN ecm_store s ON member.user_id=s.store_id WHERE member.user_id = '2'
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[537]	\eccore\model\mysql.php	287
+Fri, 19 Aug 2016 11:28:10 +0800	[2]Invalid argument supplied for foreach()	\app\my_goods.app.php	1627
+Fri, 19 Aug 2016 11:29:50 +0800	[2]Invalid argument supplied for foreach()	\app\my_goods.app.php	1627
+Fri, 19 Aug 2016 11:34:22 +0800	[2]filemtime(): stat failed for E:\phpStudy\WWW\pecmall/data/crond.lock	\includes\libraries\cron.lib.php	132
+Fri, 19 Aug 2016 14:11:06 +0800	[2]Invalid argument supplied for foreach()	\app\my_goods.app.php	1626
+Fri, 19 Aug 2016 15:33:20 +0800	[2]include(E:\phpStudy\WWW\pecmall\temp\caches\0003\fdb40492704ee31fbaa7e8e230fed1be.cache.php): failed to open stream: Permission denied	\includes\libraries\cache.lib.php	90
+Fri, 19 Aug 2016 15:58:22 +0800	[2]filemtime(): stat failed for E:\phpStudy\WWW\pecmall/data/crond.lock	\includes\libraries\cron.lib.php	132
+Fri, 19 Aug 2016 16:33:01 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+MySQL Query:SELECT name,pid,goods_prop.pid FROM ecm_goods_prop goods_prop WHERE status=1 and pid=
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[537]	\eccore\model\mysql.php	287
+Fri, 19 Aug 2016 16:36:39 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+MySQL Query:SELECT name,pid,goods_prop.pid FROM ecm_goods_prop goods_prop WHERE status=1 and pid=
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[537]	\eccore\model\mysql.php	287
+Fri, 19 Aug 2016 16:37:07 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+MySQL Query:SELECT name,pid,goods_prop.pid FROM ecm_goods_prop goods_prop WHERE status=1 and pid=
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[537]	\eccore\model\mysql.php	287
+Fri, 19 Aug 2016 16:37:36 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+MySQL Query:SELECT name,pid,goods_prop.pid FROM ecm_goods_prop goods_prop WHERE status=1 and pid=
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[537]	\eccore\model\mysql.php	287
+Fri, 19 Aug 2016 16:42:19 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+MySQL Query:SELECT name,pid,goods_prop.pid FROM ecm_goods_prop goods_prop WHERE status=1 and pid=
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[537]	\eccore\model\mysql.php	287
+Fri, 19 Aug 2016 16:46:27 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+MySQL Query:SELECT name,pid,goods_prop.pid FROM ecm_goods_prop goods_prop WHERE status=1 and pid=
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[537]	\eccore\model\mysql.php	287
+Fri, 19 Aug 2016 16:46:29 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+MySQL Query:SELECT name,pid,goods_prop.pid FROM ecm_goods_prop goods_prop WHERE status=1 and pid=
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[537]	\eccore\model\mysql.php	287
+Fri, 19 Aug 2016 16:48:46 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+MySQL Query:SELECT name,pid,goods_prop.pid FROM ecm_goods_prop goods_prop WHERE status=1 and pid=
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[537]	\eccore\model\mysql.php	287
+Fri, 19 Aug 2016 16:48:48 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+MySQL Query:SELECT name,pid,goods_prop.pid FROM ecm_goods_prop goods_prop WHERE status=1 and pid=
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[537]	\eccore\model\mysql.php	287
+Fri, 19 Aug 2016 17:27:03 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+MySQL Query:SELECT name,pid,goods_prop.pid FROM ecm_goods_prop goods_prop WHERE status=1 and pid=
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[537]	\eccore\model\mysql.php	287
+Fri, 19 Aug 2016 17:27:12 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+MySQL Query:SELECT name,pid,goods_prop.pid FROM ecm_goods_prop goods_prop WHERE status=1 and pid=
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[537]	\eccore\model\mysql.php	287
+Fri, 19 Aug 2016 17:31:55 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+MySQL Query:SELECT name,pid,goods_prop.pid FROM ecm_goods_prop goods_prop WHERE status=1 and pid=
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[537]	\eccore\model\mysql.php	287
+Fri, 19 Aug 2016 17:31:56 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+MySQL Query:SELECT name,pid,goods_prop.pid FROM ecm_goods_prop goods_prop WHERE status=1 and pid=
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[537]	\eccore\model\mysql.php	287
+Fri, 19 Aug 2016 17:32:03 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+MySQL Query:SELECT name,pid,goods_prop.pid FROM ecm_goods_prop goods_prop WHERE status=1 and pid=
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[537]	\eccore\model\mysql.php	287
+Fri, 19 Aug 2016 17:34:57 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+MySQL Query:SELECT name,pid,goods_prop.pid FROM ecm_goods_prop goods_prop WHERE status=1 and pid=
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[537]	\eccore\model\mysql.php	287
+Fri, 19 Aug 2016 17:34:58 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+MySQL Query:SELECT name,pid,goods_prop.pid FROM ecm_goods_prop goods_prop WHERE status=1 and pid=
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[537]	\eccore\model\mysql.php	287
+Sat, 20 Aug 2016 09:47:00 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+MySQL Query:SELECT name,pid,goods_prop.pid FROM ecm_goods_prop goods_prop WHERE status=1 and pid=
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[537]	\eccore\model\mysql.php	287
+Sat, 20 Aug 2016 09:47:05 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+MySQL Query:SELECT name,pid,goods_prop.pid FROM ecm_goods_prop goods_prop WHERE status=1 and pid=
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[537]	\eccore\model\mysql.php	287
+Sat, 20 Aug 2016 09:49:17 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+MySQL Query:SELECT name,pid,goods_prop.pid FROM ecm_goods_prop goods_prop WHERE status=1 and pid=
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[537]	\eccore\model\mysql.php	287
+Sat, 20 Aug 2016 09:49:18 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+MySQL Query:SELECT name,pid,goods_prop.pid FROM ecm_goods_prop goods_prop WHERE status=1 and pid=
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[537]	\eccore\model\mysql.php	287
+Sat, 20 Aug 2016 10:14:09 +0800	[2]Unknown: open(E:\phpStudy\tmp\tmp\sess_c2eptv4r0ro6ei1jerjbjadg35, O_RDWR) failed: No such file or directory (2)	Unknown	0
+Sat, 20 Aug 2016 10:16:51 +0800	[2]Unknown: open(E:\phpStudy\tmp\tmp\sess_c2eptv4r0ro6ei1jerjbjadg35, O_RDWR) failed: No such file or directory (2)	Unknown	0
+Sat, 20 Aug 2016 10:26:41 +0800	[2]session_start(): Cannot send session cache limiter - headers already sent (output started at E:\phpStudy\WWW\pecmall\app\frontend.base.php:70)	\includes\libraries\session.lib.php	404
+Tue, 23 Aug 2016 17:28:35 +0800	[2]Invalid argument supplied for foreach()	\app\frontend.base.php	2597
+Wed, 24 Aug 2016 10:13:13 +0800	[256]MySQL Error[1054]: Unknown column 'order_alias.orderid' in 'on clause'
+MySQL Query:SELECT *,obill.id FROM ecm_order_billing obill LEFT JOIN ecm_order order_alias ON obill.id=order_alias.orderid WHERE user_id = 3
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[537]	\eccore\model\mysql.php	287
+Wed, 24 Aug 2016 11:31:49 +0800	[256]MySQL Error[1052]: Column 'user_id' in where clause is ambiguous
+MySQL Query:SELECT *,obill.orderid FROM ecm_order_billing obill LEFT JOIN ecm_member member ON obill.buyer_id = member.user_id WHERE user_id = 3 AND order_alias.order_type
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[537]	\eccore\model\mysql.php	287
+Wed, 24 Aug 2016 11:32:57 +0800	[256]MySQL Error[1052]: Column 'user_id' in where clause is ambiguous
+MySQL Query:SELECT *,obill.user_id FROM ecm_order_billing obill LEFT JOIN ecm_member member ON obill.buyer_id = member.user_id WHERE user_id = 3 AND order_alias.order_type
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[537]	\eccore\model\mysql.php	287
+Wed, 24 Aug 2016 11:36:08 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= member.user_id WHERE user_id = 3 AND order_alias.order_type' at line 1
+MySQL Query:SELECT *,obill.user_id FROM ecm_order_billing obill LEFT JOIN ecm_member member ON obill. = member.user_id WHERE user_id = 3 AND order_alias.order_type
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[537]	\eccore\model\mysql.php	287
+Wed, 24 Aug 2016 11:36:44 +0800	[256]MySQL Error[1054]: Unknown column 'order_alias.order_type' in 'where clause'
+MySQL Query:SELECT *,obill.user_id FROM ecm_order_billing obill WHERE user_id = 3 AND order_alias.order_type
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[537]	\eccore\model\mysql.php	287
+Wed, 24 Aug 2016 11:39:50 +0800	[256]MySQL Error[1054]: Unknown column 'order_alias.order_type' in 'where clause'
+MySQL Query:SELECT *,obill.user_id FROM ecm_order_billing obill WHERE user_id = 3 AND order_alias.order_type
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[537]	\eccore\model\mysql.php	287
+Wed, 24 Aug 2016 11:39:52 +0800	[256]MySQL Error[1054]: Unknown column 'order_alias.order_type' in 'where clause'
+MySQL Query:SELECT *,obill.user_id FROM ecm_order_billing obill WHERE user_id = 3 AND order_alias.order_type
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[537]	\eccore\model\mysql.php	287
+Wed, 24 Aug 2016 11:39:53 +0800	[256]MySQL Error[1054]: Unknown column 'order_alias.order_type' in 'where clause'
+MySQL Query:SELECT *,obill.user_id FROM ecm_order_billing obill WHERE user_id = 3 AND order_alias.order_type
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[537]	\eccore\model\mysql.php	287
+Wed, 24 Aug 2016 11:39:53 +0800	[256]MySQL Error[1054]: Unknown column 'order_alias.order_type' in 'where clause'
+MySQL Query:SELECT *,obill.user_id FROM ecm_order_billing obill WHERE user_id = 3 AND order_alias.order_type
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[537]	\eccore\model\mysql.php	287
+Wed, 24 Aug 2016 11:39:57 +0800	[256]MySQL Error[1052]: Column 'user_id' in where clause is ambiguous
+MySQL Query:SELECT *,obill.user_id FROM ecm_order_billing obill LEFT JOIN ecm_member member ON obill.buyer_id = member.user_id WHERE user_id = 3 AND order_alias.order_type
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[537]	\eccore\model\mysql.php	287
+Wed, 24 Aug 2016 13:44:14 +0800	[256]MySQL Error[1052]: Column 'user_id' in where clause is ambiguous
+MySQL Query:SELECT *,obill.user_id FROM ecm_order_billing obill LEFT JOIN ecm_member member ON obill.buyer_id = member.user_id WHERE user_id = 3 AND order_alias.order_type
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[537]	\eccore\model\mysql.php	287
+Wed, 24 Aug 2016 13:44:15 +0800	[256]MySQL Error[1052]: Column 'user_id' in where clause is ambiguous
+MySQL Query:SELECT *,obill.user_id FROM ecm_order_billing obill LEFT JOIN ecm_member member ON obill.buyer_id = member.user_id WHERE user_id = 3 AND order_alias.order_type
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[537]	\eccore\model\mysql.php	287
+Wed, 24 Aug 2016 13:44:18 +0800	[256]MySQL Error[1052]: Column 'user_id' in where clause is ambiguous
+MySQL Query:SELECT *,obill.user_id FROM ecm_order_billing obill LEFT JOIN ecm_member member ON obill.buyer_id = member.user_id WHERE user_id = 3 AND order_alias.order_type
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[537]	\eccore\model\mysql.php	287
+Wed, 24 Aug 2016 13:45:35 +0800	[256]MySQL Error[1054]: Unknown column 'order_alias.order_type' in 'where clause'
+MySQL Query:SELECT *,obill.user_id FROM ecm_order_billing obill WHERE user_id = 3 AND order_alias.order_type
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[537]	\eccore\model\mysql.php	287
+Wed, 24 Aug 2016 13:45:42 +0800	[256]MySQL Error[1052]: Column 'user_id' in where clause is ambiguous
+MySQL Query:SELECT *,obill.user_id FROM ecm_order_billing obill LEFT JOIN ecm_member member ON obill.buyer_id = member.user_id WHERE user_id = 3 AND order_alias.order_type
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[537]	\eccore\model\mysql.php	287
+Wed, 24 Aug 2016 13:47:03 +0800	[256]MySQL Error[1052]: Column 'user_id' in where clause is ambiguous
+MySQL Query:SELECT *,obill.user_id FROM ecm_order_billing obill LEFT JOIN ecm_order order_alias ON obill.user_id=order_alias.order_id LEFT JOIN ecm_member member ON obill.buyer_id = member.user_id WHERE user_id = 3 AND order_alias.order_type
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[537]	\eccore\model\mysql.php	287
+Wed, 24 Aug 2016 13:47:19 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= member.user_id WHERE user_id = 3 AND order_alias.order_type' at line 1
+MySQL Query:SELECT *,obill.user_id FROM ecm_order_billing obill LEFT JOIN ecm_order order_alias ON obill.user_id=order_alias.order_id LEFT JOIN ecm_member member ON obill. = member.user_id WHERE user_id = 3 AND order_alias.order_type
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[537]	\eccore\model\mysql.php	287
+Wed, 24 Aug 2016 13:47:40 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= member.user_id WHERE user_id = 3 AND order_alias.order_type' at line 1
+MySQL Query:SELECT *,obill.user_id FROM ecm_order_billing obill LEFT JOIN ecm_member member ON obill. = member.user_id WHERE user_id = 3 AND order_alias.order_type
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[537]	\eccore\model\mysql.php	287
+Wed, 24 Aug 2016 13:48:35 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= member.user_id WHERE user_id = 3 AND order_alias.order_type' at line 1
+MySQL Query:SELECT *,obill.user_id FROM ecm_order_billing obill LEFT JOIN ecm_member member ON obill. = member.user_id WHERE user_id = 3 AND order_alias.order_type
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[537]	\eccore\model\mysql.php	287
+Wed, 24 Aug 2016 13:48:54 +0800	[256]MySQL Error[1052]: Column 'user_id' in where clause is ambiguous
+MySQL Query:SELECT *,obill.user_id FROM ecm_order_billing obill LEFT JOIN ecm_member member ON obill.user_id=member.user_id WHERE user_id = 3 AND order_alias.order_type
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[537]	\eccore\model\mysql.php	287
+Wed, 24 Aug 2016 13:49:29 +0800	[256]MySQL Error[1054]: Unknown column 'this.user_id' in 'where clause'
+MySQL Query:SELECT *,obill.user_id FROM ecm_order_billing obill LEFT JOIN ecm_member member ON obill.user_id=member.user_id WHERE this.user_id = 3 AND order_alias.order_type
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[537]	\eccore\model\mysql.php	287
+Wed, 24 Aug 2016 13:49:36 +0800	[256]MySQL Error[1054]: Unknown column 'order_alias.order_type' in 'where clause'
+MySQL Query:SELECT *,obill.user_id FROM ecm_order_billing obill LEFT JOIN ecm_member member ON obill.user_id=member.user_id WHERE obill.user_id = 3 AND order_alias.order_type
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[537]	\eccore\model\mysql.php	287
+Wed, 24 Aug 2016 13:54:13 +0800	[256]MySQL Error[1054]: Unknown column 'order_alias.order_type' in 'where clause'
+MySQL Query:SELECT *,obill.user_id FROM ecm_order_billing obill LEFT JOIN ecm_member member ON obill.buyer_id = member.user_id WHERE obill.user_id = 3 AND order_alias.order_type
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[537]	\eccore\model\mysql.php	287
+Wed, 24 Aug 2016 13:54:26 +0800	[256]MySQL Error[1054]: Unknown column 'order_alias.order_type' in 'where clause'
+MySQL Query:SELECT *,obill.user_id FROM ecm_order_billing obill LEFT JOIN ecm_member member ON obill.user_id = member.user_id WHERE obill.user_id = 3 AND order_alias.order_type
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[537]	\eccore\model\mysql.php	287
+Wed, 24 Aug 2016 14:06:01 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE obill.user_id = 3' at line 1
+MySQL Query:SELECT *,obill.user_id FROM ecm_order_billing obill LEFT JOIN ecm_  ON obill.user_id = .buyer_id WHERE obill.user_id = 3
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[537]	\eccore\model\mysql.php	287
+Wed, 24 Aug 2016 14:07:15 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE obill.user_id = 3' at line 1
+MySQL Query:SELECT *,obill.user_id FROM ecm_order_billing obill LEFT JOIN ecm_  ON obill.user_id = .order_id WHERE obill.user_id = 3
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[537]	\eccore\model\mysql.php	287
+Wed, 24 Aug 2016 14:07:42 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE obill.user_id = 3' at line 1
+MySQL Query:SELECT *,obill.user_id FROM ecm_order_billing obill LEFT JOIN ecm_  ON obill.user_id = .buyer_id WHERE obill.user_id = 3
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[537]	\eccore\model\mysql.php	287
+Wed, 24 Aug 2016 14:11:31 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LEFT JOIN ecm_order order_alias ON obill.user_id=order_alias.buyer_id WHERE obil' at line 1
+MySQL Query:SELECT *,obill.user_id FROM ecm_order_billing obill LEFT JOIN ecm_member member ON obill.user_id=member. LEFT JOIN ecm_order order_alias ON obill.user_id=order_alias.buyer_id WHERE obill.user_id = 3
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[537]	\eccore\model\mysql.php	287
+Wed, 24 Aug 2016 14:12:42 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ON obill.user_id=.user_id LEFT JOIN ecm_order order_alias ON obill.user_id=order' at line 1
+MySQL Query:SELECT *,obill.user_id FROM ecm_order_billing obill LEFT JOIN   ON obill.user_id=.user_id LEFT JOIN ecm_order order_alias ON obill.user_id=order_alias.buyer_id WHERE obill.user_id = 3
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[537]	\eccore\model\mysql.php	287
+Wed, 24 Aug 2016 14:13:04 +0800	[256]MySQL Error[1054]: Unknown column 'member.user_ids' in 'on clause'
+MySQL Query:SELECT *,obill.user_id FROM ecm_order_billing obill LEFT JOIN ecm_member member ON obill.user_id=member.user_ids LEFT JOIN ecm_order order_alias ON obill.user_id=order_alias.buyer_id WHERE obill.user_id = 3
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[537]	\eccore\model\mysql.php	287
+Wed, 24 Aug 2016 14:13:46 +0800	[256]MySQL Error[1054]: Unknown column 'member.username' in 'field list'
+MySQL Query:SELECT *,member.username,obill.user_id FROM ecm_order_billing obill LEFT JOIN ecm_member member ON obill.user_id=member.user_id LEFT JOIN ecm_order order_alias ON obill.user_id=order_alias.buyer_id WHERE obill.user_id = 3
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[537]	\eccore\model\mysql.php	287
+Wed, 24 Aug 2016 14:13:48 +0800	[256]MySQL Error[1054]: Unknown column 'member.username' in 'field list'
+MySQL Query:SELECT *,member.username,obill.user_id FROM ecm_order_billing obill LEFT JOIN ecm_member member ON obill.user_id=member.user_id LEFT JOIN ecm_order order_alias ON obill.user_id=order_alias.buyer_id WHERE obill.user_id = 3
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[537]	\eccore\model\mysql.php	287
+Wed, 24 Aug 2016 14:14:24 +0800	[256]MySQL Error[1054]: Unknown column 'member.user_ids' in 'on clause'
+MySQL Query:SELECT *,member.user_name,obill.user_id FROM ecm_order_billing obill LEFT JOIN ecm_member member ON obill.user_id=member.user_ids LEFT JOIN ecm_order order_alias ON obill.user_id=order_alias.buyer_id WHERE obill.user_id = 3
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[537]	\eccore\model\mysql.php	287
+Wed, 24 Aug 2016 14:16:56 +0800	[256]MySQL Error[1054]: Unknown column 'order_alias.order_sn' in 'field list'
+MySQL Query:SELECT obill.*,order_alias.order_sn,order_alias.order_name,member.user_name,obill.user_id FROM ecm_order_billing obill LEFT JOIN ecm_member member ON obill.user_id=member.user_id WHERE obill.user_id = 3
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[537]	\eccore\model\mysql.php	287
+Wed, 24 Aug 2016 14:59:45 +0800	[256]MySQL Error[1054]: Unknown column 'order_alias.order_sn' in 'field list'
+MySQL Query:SELECT obill.*,order_alias.order_sn,order_alias.order_name,member.user_name,obill.user_id FROM ecm_order_billing obill LEFT JOIN ecm_member member ON obill.user_id=member.user_id WHERE obill.user_id = 3
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[537]	\eccore\model\mysql.php	287
+Wed, 24 Aug 2016 15:02:16 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':SELECT obill.*,order.order_sn,order.order_name,member.user_name FROM ecm_order_' at line 1
+MySQL Query::SELECT obill.*,order.order_sn,order.order_name,member.user_name FROM ecm_order_billing obill LEFT JOIN ecm_member member ON obill.user_id=member.user_id LEFT JOIN ecm_order order ON order.order_id = obill.order_id WHERE obill.user_id = 3
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[506]	\eccore\model\mysql.php	287
+Wed, 24 Aug 2016 15:02:29 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order ON order.order_id = obill.order_id WHERE obill.user_id = 3' at line 1
+MySQL Query:SELECT obill.*,order.order_sn,order.order_name,member.user_name FROM ecm_order_billing obill LEFT JOIN ecm_member member ON obill.user_id=member.user_id LEFT JOIN ecm_order order ON order.order_id = obill.order_id WHERE obill.user_id = 3
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[506]	\eccore\model\mysql.php	287
+Wed, 24 Aug 2016 15:03:47 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order ON order.order_id = obill.order_id WHERE obill.user_id = 3' at line 1
+MySQL Query:SELECT obill.*,order.order_sn,order.order_name,member.user_name FROM ecm_order_billing obill LEFT JOIN ecm_member member ON obill.user_id=member.user_id LEFT JOIN ecm_order order ON order.order_id = obill.order_id WHERE obill.user_id = 3
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[506]	\eccore\model\mysql.php	287
+Wed, 24 Aug 2016 15:18:53 +0800	[256]MySQL Error[1054]: Unknown column 'obill.user_id' in 'where clause'
+MySQL Query:SELECT ord.order_sn,ord.order_name,member.user_name FROM ecm_order ord LEFT JOIN ecm_member member ON ord.buyer_id = member.user_id WHERE obill.user_id = 3 AND payment_id = -1
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[506]	\eccore\model\mysql.php	287
+Wed, 24 Aug 2016 15:19:10 +0800	[256]MySQL Error[1054]: Unknown column 'ord.user_id' in 'where clause'
+MySQL Query:SELECT ord.order_sn,ord.order_name,member.user_name FROM ecm_order ord LEFT JOIN ecm_member member ON ord.buyer_id = member.user_id WHERE ord.user_id = 3 AND payment_id = -1
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[506]	\eccore\model\mysql.php	287
+Wed, 24 Aug 2016 15:38:32 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM ecm_order ord LEFT JOIN ecm_member member ON ord.buyer_id = member.user_id ' at line 1
+MySQL Query:SELECT ord.order_sn,ord.order_name,member.user_name,ord.pay_time as FROM ecm_order ord LEFT JOIN ecm_member member ON ord.buyer_id = member.user_id LEFT JOIN ecm_billing bill ON bill.uid = ord.buyer_id WHERE ord.buyer_id = 3 AND payment_id = -1
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[506]	\eccore\model\mysql.php	287
+Wed, 24 Aug 2016 15:38:43 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM ecm_order ord LEFT JOIN ecm_member member ON ord.buyer_id = member.user_id ' at line 1
+MySQL Query:SELECT ord.order_sn,ord.order_name,member.user_name,ord.pay_time as FROM ecm_order ord LEFT JOIN ecm_member member ON ord.buyer_id = member.user_id LEFT JOIN ecm_billing bill ON bill.uid = ord.buyer_id WHERE ord.buyer_id = 3 AND payment_id = -1
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[506]	\eccore\model\mysql.php	287
+Wed, 24 Aug 2016 15:38:44 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM ecm_order ord LEFT JOIN ecm_member member ON ord.buyer_id = member.user_id ' at line 1
+MySQL Query:SELECT ord.order_sn,ord.order_name,member.user_name,ord.pay_time as FROM ecm_order ord LEFT JOIN ecm_member member ON ord.buyer_id = member.user_id LEFT JOIN ecm_billing bill ON bill.uid = ord.buyer_id WHERE ord.buyer_id = 3 AND payment_id = -1
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[506]	\eccore\model\mysql.php	287
+Wed, 24 Aug 2016 15:38:44 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM ecm_order ord LEFT JOIN ecm_member member ON ord.buyer_id = member.user_id ' at line 1
+MySQL Query:SELECT ord.order_sn,ord.order_name,member.user_name,ord.pay_time as FROM ecm_order ord LEFT JOIN ecm_member member ON ord.buyer_id = member.user_id LEFT JOIN ecm_billing bill ON bill.uid = ord.buyer_id WHERE ord.buyer_id = 3 AND payment_id = -1
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[506]	\eccore\model\mysql.php	287
+Wed, 24 Aug 2016 15:38:44 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM ecm_order ord LEFT JOIN ecm_member member ON ord.buyer_id = member.user_id ' at line 1
+MySQL Query:SELECT ord.order_sn,ord.order_name,member.user_name,ord.pay_time as FROM ecm_order ord LEFT JOIN ecm_member member ON ord.buyer_id = member.user_id LEFT JOIN ecm_billing bill ON bill.uid = ord.buyer_id WHERE ord.buyer_id = 3 AND payment_id = -1
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[506]	\eccore\model\mysql.php	287
+Wed, 24 Aug 2016 15:39:34 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM ecm_order ord LEFT JOIN ecm_member member ON ord.buyer_id = member.user_id ' at line 1
+MySQL Query:SELECT ord.order_sn,ord.order_name,member.user_name,ord.pay_time as FROM ecm_order ord LEFT JOIN ecm_member member ON ord.buyer_id = member.user_id LEFT JOIN ecm_billing bill ON bill.uid = ord.buyer_id WHERE ord.buyer_id = 3 AND payment_id = -1
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[506]	\eccore\model\mysql.php	287
+Wed, 24 Aug 2016 15:39:35 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM ecm_order ord LEFT JOIN ecm_member member ON ord.buyer_id = member.user_id ' at line 1
+MySQL Query:SELECT ord.order_sn,ord.order_name,member.user_name,ord.pay_time as FROM ecm_order ord LEFT JOIN ecm_member member ON ord.buyer_id = member.user_id LEFT JOIN ecm_billing bill ON bill.uid = ord.buyer_id WHERE ord.buyer_id = 3 AND payment_id = -1
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[506]	\eccore\model\mysql.php	287
+Wed, 24 Aug 2016 16:28:05 +0800	[256]MySQL Error[1054]: Unknown column 'userid' in 'field list'
+MySQL Query:INSERT INTO ecm_billing(userid,shopid,apply_time) VALUES('3','5','1472027285')
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\model.base.php[304]	\eccore\model\mysql.php	287
+Wed, 24 Aug 2016 16:57:10 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SELECT * FROM ecm_billing bill LEFT JOIN ecm_store store ON bill.shopid = store.' at line 1
+MySQL Query:SELECT *,bill.id FROM ecm_billing bill WHERE SELECT * FROM ecm_billing bill LEFT JOIN ecm_store store ON bill.shopid = store.store_id WHERE bill.uid = 3
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[537]	\eccore\model\mysql.php	287
+Wed, 24 Aug 2016 16:57:21 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SELECT * FROM ecm_billing bill LEFT JOIN ecm_store store ON bill.shopid = store.' at line 1
+MySQL Query:SELECT *,bill.id FROM ecm_billing bill WHERE SELECT * FROM ecm_billing bill LEFT JOIN ecm_store store ON bill.shopid = store.store_id WHERE bill.uid = 3
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[537]	\eccore\model\mysql.php	287
+Fri, 26 Aug 2016 10:02:41 +0800	[256]MySQL Error[1146]: Table 'ecmail.ecm_store_sect' doesn't exist
+MySQL Query:SELECT *,stsct.id FROM ecm_store_sect stsct WHERE 1 = 1 AND parent_id = '0' AND store_id = '2' ORDER BY sort_order, id
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[537]	\eccore\model\mysql.php	287
+Fri, 26 Aug 2016 10:02:46 +0800	[256]MySQL Error[1146]: Table 'ecmail.ecm_store_sect' doesn't exist
+MySQL Query:SELECT *,stsct.id FROM ecm_store_sect stsct WHERE 1 = 1 AND parent_id = '0' AND store_id = '2' ORDER BY sort_order, id
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[537]	\eccore\model\mysql.php	287
+Fri, 26 Aug 2016 10:43:51 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+MySQL Query:SELECT store.store_name,bill.apply_time,bill.status FROM ecm_billing bill LEFT JOIN ecm_store store ON bill.shopid = store.store_id WHERE bill.companyid = 
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[506]	\eccore\model\mysql.php	287
+Fri, 26 Aug 2016 10:46:18 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+MySQL Query:SELECT store.store_name,bill.apply_time,bill.status FROM ecm_billing bill LEFT JOIN ecm_store store ON bill.shopid = store.store_id WHERE bill.companyid = 
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[506]	\eccore\model\mysql.php	287
+Fri, 26 Aug 2016 10:46:24 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+MySQL Query:SELECT store.store_name,bill.apply_time,bill.status FROM ecm_billing bill LEFT JOIN ecm_store store ON bill.shopid = store.store_id WHERE bill.companyid = 
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[506]	\eccore\model\mysql.php	287
+Fri, 26 Aug 2016 11:03:37 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+MySQL Query:SELECT store.store_name,bill.apply_time,bill.status FROM ecm_billing bill LEFT JOIN ecm_store store ON bill.shopid = store.store_id WHERE bill.companyid = 
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[506]	\eccore\model\mysql.php	287
+Fri, 26 Aug 2016 11:04:14 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+MySQL Query:SELECT store.store_name,bill.apply_time,bill.status FROM ecm_billing bill LEFT JOIN ecm_store store ON bill.shopid = store.store_id WHERE bill.companyid = 
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[506]	\eccore\model\mysql.php	287
+Fri, 26 Aug 2016 13:44:01 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+MySQL Query:SELECT store.store_name,bill.apply_time,bill.status FROM ecm_billing bill LEFT JOIN ecm_store store ON bill.shopid = store.store_id WHERE bill.companyid = 
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[506]	\eccore\model\mysql.php	287
+Fri, 26 Aug 2016 13:46:28 +0800	[256]MySQL Error[1065]: Query was empty
+MySQL Query:
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[506]	\eccore\model\mysql.php	287
+Fri, 26 Aug 2016 13:47:01 +0800	[256]MySQL Error[1065]: Query was empty
+MySQL Query:
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[506]	\eccore\model\mysql.php	287
+Fri, 26 Aug 2016 13:47:11 +0800	[256]MySQL Error[1065]: Query was empty
+MySQL Query:
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[506]	\eccore\model\mysql.php	287
+Fri, 26 Aug 2016 14:55:29 +0800	[256]MySQL Error[1054]: Unknown column 'm.id' in 'on clause'
+MySQL Query:SELECT bill.*,com.companyname FROM ecm_billing bill LEFT JOIN ecm_company com ON bill.companyid = com.id LEFT JOIN ecm_member m ON m.id = bill.uid where shopid = 2 AND status = 1
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[506]	\eccore\model\mysql.php	287
+Fri, 26 Aug 2016 14:56:22 +0800	[256]MySQL Error[1054]: Unknown column 'm.realname' in 'field list'
+MySQL Query:SELECT bill.*,com.companyname,m.realname,m.user_name FROM ecm_billing bill LEFT JOIN ecm_company com ON bill.companyid = com.id LEFT JOIN ecm_member m ON m.user_id = bill.uid where shopid = 2 AND status = 1
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[506]	\eccore\model\mysql.php	287
+Fri, 26 Aug 2016 15:52:22 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SELECT * FROM ecm_company where id = 2' at line 1
+MySQL Query:SELECT *,co.id FROM ecm_company co WHERE SELECT * FROM ecm_company where id = 2
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[537]	\eccore\model\mysql.php	287
+Fri, 26 Aug 2016 16:49:44 +0800	[2]Missing argument 2 for BaseModel::edit(), called in E:\phpStudy\WWW\pecmall\app\billing_order_seller.app.php on line 95 and defined	\eccore\model\model.base.php	523
+Fri, 26 Aug 2016 16:50:03 +0800	[2]Missing argument 2 for BaseModel::edit(), called in E:\phpStudy\WWW\pecmall\app\billing_order_seller.app.php on line 95 and defined	\eccore\model\model.base.php	523
+Fri, 26 Aug 2016 16:50:19 +0800	[2]Missing argument 2 for BaseModel::edit(), called in E:\phpStudy\WWW\pecmall\app\billing_order_seller.app.php on line 95 and defined	\eccore\model\model.base.php	523
+Fri, 26 Aug 2016 16:52:22 +0800	[2]Missing argument 2 for BaseModel::edit(), called in E:\phpStudy\WWW\pecmall\app\billing_order_seller.app.php on line 95 and defined	\eccore\model\model.base.php	523
+Fri, 26 Aug 2016 16:53:53 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0='status = 2' WHERE id  IN (' id =9')' at line 1
+MySQL Query:UPDATE ecm_billing SET 0='status = 2' WHERE id  IN (' id =9') 
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\model.base.php[536]	\eccore\model\mysql.php	287
+Fri, 26 Aug 2016 16:54:30 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0='status',1='2' WHERE id  IN (' id =9')' at line 1
+MySQL Query:UPDATE ecm_billing SET 0='status',1='2' WHERE id  IN (' id =9') 
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\model.base.php[536]	\eccore\model\mysql.php	287
+Fri, 26 Aug 2016 16:55:21 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0='status = 2' WHERE id  IN (' id =9')' at line 1
+MySQL Query:UPDATE ecm_billing SET 0='status = 2' WHERE id  IN (' id =9') 
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\model.base.php[536]	\eccore\model\mysql.php	287
+Fri, 26 Aug 2016 16:55:28 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0='status = 2' WHERE id  IN (' id =9')' at line 1
+MySQL Query:UPDATE ecm_billing SET 0='status = 2' WHERE id  IN (' id =9') 
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\model.base.php[536]	\eccore\model\mysql.php	287
+Fri, 26 Aug 2016 16:56:22 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0='status = 2' WHERE id  IN ('9')' at line 1
+MySQL Query:UPDATE ecm_billing SET 0='status = 2' WHERE id  IN ('9') 
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\model.base.php[536]	\eccore\model\mysql.php	287
+Fri, 26 Aug 2016 18:00:42 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'limit='3000',pass_time='1472205642',passer_id='2' WHERE id  IN ('9')' at line 1
+MySQL Query:UPDATE ecm_billing SET status='2',limit='3000',pass_time='1472205642',passer_id='2' WHERE id  IN ('9') 
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\model.base.php[536]	\eccore\model\mysql.php	287
+Sat, 27 Aug 2016 10:40:58 +0800	[256]MySQL Error[1054]: Unknown column 'revoker_id' in 'field list'
+MySQL Query:UPDATE ecm_billing SET status='6',revoke_time='1472265658',revoker_id='2' WHERE id  IN ('9') 
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\model.base.php[536]	\eccore\model\mysql.php	287
+Sat, 27 Aug 2016 10:41:24 +0800	[256]MySQL Error[1054]: Unknown column 'revoker_id' in 'field list'
+MySQL Query:UPDATE ecm_billing SET status='6',revoke_time='1472265684',revoker_id='2' WHERE id  IN ('9') 
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\model.base.php[536]	\eccore\model\mysql.php	287
+Sat, 27 Aug 2016 10:41:24 +0800	[256]MySQL Error[1054]: Unknown column 'revoker_id' in 'field list'
+MySQL Query:UPDATE ecm_billing SET status='6',revoke_time='1472265684',revoker_id='2' WHERE id  IN ('9') 
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\model.base.php[536]	\eccore\model\mysql.php	287
+Sat, 27 Aug 2016 10:41:50 +0800	[256]MySQL Error[1054]: Unknown column 'revoker_id' in 'field list'
+MySQL Query:UPDATE ecm_billing SET status='6',revoke_time='1472265710',revoker_id='2' WHERE id  IN ('9') 
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\model.base.php[536]	\eccore\model\mysql.php	287
+Sat, 27 Aug 2016 10:42:38 +0800	[256]MySQL Error[1054]: Unknown column 'revoker_id' in 'field list'
+MySQL Query:UPDATE ecm_billing SET status='6',revoke_time='1472265758',revoker_id='2' WHERE id  IN ('9') 
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\model.base.php[536]	\eccore\model\mysql.php	287
+Sat, 27 Aug 2016 10:44:43 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND status = 1' at line 1
+MySQL Query:SELECT bill.*,com.companyname,m.real_name,m.user_name FROM ecm_billing bill LEFT JOIN ecm_company com ON bill.companyid = com.id LEFT JOIN ecm_member m ON m.user_id = bill.uid where shopid =  AND status = 1
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[506]	\eccore\model\mysql.php	287
+Sat, 27 Aug 2016 10:45:02 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND status = 1' at line 1
+MySQL Query:SELECT bill.*,com.companyname,m.real_name,m.user_name FROM ecm_billing bill LEFT JOIN ecm_company com ON bill.companyid = com.id LEFT JOIN ecm_member m ON m.user_id = bill.uid where shopid =  AND status = 1
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[506]	\eccore\model\mysql.php	287
+Sat, 27 Aug 2016 14:28:02 +0800	[2]implode(): Invalid arguments passed	\app\billing_order_seller.app.php	119
+Sat, 27 Aug 2016 14:28:30 +0800	[2]implode(): Invalid arguments passed	\app\billing_order_seller.app.php	119
+Sat, 27 Aug 2016 14:32:36 +0800	[2]implode(): Invalid arguments passed	\app\billing_order_seller.app.php	119
+Sat, 27 Aug 2016 14:32:41 +0800	[2]implode(): Invalid arguments passed	\app\billing_order_seller.app.php	119
+Sat, 27 Aug 2016 14:32:45 +0800	[2]implode(): Invalid arguments passed	\app\billing_order_seller.app.php	119
+Sat, 27 Aug 2016 14:35:53 +0800	[2]implode(): Invalid arguments passed	\app\billing_order_seller.app.php	119
+Sat, 27 Aug 2016 16:34:35 +0800	[256]MySQL Error[1054]: Unknown column 'ord.user_id' in 'field list'
+MySQL Query:SELECT ord.order_sn,ord.order_name,member.user_name,ord.pay_time,ord.order_amount,bil.expiration_time,ord.user_id FROM ecm_order ord LEFT JOIN ecm_member member ON ord.buyer_id = member.user_id LEFT JOIN ecm_billing bil ON bil.uid = ord.order_id WHERE ord.buyer_id = 3 AND payment_id = -1
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[506]	\eccore\model\mysql.php	287
+Mon, 29 Aug 2016 08:51:28 +0800	[256]MySQL Error[1054]: Unknown column 'member.user_name' in 'field list'
+MySQL Query:SELECT ord.order_id,ord.order_sn,ord.order_name,member.user_name,ord.pay_time,ord.order_amount,bil.expiration_time,ord.buyer_id FROM ecm_order ord  LEFT JOIN ecm_billing bil ON (bil.uid = ord.buyer_id AND bil.shopid = ord.seller_id) WHERE payment_id = -1 AND bil.shopid = 5
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[506]	\eccore\model\mysql.php	287
+Mon, 29 Aug 2016 09:29:59 +0800	[256]MySQL Error[1054]: Unknown column 'com.companyname' in 'field list'
+MySQL Query:SELECT ord.order_id,ord.order_sn,ord.order_name,member.user_name,ord.pay_time,ord.order_amount,bil.expiration_time,ord.buyer_id,com.companyname FROM ecm_order ord LEFT JOIN ecm_member member ON ord.buyer_id = member.user_id LEFT JOIN ecm_billing bil ON bil.shopid = ord.seller_id LEFT JOIN ecm_comworker com ON member.user_id = com.user_id WHERE payment_id = -1 AND bil.shopid = 5
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[506]	\eccore\model\mysql.php	287
+Mon, 29 Aug 2016 09:47:59 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND status = 1' at line 1
+MySQL Query:SELECT bill.*,com.companyname,m.real_name,m.user_name FROM ecm_billing bill LEFT JOIN ecm_company com ON bill.companyid = com.id LEFT JOIN ecm_member m ON m.user_id = bill.uid where shopid =  AND status = 1
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[506]	\eccore\model\mysql.php	287
+Mon, 29 Aug 2016 10:56:06 +0800	[256]MySQL Error[1054]: Unknown column 'bill.limit_money' in 'field list'
+MySQL Query:SELECT ord.order_id,ord.order_sn,ord.order_name,ord.buyer_name,ord.pay_time,ord.order_amount,bil.expiration_time,ord.buyer_id,ord.company_name,bill.limit_money FROM ecm_order ord LEFT JOIN ecm_billing bil ON bil.shopid = ord.seller_id WHERE payment_id = -1 AND bil.shopid = 5
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[506]	\eccore\model\mysql.php	287
+Mon, 29 Aug 2016 11:05:03 +0800	[256]MySQL Error[1241]: Operand should contain 1 column(s)
+MySQL Query:SELECT bil.*,(SELECT ord.order_id,ord.order_sn,ord.order_name,ord.buyer_name,ord.pay_time,ord.order_amount,ord.buyer_id,ord.company_name FROM ecm_order ord where ord.seller_id = bil.shopid) as order_list from ecm_billing bil WHERE payment_id = -1 AND bil.shopid = 5
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[506]	\eccore\model\mysql.php	287
+Mon, 29 Aug 2016 11:05:50 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as order_list) from ecm_billing bil WHERE payment_id = -1 AND bil.shopid = 5' at line 1
+MySQL Query:SELECT bil.*,(SELECT ord.order_id,ord.order_sn,ord.order_name,ord.buyer_name,ord.pay_time,ord.order_amount,ord.buyer_id,ord.company_name FROM ecm_order ord where ord.seller_id = bil.shopid as order_list) from ecm_billing bil WHERE payment_id = -1 AND bil.shopid = 5
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[506]	\eccore\model\mysql.php	287
+Mon, 29 Aug 2016 11:07:14 +0800	[256]MySQL Error[1054]: Unknown column 'payment_id' in 'where clause'
+MySQL Query:SELECT bil.* from ecm_billing bil WHERE payment_id = -1 AND bil.shopid = 5
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[506]	\eccore\model\mysql.php	287
+Mon, 29 Aug 2016 11:34:30 +0800	[256]MySQL Error[1054]: Unknown column 'bill.limit_money' in 'field list'
+MySQL Query:SELECT ord.*,bil.expiration_time,bill.limit_money FROM ecm_order ord LEFT JOIN ecm_member member ON ord.buyer_id = member.user_id LEFT JOIN ecm_billing bil ON (bil.uid = ord.buyer_id OR bil.companyid = ord.company_id AND bil.shopid = ord.seller_id) WHERE payment_id = -1 AND bil.shopid = 5
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[506]	\eccore\model\mysql.php	287
+Mon, 29 Aug 2016 11:36:14 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+MySQL Query:SELECT ord.*,bil.expiration_time,bil.limit_money FROM ecm_order ord LEFT JOIN ecm_member member ON ord.buyer_id = member.user_id LEFT JOIN ecm_billing bil ON (bil.uid = ord.buyer_id OR bil.companyid = ord.company_id AND bil.shopid = ord.seller_id) WHERE payment_id = -1 AND bil.shopid = 
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[506]	\eccore\model\mysql.php	287
+Mon, 29 Aug 2016 14:38:29 +0800	[256]MySQL Error[1054]: Unknown column 'bill.companyid' in 'field list'
+MySQL Query:SELECT ord.*,bil.expiration_time,bil.limit_money,bill.companyid FROM ecm_order ord LEFT JOIN ecm_billing bil ON (bil.uid = ord.buyer_id OR bil.companyid = ord.company_id AND bil.shopid = ord.seller_id) WHERE payment_id = -1 AND bil.shopid = 5
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[506]	\eccore\model\mysql.php	287
+Mon, 29 Aug 2016 14:56:12 +0800	[2]in_array() expects parameter 2 to be array, null given	\app\billing_order_seller.app.php	79
+Mon, 29 Aug 2016 15:05:16 +0800	[2]array_flip(): Can only flip STRING and INTEGER values!	\app\billing_order_seller.app.php	80
+Tue, 30 Aug 2016 09:23:42 +0800	[2]array_search() expects parameter 2 to be array, null given	\app\billing_order_seller.app.php	71
+Tue, 30 Aug 2016 09:24:04 +0800	[2]array_search() expects parameter 2 to be array, null given	\app\billing_order_seller.app.php	71
+Tue, 30 Aug 2016 09:24:37 +0800	[2]array_search() expects parameter 2 to be array, null given	\app\billing_order_seller.app.php	71
+Tue, 30 Aug 2016 09:25:57 +0800	[2]array_search() expects parameter 2 to be array, null given	\app\billing_order_seller.app.php	71
+Tue, 30 Aug 2016 09:26:28 +0800	[2]array_search() expects parameter 2 to be array, null given	\app\billing_order_seller.app.php	71
+Tue, 30 Aug 2016 09:26:54 +0800	[2]array_search() expects parameter 2 to be array, null given	\app\billing_order_seller.app.php	71
+Tue, 30 Aug 2016 09:26:56 +0800	[2]array_search() expects parameter 2 to be array, null given	\app\billing_order_seller.app.php	71
+Tue, 30 Aug 2016 09:28:51 +0800	[2]in_array() expects parameter 2 to be array, null given	\app\billing_order_seller.app.php	73
+Wed, 31 Aug 2016 14:04:53 +0800	[256]MySQL Error[1054]: Unknown column 'bill.id' in 'field list'
+MySQL Query:SELECT bill.id,bil.uid,ord.*,bil.expiration_time,bil.limit_money,bil.companyid FROM ecm_order ord LEFT JOIN ecm_billing bil ON (bil.uid = ord.buyer_id OR bil.companyid = ord.company_id AND bil.shopid = ord.seller_id) WHERE payment_id = -1 AND bil.uid = 6
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[506]	\eccore\model\mysql.php	287
+Wed, 31 Aug 2016 15:25:09 +0800	[2]Invalid argument supplied for foreach()	\app\billing_order.app.php	43
+Wed, 31 Aug 2016 15:25:55 +0800	[2]Invalid argument supplied for foreach()	\app\billing_order.app.php	43
+Wed, 31 Aug 2016 15:25:56 +0800	[2]Invalid argument supplied for foreach()	\app\billing_order.app.php	43
+Wed, 31 Aug 2016 15:25:56 +0800	[2]Invalid argument supplied for foreach()	\app\billing_order.app.php	43
+Wed, 31 Aug 2016 15:25:57 +0800	[2]Invalid argument supplied for foreach()	\app\billing_order.app.php	43
+Wed, 31 Aug 2016 15:25:58 +0800	[2]Invalid argument supplied for foreach()	\app\billing_order.app.php	43
+Wed, 31 Aug 2016 16:51:24 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND payment_id = -1 AND seller_id = 2' at line 1
+MySQL Query:SELECT * FROM ecm_order where buyer_id =  AND payment_id = -1 AND seller_id = 2
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[506]	\eccore\model\mysql.php	287
+Wed, 31 Aug 2016 16:52:00 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND payment_id = -1 AND seller_id = 2' at line 1
+MySQL Query:SELECT * FROM ecm_order where buyer_id =  AND payment_id = -1 AND seller_id = 2
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[506]	\eccore\model\mysql.php	287
+Wed, 31 Aug 2016 16:54:00 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND payment_id = -1 AND seller_id = 5' at line 1
+MySQL Query:SELECT * FROM ecm_order where buyer_id =  AND payment_id = -1 AND seller_id = 5
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[506]	\eccore\model\mysql.php	287
+Wed, 31 Aug 2016 16:54:03 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND payment_id = -1 AND seller_id = 2' at line 1
+MySQL Query:SELECT * FROM ecm_order where buyer_id =  AND payment_id = -1 AND seller_id = 2
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[506]	\eccore\model\mysql.php	287
+Wed, 31 Aug 2016 16:54:06 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND payment_id = -1 AND seller_id = 2' at line 1
+MySQL Query:SELECT * FROM ecm_order where buyer_id =  AND payment_id = -1 AND seller_id = 2
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[506]	\eccore\model\mysql.php	287
+Wed, 31 Aug 2016 16:59:04 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND payment_id = 1 AND seller_id = 2' at line 1
+MySQL Query:SELECT * FROM ecm_order where buyer_id =  AND payment_id = 1 AND seller_id = 2
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[506]	\eccore\model\mysql.php	287
+Wed, 31 Aug 2016 16:59:19 +0800	[256]MySQL Error[1064]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND seller_id = 2' at line 1
+MySQL Query:SELECT * FROM ecm_order where buyer_id =   AND seller_id = 2
+Wrong File:  E:\phpStudy\WWW\pecmall\eccore\model\mysql.php[506]	\eccore\model\mysql.php	287
+Wed, 31 Aug 2016 17:55:01 +0800	[2]mt_rand(): max(20) is smaller than min(21)	\includes\libraries\captcha.lib.php	288
+Wed, 31 Aug 2016 17:55:02 +0800	[2]mt_rand(): max(20) is smaller than min(21)	\includes\libraries\captcha.lib.php	288
+Wed, 31 Aug 2016 17:55:04 +0800	[2]mt_rand(): max(20) is smaller than min(21)	\includes\libraries\captcha.lib.php	288
+Wed, 31 Aug 2016 17:55:05 +0800	[2]mt_rand(): max(0) is smaller than min(1)	\includes\libraries\captcha.lib.php	274
+Wed, 31 Aug 2016 17:55:08 +0800	[2]mt_rand(): max(20) is smaller than min(21)	\includes\libraries\captcha.lib.php	288
+Wed, 31 Aug 2016 17:55:09 +0800	[2]mt_rand(): max(0) is smaller than min(1)	\includes\libraries\captcha.lib.php	274

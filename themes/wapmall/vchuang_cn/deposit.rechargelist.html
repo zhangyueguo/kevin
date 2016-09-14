@@ -1,0 +1,95 @@
+{include file=member.header.html}
+<script type="text/javascript">
+$(function(){
+    $('#add_time_from').datepicker({dateFormat: 'yy-mm-dd'});
+    $('#add_time_to').datepicker({dateFormat: 'yy-mm-dd'});
+});
+</script>
+
+
+
+
+<body class="gray" style="overflow-x:hidden;">
+    <div class="w320">
+        <div class="fixed">
+            <!---头部------>
+            <div class="header header2">
+                <a href="{url app=default}"
+                   class="back2_index"></a>
+                交易宝
+                <a href="{url app=my_favorite}" class="bookmark"></a>
+            </div>    
+   </div>
+   <div class="public table deposit" style="margin-top:60px;">
+
+<div class="tab-ttl">
+                		<ul class="withdraw-tab clearfix">
+                        <li>	<p class="opr">  <a  style="width:100%" class="white_btn" href="{url app=deposit&act=drawlist}"><span>{$lang.withdraw_record}</span></a>  </p></li>
+                 <li> 	<p class="opr">       <a style="width:100%" class="white_btn" href="{url app=deposit&act=rechargelist}"><span>{$lang.recharge_record}</span></a>
+                    	</p></li>
+                        
+                        </ul>
+                    </div> 
+                    
+                    <div style="clear:both"></div>
+                    <div class="title clearfix">
+                    	<form method="get" class="">
+                        	<input type="hidden" name="app" value="deposit" />
+                            <input type="hidden" name="act" value="rechargelist" />
+                			<input class="text" type="text" name="add_time_from" id="add_time_from" value="{$smarty.get.add_time_from}" /> <span>-</span>
+                            <input class="text" id="add_time_to" type="text" name="add_time_to" value="{$smarty.get.add_time_to}" />
+                            <select name="status">
+                            	<option value=""></option>
+                            	<option value="success" {if $smarty.get.status eq 'success'} selected="selected"{/if}>{$lang.success}</option>
+                                <option value="verifing" {if $smarty.get.status eq 'verifing'} selected="selected"{/if}>{$lang.verifing}</option>
+                            </select>
+                			<input type="submit" class="btn-withdraw" value="{$lang.search}" />
+        				</form>
+                        <div >
+                    		已成功充值 <font color="#FF0000" >{$recharges.total_amount}</font> 元
+                        </div>
+                       
+                    </div>
+                    
+                    <div style="clear:both"></div>
+                    <div class="u_order" style="margin-top:15px;">
+                  	<!--{foreach from=$recharges.list item=recharge}-->
+                    <div class="orderbox">
+                <div class="detail">
+                    <a href="{url app=deposit&act=record&tradesn=$record.tradesn}">流水帐号：{$recharge.tradesn} </a>
+                    <p>{if $record.flow eq 'income'}{$record.end_time|date:Y.m.d H.i.s}{else}{$record.pay_time|date:Y.m.d H.i.s}{/if}</p>
+                    <p>​{$lang.recharge}</p>
+                     <p>金额：{$recharge.amount}</p>
+                     <p>资金渠道：  {$recharge.extra.payway}
+                                    {if !$recharge.is_online}
+                                    <span class="gray">{$recharge.extra.num}</span>
+                                    {/if}</p>
+                     <p>状态：{if $recharge.status eq 'SUCCESS'}{$lang.success}
+                                    {elseif $recharge.status eq 'PENDING'}
+                                    <span class="f60">{$lang.pending}</span>
+                                    {else}<span class="f60">{$lang.verifing}</span>{/if}</p>
+                                   
+                </div>
+                {if $recharge.status eq 'PENDING'}
+                <p class="opr">
+                    <a href="{url app=deposit&act=droprecharge&tradesn=$recharge.tradesn}" class="white_btn">{$lang.drop}</a>
+
+                </p>
+                
+                {/if}
+            </div>
+                    <!--{foreachelse}-->
+                        <div class="notice-word mt10">没有任何充值记录。
+                        
+                        <p class="opr">  <a class="white_btn" href="{url app=deposit&act=recharge}">马上充值</a>
+                        </p>
+                        </div>
+                        <!--{/foreach}-->
+                    </div>
+                      
+   
+      {include file=member.page.bottom.html}
+    
+   </div> 
+    </div>
+{include file=footer.html}

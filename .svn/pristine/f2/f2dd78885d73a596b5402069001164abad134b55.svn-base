@@ -1,0 +1,157 @@
+<?php
+require (ROOT_PATH . '/app/memberseller.app.php');
+
+class Store_creditApp extends MembersellerApp
+{
+    protected $_credit_set_mod;
+
+    protected $_xincredit_mod;
+
+    protected $_zhangdan_mod;
+
+
+    public function __construct()
+    {
+        $this->Seller_adminApp();
+    }
+
+    public function Seller_adminApp()
+    {
+        parent::__construct();
+        $this->_get_member_role();
+        $this->_credit_set_mod = & m('credit_set');
+        $this->_xincredit_mod = & m('xincredit');
+        $this->_zhangdan_mod = & m('zhangdan');
+    }
+
+    public function index()
+    {
+        $user = $this->visitor->get();
+
+        $this->_curlocal(LANG::get('member_center'),    url('app=member'),
+            LANG::get('overview'));
+
+        /* 当前用户中心菜单 */
+        $this->_curitem('credit_set');
+      //  $this->_config_seo('title', Lang::get('member_center'));
+
+        $array = array(
+              'conditions'=>"store_id=".$user['user_id']
+        );
+        $credit_set = $this->_credit_set_mod->find($array);
+        if(IS_POST)
+        {
+            $data['zhouqi']       = $_POST['zhouqi'];
+            //$data['zhangdanri']  = $_POST['zhangdanri'];
+            //$data['jiesuanri']   = $_POST['jiesuanri'];
+            $data['zhijin']      = $_POST['zhijin'];
+            $data['emailtm']     = $_POST['emailtm'];
+            $data['phonetm']     = $_POST['phonetm'];
+            $data['store_id']    = $user['user_id'];
+           if(empty($credit_set))
+           {
+               $this->_credit_set_mod->add($data);
+           }
+            else
+            {
+                $this->_credit_set_mod->edit($credit_set[1]['id'],$data);
+            }
+        }
+        $credit_set = $this->_credit_set_mod->find($array);
+        $this->assign('credit_set',$credit_set[1]);
+//        $days = array();
+//        for($i=1;$i<31;$i++)
+//        {
+//            $days[] = $i;
+//        }
+       // $this->assign('days',$days);
+        $this->display('store_credit.set.html');
+    }
+
+    public function qianshou()
+    {
+        $user = $this->visitor->get();
+
+        $this->_curlocal(LANG::get('member_center'),    url('app=store_credit'),
+            LANG::get('overview'));
+        /* 当前用户中心菜单 */
+        $this->_curitem('credit_link');
+        //  $this->_config_seo('title', Lang::get('member_center'));
+
+        $sql = "select * from ecm_xincredit where seller_store_id = ".$user['user_id'];
+
+        $xincredits = $this->_xincredit_mod->getAll($sql);
+
+        $this->assign('xincredits',$xincredits);
+
+        $this->display('store_credit.qianshou.html');
+    }
+
+    public function yishouxin()
+    {
+        $user = $this->visitor->get();
+        $this->_curlocal(LANG::get('member_center'),    url('app=store_credit'),
+            LANG::get('overview'));
+        /* 当前用户中心菜单 */
+        $this->_curitem('credit_manage');
+
+        $sql = "select * from ecm_xincredit where seller_store_id = ".$user['user_id']." and status = 1";
+
+        $xincredits = $this->_xincredit_mod->getAll($sql);
+
+        $this->assign('xincredits',$xincredits);
+
+        $this->display('store_credit.yishouxin.html');
+    }
+
+    public function zhangdan()
+    {
+        $user = $this->visitor->get();
+        $this->_curlocal(LANG::get('member_center'),    url('app=store_credit'),
+            LANG::get('overview'));
+        /* 当前用户中心菜单 */
+        $this->_curitem('bill_manage');
+      //获取和商家相关的账单
+        $sql = "select * from ecm_zhangdan where store_id = ".$user['user_id'];
+
+        $zhangdans = $this->_zhangdan_mod->getAll($sql);
+
+
+        $this->assign('zhangdans',$zhangdans);
+
+
+
+        $this->display('store_credit.zhangdan.html');
+    }
+
+
+    public function shenhe()
+    {
+        //$user = $this->visitor->get();
+        $zhouqi = $this->_credit_set_mod->getOne('select zhouqi from ecm_credit_set where id = '.$_POST['id']);
+        $data['status'] = $_POST['status'];
+        $data['shenhetime'] = time();
+        $data['zhangdanri'] = date('d');
+        $day = $zhouqi-30;
+        $data['jiesuanri']  = date('d',strtotime("+".$day." day"));
+        $this->_xincredit_mod->edit($_POST['id'],$data);
+        echo json_encode($_POST['status']);exit;
+    }
+
+    public function _get_member_role()
+    {
+        if (!$this->visitor->has_login)
+        {
+            header('Location:index.php?app=member&act=login&ret_url=' . rawurlencode($_SERVER['PHP_SELF'] . '?' . $_SERVER['QUERY_STRING']));
+            return;
+        }
+        if(!$this->visitor->get('has_store')){
+            $this->show_warning('has_no_store');
+            exit;
+        }
+        $_SESSION['member_role'] = 'seller_admin';
+    }
+}
+
+
+?>

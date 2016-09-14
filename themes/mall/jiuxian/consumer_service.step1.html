@@ -1,0 +1,52 @@
+{include file=member.header.html}
+<style>
+.member_no_records {border-top: 0px !important;}
+.table td{ padding-left: 5px; }
+.xiaotit {
+	color:#F00;
+	}
+</style>
+<div class="content">
+  <div class="totline"></div>
+  <div class="botline"></div>
+  {include file=member.menu.html}
+  <div id="right">
+    {include file=member.submenu.html}
+        <div class="wrap">
+
+            <div class="public_select table">
+                <div class="cpsa_services">
+				<div class="cpsa_services_content">
+	<div class="xbserver-img">
+	<div class="normal-server-pic"><img src="{$xfzbz_image.xb_img_1}" alt="{$lang.consumer_protection_service}" /></div>
+	<b>
+    
+<span class="xiaotit">{$lang.consumer_protection_service}</span>-<!--{if !$consumerservice}-->{$lang.not_post_deposit}<!--{else}-->{$lang.c_s_state.$consumerservice.state}<!--{/if}--></b>
+	
+    
+    <span class="price">{$lang.deposit_quota}：{$deposit_quota.bao_1|price}</span>
+    <hr class="underline">
+	<p> {$lang.c_p_step1_notice1}</p>
+	<p class="warning-content">{$lang.c_p_step1_notice2}</p>
+	 <!--{if !$consumerservice}--><input type="button" onClick="location.href=('index.php?app=consumer_service&step=2&type=1');" value="{$lang.post_deposit}" class="cpsa_button"><!--{/if}-->
+							</div>
+						</div>
+				</div>
+            </div>
+            
+           
+            
+            
+            
+            
+           
+            
+            
+            <div class="wrap_bottom"></div>
+        </div>
+        <div class="clear"></div>
+
+    </div>
+    <div class="clear"></div>
+</div>
+{include file=footer.html}

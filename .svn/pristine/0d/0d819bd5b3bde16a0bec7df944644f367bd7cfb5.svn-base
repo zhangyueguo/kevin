@@ -1,0 +1,141 @@
+{include file=member.header.html}
+<script type="text/javascript">
+    $(function(){
+        $('#add_time_from').datepicker({dateFormat: 'yy-mm-dd'});
+        $('#add_time_to').datepicker({dateFormat: 'yy-mm-dd'});
+    });
+</script>
+<style type="text/css">
+    .float_right {float: right;}
+</style>
+<div class="content">
+    {include file=member.menu.html}
+    <div id="right">
+        {include file=member.submenu.html}
+        <div class="wrap">
+            <div class="public">
+
+               <form method="post" enctype="multipart/form-data" id="profile_form">
+                    <div class="information">
+                        <div class="info individual">
+
+                <!--{if $credits}-->
+                <table>
+                    <tr>
+                        <th class="width4">授信类型</th>
+                        <th class="width4">申请额度</th>
+                        <th class="width4">审批额度</th>
+                        <th class="width4">申请商家</th>
+                        <th class="width4">审核情况</th>
+                        <!--<th class="width4">操作</th>-->
+                    </tr>
+                    <!--{foreach from=$credits item=comworker}-->
+                    <tr>
+                        <td>
+                            <!--{if $comworker.beilei=='shang'}-->
+                            商家授信
+                            <!--{else}-->
+                            平台授信
+                            <!--{/if}-->
+                        </td>
+                        <td>{$comworker.edu}</td>
+                        <td>{$comworker.shenpiedu}</td>
+                        <td>{$comworker.seller_store_name}</td>
+                        <td>
+                            <!--{if $comworker.status=='0'}-->
+                            未审核
+                            <!--{elseif $comworker.status=='1'}-->
+                            已审核通过
+                            <!--{elseif $comworker.status=='1'}-->
+                            审核未通过
+                            <!--{/if}-->
+                        </td>
+                        <!--<td><a href="index.php?app=store_worker&amp;act=editworker&amp;id={$comworker.id}">编辑</a>
+                            <a href="javascript:if(confirm('确定要删除此员工吗'))window.location = 'index.php?app=store_worker&amp;act=drop&amp;id={$comworker.id}';">删除</a></td>-->
+                    </tr>
+                    <!--{/foreach}-->
+                </table>
+
+            </div>
+        </div>
+    </form>
+
+                <!--{else}-->
+                <div class="order_form member_no_records">
+                    <span>您还未获得任何信用授权！</span>
+                </div>
+                <!--{/if}-->
+                <div class="order_form_page">
+                    <div class="page">
+                        {include file=member.page.bottom.html}
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="wrap_bottom"></div>
+        </div>
+        <div class="clear"></div>
+        <div class="adorn_right1"></div>
+        <div class="adorn_right2"></div>
+        <div class="adorn_right3"></div>
+        <div class="adorn_right4"></div>
+    </div>
+    <div class="clear"></div>
+</div>
+<iframe id='iframe_post' name="iframe_post" src="about:blank" frameborder="0" width="0" height="0"></iframe>
+<script type="text/javascript">
+    //xiao进行的添加
+    $(function () {
+        $("a[id='delete']").click(function(){
+            if(confirm("您确定要删除该订单吗？\n\n删除后，您可在订单回收站找回，或永久删除。")){
+                var uri = $(this).attr('uri');
+                var obj = $(this);
+                var order_id = $(this).attr('order_id');
+                $.post(uri, { orderid: order_id},
+                        function(data){
+                            if(data == 'success'){
+                                obj.parents('.order_form').remove();
+                            }
+                        });
+            }
+        })
+
+        $("a[id='recovery']").click(function(){
+            var uri = $(this).attr('uri');
+            var obj = $(this);
+            var pagecount = '{$page_info.item_count}';
+            var order_id = $(this).attr('order_id');
+            var plength = $(".order_form").length;
+            $.post(uri, { orderid: order_id},
+                    function(data){
+                        if(data == 'success'){
+                            obj.parents('.order_form').remove();
+                            if(plength == 1){
+                                $(".public").html('<div class="order_form member_no_records"><span>{$lang.no_records}</span></div>');
+                            }
+                        }
+                    });
+        })
+
+        $("a[id='chedidelete']").click(function(){
+            if(confirm("您确定要彻底删除该订单吗？\n\n删除后，您将不能查看该订单信息，也无法针对该订单进行维权！")){
+                var uri = $(this).attr('uri');
+                var obj = $(this);
+                var pagecount = '{$page_info.item_count}';
+                var order_id = $(this).attr('order_id');
+                var plength = $(".order_form").length;
+                $.post(uri, { orderid: order_id},
+                        function(data){
+                            if(data == 'success'){
+                                obj.parents('.order_form').remove();
+                                if(plength == 1){
+                                    $(".public").html('<div class="order_form member_no_records"><span>{$lang.no_records}</span></div>');
+                                }
+                            }
+                        });
+            }
+        })
+
+    })
+</script>
+{include file=footer.html}

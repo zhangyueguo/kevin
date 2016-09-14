@@ -1,0 +1,110 @@
+@import url('global.css');
+
+/* header */
+
+.rc-lt{ display:block; position:absolute;left:0;top:0;width:1px;height:1px; background:#ffffff; overflow:hidden}
+.rc-lb{ display:block; position:absolute;left:0;bottom:0;width:1px;height:1px; background:#ffffff; overflow:hidden}
+.rc-rt{ display:block; position:absolute;right:0;top:0;width:1px;height:1px; background:#ffffff; overflow:hidden}
+.rc-rb{ display:block; position:absolute;right:0;bottom:0;width:1px;height:1px; background:#ffffff; overflow:hidden}
+
+#header { position:relative; background:#fAfAfA; z-index:2; }
+#header .logo{float:left;margin-left:3px;margin-top:5px;width:300px;}
+#header .top-search{float:left;margin-left:20px;width:460px; position:relative;margin-top:10px;}
+#header .top-search-tab li{float:left; position:relative; height:22px; line-height:22px;padding:0 15px 0 15px;}
+#header .top-search-tab li a:hover{ text-decoration:underline}
+#header .top-search-tab li.current{background: #FA5A03;}
+#header .top-search-tab li.current a{color:#fff; font-weight:bold}
+#header .top-search-tab li.current a:hover{ text-decoration:none}
+#header .top-search-box{ margin-top:15px; height:35px;color:#666;}
+#header .top-search-box input{ vertical-align:middle; line-height:150%;}
+#header .top-search-box .keyword{border:1px #fff solid;height:30px;width:350px;padding:0 0 0 2px;line-height:30px; position:absolute;left:6px; top:2px;color:#666;}
+#header .top-search-box .kw_bj{background:url(../images/head_foot_bj.png) no-repeat 3px -232px;}
+#header .top-search-box .index_bj{background-position:0px 2px;}
+#header .top-search-box .groupbuy_bj{background-position:3px -212px;}
+#header .top-search-box .store_bj{background-position:3px -193px;}
+
+#header .top-search-box .submit{width:100px; height:37px;position:absolute;border:0;right:-1px;top:-1px; cursor:pointer;font-size:16px;color:#fff;font-weight:bold; background:url(../images/btn-top-search.png) no-repeat 0 -48px;}
+#header .top-search-box .submit:hover{width:100px; height:37px;position:absolute;border:0;right:-1px;top:-1px; cursor:pointer;font-size:16px;color:#fff;font-weight:bold; background:url(../images/btn-top-search.png) no-repeat 0 -3px;}
+#header .top-search-box .form-fields{position:relative;border: 2px #f52b00 solid; border-right:0px; width:100%; height:35px; background:#FFF; }
+
+#header .top-search-keywords{margin-top:10px;padding-left:5px;}
+#header .top-search-keywords a{margin-right:10px;color:#646464;}
+#header .top-search-keywords a:hover{color:#FA5A03; text-decoration:none}
+.hotline { float:right;background:url(../images/400.gif) right no-repeat;height:52px;width:400px;margin-top:17px;}
+#header .search-cat a{ display:block;margin:10px 0 10px 10px;border:1px #ddd solid;padding:0 10px 0 10px; height:32px; line-height:32px;}
+#header .search-cat a:hover{border:1px #FA5A03 solid;}
+
+
+/* mall-nav */
+.mall-nav{ height:34px; line-height:34px; background:#f52b00; border-top: #f52b00 1px solid; border-bottom:1px solid #f52b00;}
+.mall-nav ul .each{ position:relative}
+.mall-nav ul .each a{display:inline-block;padding:0px 16px; font-size: 14px;font-weight: bold;color: white;}
+.mall-nav ul .each a.current,.mall-nav ul .each a:hover{}
+
+.mall-nav ul .each span{width:40px;height:29px;background: url(../images/CgQCtVDQPSqAAeI2AAAFJZRGz6047200.jpg) no-repeat;top:-10px;right:-10px;}
+
+
+/* header and home widget allcategory-list  */
+
+.allcategory{position:relative; z-index:100;width:205px; top:-8px; }
+.allcategory .allsort{width:205px; background: url(../images/indexhead_sprite.png) -5px -70px;font-weight: bold;font-size:14px;color:#fff;display:block;padding-left:15px; height:35px; }
+.allcategory .allsort b1 { width:165px; text-align:center; display:inline-block; }
+
+#header .allcategory-list{position:absolute;left:0;top:35px;}
+
+.allcategory-list{ margin-top:-9px; border:2px #e60012 solid;border-top:0;width:201px;background:#fff; text-align:left;color:#404040; z-index:100;}
+.allcategory-list .item{ float:left;width:201px;height:40px;line-height:22px; position:relative; z-index:99;/*background:#faf6f3;*/}
+.allcategory-list .item .pborder{ /*border-bottom:1px #fff solid;border-top:#EAEAEA 1px solid;*/padding-top:8px;padding-left:29px;padding-bottom:8px;padding-right:11px; cursor:pointer;width:161px; background:url(../images/ico-cat.png) no-repeat;background-position:4px 1px;}
+.allcategory-list .item .pborder1 { background-position:4px -40px;background-color:whiteSmoke;}
+.allcategory-list .item .pborder2 { background-position:4px -80px;}
+.allcategory-list .item .pborder3 { background-position:4px -120px;background-color:whiteSmoke;}
+.allcategory-list .item .pborder4 { background-position:4px -160px;}
+.allcategory-list .item .pborder5 { background-position:4px -200px;background-color:whiteSmoke;}
+.allcategory-list .item .pborder6 { background-position:4px -240px;}
+.allcategory-list .item .pborder7 { background-position:4px -280px;background-color:whiteSmoke;}
+.allcategory-list .item .pborder8 { background-position:4px -320px;}
+.allcategory-list .item .pborder9 { background-position:4px -360px;background-color:whiteSmoke;}
+.allcategory-list .item .pborder10 { background-position:4px -400px;}
+.allcategory-list .item .pborder11 { background-position:4px -440px;background-color:whiteSmoke;}
+.allcategory-list .item .pborder12 { background-position:4px -480px;}
+.allcategory-list .item .pborder p{ background:url(../images/home-bg.gif) 114px -49px no-repeat;font-size:14px;}
+.allcategory-list .item a{color:#3e3e3e;}
+.allcategory-list .item a:hover{color:#F52B00;}
+.allcategory-list .item .pop,
+.allcategory-list .item .line{ display:none}
+.allcategory-list .item .pborder p a:hover{white-space:nowrap; }
+
+.allcategory-list .pop .catlist{width:539px;border-right:1px #ddd solid; background:#fff;}
+.allcategory-list .pop dl{width:514px; line-height:22px;border-bottom:1px #E3E3E3 dashed;padding:5px 10px 5px 15px;}
+.allcategory-list .pop dl a{ text-decoration:none}
+.allcategory-list .pop dt{width:200px;}
+.allcategory-list .pop a{color:#333333;}
+.allcategory-list .pop a:hover{ text-decoration:underline;}
+.allcategory-list .pop dd{width:444px;margin-left:10px;}
+.allcategory-list .pop dd a{padding-right:10px;}
+
+.allcategory-list .item:hover .pborder,
+.allcategory-list .hover .pborder{border:1px #e60012 solid;border-left:0px;border-right:0;}
+.allcategory-list .item:hover .line,
+.allcategory-list .hover .line{display:block;position:absolute;right:-1px;top:1px;width:2px; height:38px; background:#fff;z-index:9; overflow:hidden}
+.allcategory-list .item:hover .pop,
+.allcategory-list .hover .pop{display:block;position:absolute;border:1px #e60012 solid;left:201px;top:0px;background:#FFF9E6;width:760px;}
+
+.allcategory-list .catbrand{width:200px;padding:10px;overflow:hidden;}
+.allcategory-list .catbrand .btn-channel{ display:block;width:180px; height:30px; background:#FA5A03;line-height:30px; text-align:center;margin-bottom:20px;color:#fff;font-size:14px;_padding-top:10px;_height:20px;}
+.allcategory-list .catbrand .btn-channel ins{display:inline-block;background:url(../images/sort_banner_arrow.png) no-repeat left top;width:11px; height:11px;margin-left:3px;}
+.allcategory-list .catbrand .btn-channel:hover{color:#fff;}
+.allcategory-list .catbrand h2{font-size:14px;font-weight:bold;margin-bottom:5px;color:#5E5E5E}
+
+/* if is text */
+.allcategory-list .catbrand li{margin-right:8px;width:92px;margin-top:5px;}
+.allcategory-list .catbrand li a{color:#333}
+.allcategory-list .catbrand li a:hover{ text-decoration:underline}
+/* if is image
+.allcategory-list .catbrand li{margin-right:8px;width:92px;height:42px;margin-top:5px;}
+.allcategory-list .catbrand ul a{ display:block;width:90px; height:40px;border:1px #ddd solid;}
+.allcategory-list .catbrand ul a:hover{border:1px #FA5A03 solid}
+.allcategory-list .catbrand ul a img{display:block;}
+*/
+#regionbox { display:none; padding-top: 120px; padding-right: 100px; padding-bottom: 60px; padding-left: 100px; width: 339px;height:71px;text-align: center; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-color: rgb(170, 170, 170); border-right-color: rgb(170, 170, 170); border-bottom-color: rgb(170, 170, 170); border-left-color: rgb(170, 170, 170); background: url(../images/sr_bg.png);background-repeat:no-repeat;background-color: rgb(255, 255, 255); position:fixed; left: 30%;z-index: 10000;_margin-left:400px; }
+#confirm { cursor:pointer;background:url(../images/sr_bt.png);width:102px;height:32px; }

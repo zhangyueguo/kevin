@@ -1,0 +1,288 @@
+<?php
+/**
+ *  @Created By ECMall PhpCacheServer
+ *  @Time:2016-09-13 09:10:50
+ */
+
+if(filemtime(__FILE__) + 86400 < time())return false;
+
+return array (
+  'gcategories' => 
+  array (
+    0 => 
+    array (
+      'id' => '461',
+      'value' => '打印',
+      'catpic' => '',
+      'children' => 
+      array (
+        0 => 
+        array (
+          'id' => '465',
+          'value' => '装订方式',
+          'catpic' => '',
+          'children' => 
+          array (
+            0 => 
+            array (
+              'id' => '468',
+              'value' => '角钉',
+              'catpic' => '',
+              'children' => 
+              array (
+              ),
+            ),
+            1 => 
+            array (
+              'id' => '469',
+              'value' => '平钉',
+              'catpic' => '',
+              'children' => 
+              array (
+              ),
+            ),
+            2 => 
+            array (
+              'id' => '470',
+              'value' => '骑马钉',
+              'catpic' => '',
+              'children' => 
+              array (
+              ),
+            ),
+            3 => 
+            array (
+              'id' => '471',
+              'value' => '胶装',
+              'catpic' => '',
+              'children' => 
+              array (
+              ),
+            ),
+          ),
+          'brands' => 
+          array (
+          ),
+        ),
+        1 => 
+        array (
+          'id' => '466',
+          'value' => '纸张大小',
+          'catpic' => '',
+          'children' => 
+          array (
+            0 => 
+            array (
+              'id' => '472',
+              'value' => 'A3',
+              'catpic' => '',
+              'children' => 
+              array (
+              ),
+            ),
+            1 => 
+            array (
+              'id' => '473',
+              'value' => 'A4',
+              'catpic' => '',
+              'children' => 
+              array (
+              ),
+            ),
+            2 => 
+            array (
+              'id' => '474',
+              'value' => 'B5',
+              'catpic' => '',
+              'children' => 
+              array (
+              ),
+            ),
+          ),
+          'brands' => 
+          array (
+          ),
+        ),
+        2 => 
+        array (
+          'id' => '467',
+          'value' => '封面',
+          'catpic' => '',
+          'children' => 
+          array (
+            0 => 
+            array (
+              'id' => '475',
+              'value' => '常规封面',
+              'catpic' => '',
+              'children' => 
+              array (
+                0 => 
+                array (
+                  'id' => '477',
+                  'value' => '皮纹纸',
+                  'catpic' => '',
+                  'children' => 
+                  array (
+                  ),
+                ),
+                1 => 
+                array (
+                  'id' => '478',
+                  'value' => '布纹纸',
+                  'catpic' => '',
+                  'children' => 
+                  array (
+                  ),
+                ),
+              ),
+            ),
+            1 => 
+            array (
+              'id' => '476',
+              'value' => '特殊封面',
+              'catpic' => '',
+              'children' => 
+              array (
+                0 => 
+                array (
+                  'id' => '479',
+                  'value' => '铜版纸覆膜',
+                  'catpic' => '',
+                  'children' => 
+                  array (
+                  ),
+                ),
+                1 => 
+                array (
+                  'id' => '480',
+                  'value' => '特种纸',
+                  'catpic' => '',
+                  'children' => 
+                  array (
+                  ),
+                ),
+              ),
+            ),
+          ),
+          'brands' => 
+          array (
+          ),
+        ),
+      ),
+      'top' => '0px',
+      'image' => 
+      array (
+        'image' => 'static/ads/201307181719573646.jpg',
+        'link' => '/index.php?app=store&id=371',
+      ),
+      'store' => 
+      array (
+        0 => 
+        array (
+          'store_name' => '雅意娜菲',
+          'store_id' => '371',
+        ),
+        1 => 
+        array (
+          'store_name' => '壹号童仓',
+          'store_id' => '466',
+        ),
+        2 => 
+        array (
+          'store_name' => '李宁',
+          'store_id' => '495',
+        ),
+      ),
+    ),
+    1 => 
+    array (
+      'id' => '462',
+      'value' => '印刷',
+      'catpic' => '',
+      'children' => 
+      array (
+      ),
+      'top' => '-37px',
+      'image' => 
+      array (
+        'image' => 'static/ads/201307180943066127.jpg',
+        'link' => '/index.php?app=store&id=496',
+      ),
+      'store' => 
+      array (
+        0 => 
+        array (
+          'store_name' => '手机直营店',
+          'store_id' => '496',
+        ),
+      ),
+    ),
+    2 => 
+    array (
+      'id' => '463',
+      'value' => '户外广告',
+      'catpic' => '',
+      'children' => 
+      array (
+      ),
+      'top' => '-50px',
+      'image' => 
+      array (
+        'image' => NULL,
+        'link' => NULL,
+      ),
+      'store' => 
+      array (
+        0 => 
+        array (
+          'store_name' => '厦门科信电脑科技',
+          'store_id' => '3',
+        ),
+        1 => 
+        array (
+          'store_name' => '科大科技',
+          'store_id' => '350',
+        ),
+        2 => 
+        array (
+          'store_name' => '戴尔旗舰店',
+          'store_id' => '9',
+        ),
+        3 => 
+        array (
+          'store_name' => '华硕。索尼专卖店',
+          'store_id' => '12',
+        ),
+        4 => 
+        array (
+          'store_name' => '手机直销店',
+          'store_id' => '496',
+        ),
+        5 => 
+        array (
+          'store_name' => '厦门市星锐科技经营部',
+          'store_id' => '337',
+        ),
+      ),
+    ),
+    3 => 
+    array (
+      'id' => '464',
+      'value' => '名片',
+      'catpic' => '',
+      'children' => 
+      array (
+      ),
+      'top' => '-80px',
+      'image' => 
+      array (
+        'image' => NULL,
+        'link' => NULL,
+      ),
+      'store' => NULL,
+    ),
+  ),
+);
+
+?>

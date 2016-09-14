@@ -1,0 +1,14 @@
+<!--{if $payform.online}-->
+  <h3>{$lang.connecting_pay_gateway}</h3>
+  <form action="{$payform.gateway}" id="payform" method="{$payform.method}" style="display:none">
+  <!--<form action="{$payform.gateway}" id="payform" method="{$payform.method}">-->
+  <!-- {foreach from=$payform.params item=value key=_k} -->
+    <!--<input type="hidden" name="{$_k}" value="{$value}" />-->
+    <input type="text" name="{$_k}" value="{$value}" />
+  <!-- {/foreach} -->
+  <input type="hidden" name="backuri" value="{$uri}" />
+  </form>
+  <script type="text/javascript">
+     document.getElementById('payform').submit();
+  </script>
+<!--{/if}-->

@@ -1,0 +1,36 @@
+<?php
+/**
+ *  @Created By ECMall PhpCacheServer
+ *  @Time:2016-08-25 14:38:12
+ */
+
+if(filemtime(__FILE__) + 1800 < time())return false;
+
+return array (
+  'model_id' => 62364908,
+  'model_name' => '母婴用品',
+  'keywords' => 
+  array (
+    0 => '御宝',
+    1 => '英氏',
+    2 => '哺育用品',
+    3 => '婴儿奶粉',
+    4 => '婴儿护肤',
+    5 => '纸尿裤',
+    6 => '益智玩具',
+    7 => '辅食',
+  ),
+  'title' => '母婴馆',
+  'link' => '/index.php?app=search&cate_id=5',
+  'goods_list' => 
+  array (
+  ),
+  'ad1_image_url' => 'data/files/mall/template/201404011437555180.jpg',
+  'ad1_link_url' => '/index.php?app=store&id=448',
+  'ad2_image_url' => 'data/files/mall/template/201404011445029395.gif',
+  'ad2_link_url' => '/index.php?app=goods&id=1134',
+  'ad3_image_url' => 'data/files/mall/template/201404011451336334.jpg',
+  'ad3_link_url' => '/index.php?app=goods&id=1146',
+);
+
+?>

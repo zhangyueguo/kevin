@@ -1,0 +1,11 @@
+<?php
+/**
+ *  @Created By ECMall PhpCacheServer
+ *  @Time:2016-08-04 09:31:45
+ */
+return array (
+  1 => '普通店铺',
+  2 => '旗舰店铺',
+);
+
+?>

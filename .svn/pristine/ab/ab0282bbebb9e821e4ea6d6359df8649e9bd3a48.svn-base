@@ -1,0 +1,53 @@
+{include file=member.header.html}
+<div class="content">
+    <div id="right">
+    	{include file=member.submenu.html}
+        <div class="wrap">
+        <a class="btn-fabu" href="{url app=supply_demand&act=add}"><i></i>{$lang.add_info_free}</a>
+            <div class="public table">
+                <table class="table_head_line">
+                    <!--{if $sdinfo}-->
+                    <tr class="line tr_color">
+                        <th width="34%">{$lang.title}</th>
+                        <th width="15%">{$lang.name}</th>
+                        <th width="15%">{$lang.verify}</th>
+                        <th width="20%">{$lang.verify_desc}</th>
+                        <th width="16%">{$lang.handle}</th>
+                    </tr>
+                    <!--{/if}-->
+                    <!--{foreach from=$sdinfo item=info name=v}-->
+                    <!--{if $smarty.foreach.v.last}--><tr class="line_bold tr_align"><!--{else}--><tr class="line tr_align"><!--{/if}-->
+                        <td><a href="{url app=sdemand&act=view&id=$info.id}" target="_blank">{$info.title|escape}</a></td>
+                        <td>{$info.name|escape}</td>
+                        <td class="align2">
+                            <!--{if $info.verify eq 1}-->
+                            <font color="#006633">{$lang.verified}</font>
+                            <!--{elseif $info.verify eq 2}-->
+                            <font color="red">{$lang.verify_no_pass}</font>
+                            <!--{else}-->
+                            <font color="#FF6666">{$lang.verifying}</font>
+                            <!--{/if}-->
+                        </td>
+                        <td class="align2"><font color="#999">{$info.verify_desc}</font></td>
+                        <td> <a href="index.php?app=supply_demand&act=edit&id={$info.id}" class="edit1 float_none">{$lang.edit}</a>
+                            <a href="javascript:drop_confirm('{$lang.drop_confirm}', 'index.php?app=supply_demand&amp;act=drop&id={$info.id}');" class="delete float_none">{$lang.drop}</a></td>
+                        </td>
+                    </tr>
+                    <!--{foreachelse}-->
+                    <tr>
+                        <td colspan="8" class="member_no_records padding6">{$lang.$smarty.get.act}{$lang.no_records}</td>
+                    </tr>
+                    <!--{/foreach}-->
+                </table>
+            </div>
+            <div class="wrap_bottom"></div>
+        </div>
+        <div class="clear"></div>
+        <div class="adorn_right1"></div>
+        <div class="adorn_right2"></div>
+        <div class="adorn_right3"></div>
+        <div class="adorn_right4"></div>
+    </div>
+    <div class="clear"></div>
+</div>
+{include file=footer.html}

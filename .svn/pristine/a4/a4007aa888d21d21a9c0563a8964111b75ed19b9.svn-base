@@ -1,0 +1,245 @@
+<?php
+
+define('UPLOAD_PATH_BUS','data/files/mall/company');
+
+class CompanyApp extends CompanybaseApp
+{
+    protected $_feed_enabled = false;
+    public function __construct()
+    {
+        $this->CompanyApp();
+    }
+    public function CompanyApp()
+    {
+        parent::__construct();
+        $ms = & ms();
+        $this->_feed_enabled = $ms->feed->feed_enabled();
+        $this->assign('feed_enabled',$this->_feed_enabled);
+    }
+
+    public function index()
+    {
+        $id=2;   //暂时
+        if(!IS_POST)
+        {
+            /* 当前位置 */
+            $this->_curlocal(LANG::get('member_center'),  'index.php?app=company',
+                LANG::get('basic'));
+
+           //企业中心菜单
+            $this->_curitem('overview');
+
+            /* 当前所处子菜单 */
+            $this->_curmenu('basic_information');
+
+            $region_mod = & m('region');
+            $this->assign('regions',$region_mod->get_options(0));
+
+            $model_company = & m('company');
+            $company = $model_company->get_info(2);
+            $this->assign('company',$company);
+
+            $this->import_resource(
+              array('script'=>'jquery.plugins/jquery.validate.js',)
+            );
+
+            $this->display('company.index.html');
+        }
+        else
+        {
+           $data = array(
+                 'companyname'  =>  $_POST['company_name'],
+                 'email'         =>  $_POST['email'],
+                 'lxrname'       =>  $_POST['lxrname'],
+                 'section'       =>  $_POST['section'],
+                 'tel'           =>  $_POST['tel'],
+                 'phone'        =>  $_POST['phone'],
+                'region_id'    =>  $_POST['region_id'],
+               'region_name'  =>  $_POST['region_name']
+           );
+
+            $model_company = & m('company');
+            $model_company->edit(2,$data);                        //没做登入，暂时
+
+            if($model_company->has_error())
+            {
+                $this->show_warning($model_company->get_error());
+                return;
+            }
+            $this->show_warning('edit_company_successed');
+        }
+    }
+
+    public function approve()
+    {
+        $id = 2;
+        /* 当前位置 */
+        $this->_curlocal(LANG::get('member_center'),  'index.php?app=company',
+            LANG::get('basic'));
+
+        //企业中心菜单
+        $this->_curitem('my_profile');
+
+        /* 当前所处子菜单 */
+        $this->_curmenu('basic_information');
+        $model_company = & m('company');
+        if(IS_POST)
+        {
+            $images = array('bus_img','card_s','card_x');
+            $image_urls = $this->_uplocad_images($images);
+
+            foreach($images as $image)
+            {
+                //isset($image_urls[$image]) ? $data[$image] = $image_urls['$image']:null;
+                $data[$image] = $image_urls[$image];
+            }
+            $model_company->edit($id,$data);
+        }
+        $company = $model_company->get_info($id);
+
+        $this->assign('company',$company);
+
+        $this->display('company.approve.html');
+    }
+
+    public function security()
+    {
+        $this->_curlocal(LANG::get('member_center'),  'index.php?app=company',
+            LANG::get('basic'));
+
+        //企业中心菜单
+        $this->_curitem('user');
+
+        /* 当前所处子菜单 */
+        $this->_curmenu('basic_information');
+
+        $this->display('company.security.html');
+    }
+
+    public function worker()
+    {
+        $this->_curlocal(LANG::get('member_center'),  'index.php?app=company',
+            LANG::get('basic'));
+
+        //企业中心菜单
+        $this->_curitem('worker');
+
+        /* 当前所处子菜单 */
+        $this->_curmenu('basic_information');
+
+       $this->display('company.worker.html');
+    }
+
+    public function addsector()
+    {
+        $company_id = 2;
+        $this->_curlocal(LANG::get('member_center'),  'index.php?app=company',
+            LANG::get('basic'));
+        //企业中心菜单
+        $this->_curitem('worker');
+        /* 当前所处子菜单 */
+        $this->_curmenu('basic_information');
+        $company_sect = &m('sect');
+        if(IS_POST)
+        {
+            $data['company_id'] = $company_id;
+            $data['sectname'] = $_POST['sectname'];
+
+            $company_sect->add($data);
+        }
+
+        $this->display('company.addsector.html');
+    }
+
+    public function sectorlist()
+    {
+        $company_id = 2;
+        $company_sect = &m('sect');
+
+        $array= array(
+            'conditons' => array(
+                'company_id' => $company_id
+               )
+        );
+        $sects = $company_sect->find($array);
+        var_dump($sects);exit;
+        $this->display('company.sectorlist.html');
+    }
+
+    public function addworker()
+    {
+        $this->_curlocal(LANG::get('member_center'),  'index.php?app=company',
+            LANG::get('basic'));
+
+        //企业中心菜单
+        $this->_curitem('worker');
+
+        /* 当前所处子菜单 */
+        $this->_curmenu('basic_information');
+
+
+        $this->display('company.addworker.html');
+
+    }
+
+    public function addzizhi()
+    {
+        $this->_curlocal(LANG::get('member_center'),  'index.php?app=company',
+            LANG::get('basic'));
+
+        //企业中心菜单
+        $this->_curitem('friend');
+
+        /* 当前所处子菜单 */
+        $this->_curmenu('basic_information');
+
+
+        $this->display('company.zizhi.html');
+
+    }
+
+    public function password()
+    {
+        $this->_curlocal(LANG::get('member_center'),  'index.php?app=company',
+            LANG::get('basic'));
+
+        //企业中心菜单
+        $this->_curitem('user');
+
+        /* 当前所处子菜单 */
+        $this->_curmenu('basic_information');
+
+        $this->display('company.password.html');
+
+    }
+
+
+    public  function _uplocad_images($images)
+    {
+        import('uploader.lib');
+        $image_urls = array();
+
+        foreach ($images as $image)
+        {
+            $file = $_FILES[$image];
+            if ($file['error'] != UPLOAD_ERR_OK)
+            {
+                continue;
+            }
+            $uploader = new Uploader();
+            $uploader->allowed_type(IMAGE_FILE_TYPE);
+            $uploader->addFile($file);
+            if ($uploader->file_info() === false)
+            {
+                continue;
+            }
+            $uploader->root_dir(ROOT_PATH);
+            $image_urls[$image] = $uploader->save(UPLOAD_PATH_BUS , $image);
+        }
+        return $image_urls;
+    }
+
+
+}
+
+?>

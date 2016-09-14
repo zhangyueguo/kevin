@@ -1,0 +1,13 @@
+<?php
+/**
+ *  @Created By ECMall PhpCacheServer
+ *  @Time:2016-09-08 03:55:33
+ */
+
+if(filemtime(__FILE__) + 3600 < time())return false;
+
+return array (
+  2 => '8',
+);
+
+?>

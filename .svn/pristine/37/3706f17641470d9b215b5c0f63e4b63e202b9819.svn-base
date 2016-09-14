@@ -1,0 +1,142 @@
+<?php
+/**
+ * 买家中心记账单
+ */
+class Billing_orderApp extends personalbaseApp
+{
+	protected $_billing_mod;
+	protected $_order_billing_mod;
+	function __construct(){
+		$this->Billing_orderApp();
+	}
+
+	public function Billing_orderApp(){
+		parent::__construct();
+		$this->_billing_mod =& m('billing');
+		$this->_order_billing_mod =& m('order_billing');
+	}
+
+	public function index(){
+		//获取我的记账列表
+		$this->_get_billing();
+
+		/* 当前用户中心菜单 */
+		$this->_curitem('billing_order');
+        $this->_curmenu('billing_order');
+        $this->_config_seo('title', '记账单 - 财务管理');
+        $this->display('buyer_billing.index.html');
+	}
+
+	public function _get_billing(){
+		/*$conditions = array(
+			'conditions'=>"obill.user_id = ".$this->visitor->get('user_id'),
+			'fields'=>"obill.*,order_alias.order_sn,order_alias.order_name,member.user_name",
+			'join'	=>'belongs_to_user',
+		);*/
+
+		$sql = "SELECT ord.order_sn,ord.order_name,member.user_name,ord.pay_time FROM ecm_order ord LEFT JOIN ecm_member member ON ord.buyer_id = member.user_id WHERE ord.buyer_id = 3 AND payment_id = -1";
+		$result = $this->_order_billing_mod->getAll($sql);
+		//print_r($result);
+		$this->assign('order_billing',$result);
+	}
+
+	/**
+	 * 申请几张单
+	 */
+	public function apply(){
+		/* 当前用户中心菜单 */
+		$this->_curitem('billing_order');
+        $this->_curmenu('billing_apply');
+        $this->_config_seo('title', '申请记账单 - 财务管理');
+        if(!IS_POST)
+        {
+            $region_mod = & m('region');
+            $this->assign('regions',$region_mod->get_options(0));
+
+            $minfo['user_id'] = $this->visitor->get('user_id');
+            $minfo['user_name'] = $this->visitor->get('user_name');
+            $this->assign('minfo',$minfo);
+
+            $sql = "SELECT store.store_name,bill.apply_time,bill.status FROM ecm_billing bill LEFT JOIN ecm_store store ON bill.shopid = store.store_id WHERE bill.uid = ".$minfo['user_id'];
+            $billings = $this->_billing_mod->getAll($sql);
+            
+            $this->assign('billings',$billings);
+            $this->import_resource(
+                array('script'=>'jquery.plugins/jquery.validate.js',)
+            );
+            $this->display('buyer_billing.apply.html');
+        }
+        else
+        {
+            $data['uid']   			= $this->visitor->get('user_id');
+            if($_POST['beilei'] == 'ping'){
+            	$data['shopid']	 = '2';
+            }else{
+            	$data['shopid']  = $_POST['store_id'];
+            }
+            if(empty($data['shopid'])){
+            	$this->show_warning(
+	                '请先选择记账单类型!',
+	                'back_list','index.php?app=billing_order&act=apply'
+	            );exit;
+            }
+            $result = $this->_billing_mod->get(array('conditions'=>'uid = '.$this->visitor->get('user_id').' AND shopid = '.$data['shopid'],'fields'=>'id,shopid'));
+            if(!empty($result)){
+            	$this->show_warning(
+	                '您已经申请该商家记账单了!',
+	                'back_list','index.php?app=billing_order&act=apply'
+	            );exit;
+            }
+            $data['apply_time']         =  time();
+            $data['status']				=  '1';
+            $this->_billing_mod->add($data);
+            header("location:index.php?app=billing_order&act=apply");
+        }
+	}
+
+	function balance(){
+		//获取我的记账列表
+		$this->_get_billing_balance();
+
+		/* 当前用户中心菜单 */
+		$this->_curitem('billing_order');
+        $this->_curmenu('billing_balance');
+        $this->_config_seo('title', '记账单 - 财务管理');
+        $this->display('buyer_billing.balance.html');
+	}
+
+	function _get_billing_balance(){
+
+	}
+
+	/**
+     *    三级菜单
+     *
+     *    @author    psmb
+     *    @return    void
+     */
+    function _get_member_submenu()
+    {
+    	$data = array(
+    		array(
+    			'name'	=>'billing_apply',
+    			'url'	=>'index.php?app=billing_order&act=apply',
+    			'text'	=>'申请记账单'
+    		),
+    		array(
+    			'name'	=>'billing_order',
+    			'url'	=>'index.php?app=billing_order',
+    			'text'	=>'记账明细'
+    		),
+    		array(
+    			'name'	=>'billing_balance',
+    			'url'	=>'index.php?app=billing_order&act=balance',
+    			'text'	=>'结算明细'
+    		)
+
+    	);
+    	return $data;
+    }
+}
+
+?>

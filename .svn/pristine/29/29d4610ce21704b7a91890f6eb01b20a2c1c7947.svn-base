@@ -1,0 +1,162 @@
+<?php
+/**
+ *  @Created By ECMall PhpCacheServer
+ *  @Time:2016-08-24 15:37:17
+ */
+
+if(filemtime(__FILE__) + 86400 < time())return false;
+
+return array (
+  'model_id' => 1871063059,
+  'model_name' => '',
+  'tabs' => 
+  array (
+    0 => '一周惠选',
+    1 => '新品推荐',
+    2 => '热卖商品',
+    3 => '店铺推荐',
+  ),
+  'goods_list' => 
+  array (
+    0 => 
+    array (
+      0 => 
+      array (
+        'goods_id' => '99',
+        'virtual_seles' => '0',
+        'goods_name' => '测试商品',
+        'default_image' => 'data/files/store_2/goods_123/small_201406260258439769.jpg',
+        'price' => '0.10',
+        'stock' => '999',
+        'spec_id' => '99',
+        'sales' => '0',
+        'store_id' => '2',
+        'store_name' => '超级店铺',
+      ),
+      1 => 
+      array (
+        'goods_id' => '98',
+        'virtual_seles' => '0',
+        'goods_name' => '酷派(Coolpad)8730 3G手机 TD-SCDMA/GSM',
+        'default_image' => 'data/files/store_2/goods_107/small_201312262308271759.jpg',
+        'price' => '1588.00',
+        'stock' => '100',
+        'spec_id' => '98',
+        'sales' => '0',
+        'store_id' => '2',
+        'store_name' => '超级店铺',
+      ),
+      2 => 
+      array (
+        'goods_id' => '97',
+        'virtual_seles' => '0',
+        'goods_name' => '三星（SAMSUNG）I8558 3G手机 TD-SCDMA/GSM 双卡双待',
+        'default_image' => 'data/files/store_2/goods_27/small_201312262307078496.jpg',
+        'price' => '1549.00',
+        'stock' => '100',
+        'spec_id' => '97',
+        'sales' => '0',
+        'store_id' => '2',
+        'store_name' => '超级店铺',
+      ),
+    ),
+    1 => 
+    array (
+      0 => 
+      array (
+        'goods_id' => '99',
+        'virtual_seles' => '0',
+        'goods_name' => '测试商品',
+        'default_image' => 'data/files/store_2/goods_123/small_201406260258439769.jpg',
+        'price' => '0.10',
+        'stock' => '999',
+        'spec_id' => '99',
+        'sales' => '0',
+        'store_id' => '2',
+        'store_name' => '超级店铺',
+      ),
+      1 => 
+      array (
+        'goods_id' => '98',
+        'virtual_seles' => '0',
+        'goods_name' => '酷派(Coolpad)8730 3G手机 TD-SCDMA/GSM',
+        'default_image' => 'data/files/store_2/goods_107/small_201312262308271759.jpg',
+        'price' => '1588.00',
+        'stock' => '100',
+        'spec_id' => '98',
+        'sales' => '0',
+        'store_id' => '2',
+        'store_name' => '超级店铺',
+      ),
+      2 => 
+      array (
+        'goods_id' => '97',
+        'virtual_seles' => '0',
+        'goods_name' => '三星（SAMSUNG）I8558 3G手机 TD-SCDMA/GSM 双卡双待',
+        'default_image' => 'data/files/store_2/goods_27/small_201312262307078496.jpg',
+        'price' => '1549.00',
+        'stock' => '100',
+        'spec_id' => '97',
+        'sales' => '0',
+        'store_id' => '2',
+        'store_name' => '超级店铺',
+      ),
+    ),
+    2 => 
+    array (
+    ),
+    3 => 
+    array (
+    ),
+  ),
+  'ads' => 
+  array (
+    1 => 
+    array (
+      'ad_image_url' => 'data/files/mall/template/201403311153027168.gif',
+      'ad_link_url' => '/index.php?app=goods&id=1302',
+    ),
+    2 => 
+    array (
+      'ad_image_url' => 'data/files/mall/template/201403311200543356.gif',
+      'ad_link_url' => 'index.php?app=goods&id=1015',
+    ),
+    3 => 
+    array (
+      'ad_image_url' => 'data/files/mall/template/201403311208321274.gif',
+      'ad_link_url' => '/index.php?app=goods&id=436',
+    ),
+    4 => 
+    array (
+      'ad_image_url' => 'data/files/mall/template/201403312043281454.gif',
+      'ad_link_url' => '/index.php?app=goods&id=1310',
+    ),
+    5 => 
+    array (
+      'ad_image_url' => 'data/files/mall/template/201403312100583949.gif',
+      'ad_link_url' => '/',
+    ),
+    6 => 
+    array (
+      'ad_image_url' => 'data/files/mall/template/201403312111131024.gif',
+      'ad_link_url' => '/',
+    ),
+    7 => 
+    array (
+      'ad_image_url' => 'data/files/mall/template/201403312115483433.gif',
+      'ad_link_url' => '/',
+    ),
+    8 => 
+    array (
+      'ad_image_url' => 'data/files/mall/template/201403312121398097.gif',
+      'ad_link_url' => '/',
+    ),
+    9 => 
+    array (
+      'ad_image_url' => 'data/files/mall/template/201403312130201906.gif',
+      'ad_link_url' => '/',
+    ),
+  ),
+);
+
+?>

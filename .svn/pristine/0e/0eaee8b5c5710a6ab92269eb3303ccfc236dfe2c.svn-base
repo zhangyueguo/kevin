@@ -1,0 +1,159 @@
+{include file=member.header.html}
+			<div class="content">
+        <div class="wrap">
+            <style>
+			.deposit {
+				line-height:22px;
+				}
+			
+			</style>
+            
+            
+            <div class="public table deposit">
+           <!--{if $deposit_account}-->
+           <div class="deposit-account">
+       
+           <div class="account-info">
+                    	<h1>交易宝账户余额</h1>
+                        <div class="explain">余额支付[<em>?<span></span></em>]：
+                        	<!--{if $deposit_account.pay_status eq 'ON'}-->
+                            <a  href="{url app=deposit&act=pay_status&status=off}" onclick="return confirm('点击后关闭余额支付功能，要确定么？')">已开启>></a>
+                            <!--{else}-->
+                            <a  href="{url app=deposit&act=pay_status&status=on}" onclick="return confirm('点击后开启余额支付功能，要确定么？')">已关闭>></a>
+                            <!--{/if}-->
+                        
+
+	</div>
+                		<div class="action">
+                        	<h2>账户名：{$deposit_account.account}</h2><a  href="{url app=deposit&act=recordlist}">账户收支明细</a>
+                        </div>
+                        <div class="balanceNum">
+                    		<em>{$deposit_account.money|default:0}</em>元可用{if $deposit_account.frozen gt 0}，<b><a  href="{url app=deposit&amp;act=frozenlist}">{$deposit_account.frozen}</a></b> 元不可用{/if}
+                            <div class="balanceBtn">
+                            	<a  href="{url app=deposit&act=recharge}" class="btn-alipay"><span>充值</span></a>
+                            	<a  href="{url app=deposit&act=withdraw}" class="btn-alipay btn-alipay-white"><span>提现</span></a>
+                                <a  href="{url app=deposit&act=transfer}" class="btn-alipay btn-alipay-white"><span>转账</span></a>
+                            </div>
+                    	</div>
+                    </div>
+           </div>
+           <!--{else}-->
+           
+           请先配置帐户，点击 <a  href="{url app=deposit&act=config2}" class="white_btn">立即配置</a></div>
+				<!--{/if}-->
+           
+           
+           <form method="post" >
+           <div class="goumai">选择购买特权：
+          <div style="width:450px; "> 
+          {if $title}
+          <input type="hidden" name="title" value="{$title}"  />
+         <h5 style="color:#F00"> {$title}</h5>
+          {else}
+           <input type="radio" value="虚拟销量" name="title"  checked="checked" /> 5元/月 <a  href="/index.php?app=my_goods" class="btn-alipay"><span>虚拟销量</span></a><a  href="/index.php?app=help&act=view&article_id=66" class="btn-alipay btn-alipay-white"><span>功能介绍</span></a><br />
+           <input type="radio" value="图片搬家"  name="title" />3元/月 <a  href="/index.php?app=my_goods" class="btn-alipay"><span>图片搬家</span></a><a  href="/index.php?app=help&act=view&article_id=66" class="btn-alipay btn-alipay-white"><span>功能介绍</span></a><br />
+           <input type="radio" value="积分营销" name="title"  />3元/月 <a  href="/index.php?app=my_goods" class="btn-alipay"><span>积分营销</span></a><a  href="/index.php?app=help&act=view&article_id=67" class="btn-alipay btn-alipay-white"><span>功能介绍</span></a><br />
+           
+           <input type="radio" value="价格等级" name="title" /> 5元/月 <a  href="/index.php?app=my_goods" class="btn-alipay"><span>价格等级</span></a><a  href="/index.php?app=help&act=view&article_id=68" class="btn-alipay btn-alipay-white"><span>功能介绍</span></a><br />
+           <input type="radio" value="店铺地图"  name="title"/> 3元/月 <a  href="/index.php?app=my_store" class="btn-alipay"><span>店铺地图</span></a><a  href="/index.php?app=help&act=view&article_id=69" class="btn-alipay btn-alipay-white"><span>功能介绍</span></a><br />
+            <input type="radio" value="微店菜单" name="title" /> 5元/月 <a  href="/index.php?app=kmenus" class="btn-alipay"><span>微店菜单</span></a><a  href="/index.php?app=help&act=view&article_id=70" class="btn-alipay btn-alipay-white"><span>功能介绍</span></a><br />
+            
+         
+            <input type="radio" value="二维码" name="title" />  3元/月 <a  href="/index.php?app=my_store" class="btn-alipay"><span>&nbsp; &nbsp;二维码</span></a><a  href="/index.php?app=help&act=view&article_id=71" class="btn-alipay btn-alipay-white"><span>功能介绍</span></a><br /> 
+            <input type="radio" value="数据包" name="title"  /> 5元/月 <a  href="/index.php?app=my_datapacket" class="btn-alipay"><span>&nbsp; &nbsp;数据包</span></a><a  href="/index.php?app=help&act=view&article_id=72" class="btn-alipay btn-alipay-white"><span>功能介绍</span></a><br /> 
+           <input type="radio" value="微店会员" name="title" /> 5元/月 <a  href="/index.php?app=my_membership_setting" class="btn-alipay"><span>微店会员</span></a><a  href="/index.php?app=help&act=view&article_id=73" class="btn-alipay btn-alipay-white"><span>功能介绍</span></a><br />
+		   <input type="radio" value="微店轮播" name="title" /> 3元/月 <a  href="/index.php?app=lunbo" class="btn-alipay"><span>微店轮播</span></a><a  href="/index.php?app=help&act=view&article_id=74" class="btn-alipay btn-alipay-white"><span>功能介绍</span></a><br />
+         
+         
+         {/if}
+      <Br />
+      
+      购买数量：<input name="nums" value="1" type="text"  />
+	</div>
+            
+            
+           </div> 	
+            <div style="clear:both"></div>
+              <div class="goumai2">
+              支付方式：<input type="radio"  name="fangs" value="交易宝" checked="checked" />  交易宝
+              </div>
+                  <div class="btn-alipay">
+                  <input type="submit" value="确认提交" />
+                  </div>
+                </form>
+            </div>
+            
+            
+            
+            <div class="tradelist" style="width: 767px;
+margin: 0 auto;">
+<div class="w320">
+                    	<div class="title clearfix"><h1>购买特权记录</h1></div>
+                    	<div class="subtit">
+                        	<ul class="clearfix">
+                            	<li >购买日期</li>
+                                <li >到期日期</li>
+                                <li >名称 </li>
+                                <li >剩余时间</li>
+                                <li >金额</li>
+                             <li >操作</li>
+                            </ul>
+                        </div>
+                        <div class="list clearfix">
+                        	<!--{if $recordlist}-->
+                        	<!--{foreach from=$recordlist item=record}-->
+                        	<ul class="clearfix" >
+                            	<li >{$record.add_time|date:Y.m.d H:i:s}</li>
+                                <li >{$record.end_time|date:Y.m.d H:i:s}</li>
+                                <li >{$record.title}</li>
+                         
+                                <li >
+                        {if $record.dates <0}
+                       到期
+                       {else}
+                       {$record.dates}天
+                     
+                       {/if}
+                                </li>
+                       
+                      
+                              <li >
+                       {$record.money}元
+                                </li>
+                                
+                                     <li >
+                             {if $record.is_online}
+                              
+                              等待审核
+                             {else}        
+                     <a class="white_btn" href="index.php?app=deposit&act=tequan&q={$record.title}">申请退款</a> 
+                     
+                     {/if}
+                                </li>
+                       </ul>
+                            <!--{if $record.refund}-->
+                   
+                            <!--{/if}-->
+                            <!--{/foreach}-->
+                          
+                            <!--{else}-->
+                           
+                            <!--{/if}-->
+                        </div>
+                    </div>
+                    
+                    
+                    
+        
+        </div>
+        <div class="clear"></div>
+        <div class="adorn_right1"></div>
+        <div class="adorn_right2"></div>
+        <div class="adorn_right3"></div>
+        <div class="adorn_right4"></div>
+    </div>
+
+    <div class="clear"></div>
+</div>
+<iframe id='iframe_post' name="iframe_post" src="about:blank" frameborder="0" width="0" height="0"></iframe>
+{include file=footer.html}

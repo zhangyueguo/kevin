@@ -1,0 +1,34 @@
+{include file="header.html"}
+<div id="rightTop">
+    <p>{$lang.specialpage}</p>
+    <ul class="subnav">
+        <li><a class="btn3" href="index.php?module=specialpage">{$lang.manage_specialpage}</a></li>
+        <li><a class="btn3" href="index.php?module=specialpage&amp;act=goods&amp;id={$smarty.get.spec_id}">{$lang.manage_specialpage_goods}</a></li>
+        <li><a class="btn3" href="index.php?module=specialpage&amp;act=add_goods&amp;id={$smarty.get.spec_id}">{$lang.add_specialpage_goods}</a></li>
+    </ul>
+</div>
+
+<div class="info">
+    <form method="post" enctype="multipart/form-data">
+            <table class="infoTable">
+            <tr>
+              <th class="paddingT15">{$lang.specialpage_cate}:</th>
+              <td class="paddingT15 wordSpacing5">
+              <select class="cate" name="category"><option value="">{$lang.select_pls}</option>{html_options output=$categories values=$categories}</select>
+              </td>
+            </tr>
+            <tr>
+                <th class="paddingT15">{$lang.specialpage_verified}:</th>
+                <td class="paddingT15 wordSpacing5">{html_radios options=$yes_or_no name=verified checked=$not_yes_and_no}</td>
+            </tr>
+        <tr>
+            <th></th>
+            <td class="ptb20">
+                <input class="formbtn" type="submit" name="Submit" value="{$lang.submit}" />
+                <input class="formbtn" type="reset" name="Submit2" value="{$lang.reset}" />
+            </td>
+        </tr>
+        </table>
+    </form>
+</div>
+{include file="footer.html"}

@@ -1,0 +1,128 @@
+{include file=company.header.html}
+<style>
+    .borline td { padding:10px 0px; }
+    .ware_list th { text-align:left; }
+</style>
+<!--<script type="text/javascript" src="http://localhost/kevin/includes/libraries/javascript/ajax_tree.js"></script>-->
+<script type="text/javascript" src="{lib file=ajax_tree1.js}" charset="utf-8"></script>
+<script type="text/javascript">
+    //<!CDATA[
+    $(function(){
+        $('#profile_form').validate({
+            errorPlacement: function(error, element){
+                $(element).parent('span').parent('b').after(error);
+            },
+            rules : {
+                portrait : {
+                    accept   : 'gif|jpe?g|png'
+                }
+            },
+            messages : {
+                portrait  : {
+                    accept   : '{$lang.avatar}'
+                }
+            }
+        });
+        $('input[ectype="change_avatar"]').change(function(){
+
+            var src = getFullPath($(this)[0]);
+            $('img[ectype="avatar"]').attr('src', src);
+            $('input[ectype="change_avatar"]').removeAttr('name');
+            $(this).attr('name', 'portrait');
+        });
+    });
+
+    //]]>
+</script>
+<div class="content">
+    {include file=company.menu.html}
+    <div id="right">
+
+        <div class="submenu">
+            <ul class="tab">
+
+                <li class="normal {if $smarty.foreach.member_submenu.first}first{/if}"><h2><a href="javascript:;">员工列表</a></h2></li>
+
+                <li class="normal {if $smarty.foreach.member_submenu.first}first{/if}"><h2><a href="index.php?app=company&act=addsector">添加部门</a></h2></li>
+
+                <li class="active {if $smarty.foreach.member_submenu.first}first{/if}"><h2><a href="index.php?app=company&act=sectorlist">部门列表</a></h2></li>
+
+                <li class="normal {if $smarty.foreach.member_submenu.first}first{/if}"><h2><a href="index.php?app=company&act=addworker">添加员工</a></h2></li>
+
+                <div class="dustbin">
+                    <!--<a href="index.php?app=buyer_order&act=dustbin" {if $_s_m.dustbin eq '1'}style="color:#EE3000; text-decoration:none"{/if}>订单回收站</a>-->
+                </div>
+            </ul>
+        </div>
+
+        <div class="wrap">
+            <div class="public">
+                <form method="post" enctype="multipart/form-data" id="profile_form">
+                    <div class="information">
+                        <div class="info individual">
+                            <table>
+                                <!--{if $sects}-->
+                                <thead>
+                                <tr class="tatr1">
+                                    <td class="w30"><input id="checkall_1" type="checkbox" class="checkall" /></td>
+                                    <td width="50%"><span class="all_checkbox"><label for="checkall_1">全选</label></span>分类名称</td>
+                                    <td>排序</td>
+                                    <td class="handler">操作</td>
+                                </tr>
+                                </thead>
+                                <!--{/if}-->
+                                <!-- {if $sects} -->
+                                <tbody id="treet1">
+                                <!-- {/if} -->
+                                <!--{foreach from=$sects item=gcategory}-->
+                                <tr>
+                                    <td class="align_center w30">
+                                        <input type="checkbox" class="checkitem" value="{$gcategory.id}" />
+                                    </td>
+                                    <td class="node" width="50%">
+                                        <!--{if $gcategory.switchs}-->
+                                        <img src="data/files/mall/images/treetable/tv-expandable.gif" ectype="flex" status="open" fieldid="{$gcategory.id}">
+                                        <!--{else}-->
+                                        <img src="data/files/mall/images/treetable/tv-item.gif">
+                                        <!--{/if}-->
+                                        <span class="node_name editable" ectype="inline_edit" fieldname="cate_name" fieldid="{$gcategory.id}" required="1" title="{$lang.editable}">{$gcategory.sectname|escape}</span>
+                                    </td>
+                                    <td class="align_center"><span class="editable" ectype="inline_edit" fieldname="sort_order" fieldid="{$gcategory.id}" datatype="number" title="{$lang.editable}">{$gcategory.sort_order}</span></td>
+
+                                    <!-- props tyioocom -->
+                                    <td  width="200">
+                                        <span>
+                                            <a href="index.php?app=company&amp;act=sect_edit&amp;id={$gcategory.id}">{$lang.edit}</a>
+                                        |
+                                        <a href="javascript:if(confirm('删除该分类将会同时删除该分类的所有下级分类，您确定要删除吗'))window.location = 'index.php?app=company&amp;act=drop&amp;id={$gcategory.id}';">{$lang.drop}</a>
+                                            <!-- {if $region.layer lt $max_layer} -->
+                                            | <a href="index.php?app=company&amp;act=addsector&amp;pid={$gcategory.id}">添加子部门</a>
+                                            <!-- {/if} -->
+                                            <!-- end props -->
+                                        </span>
+                                    </td>
+                                </tr>
+                                <!--{foreachelse}-->
+                                <tr class="no_data">
+                                    <td colspan="5">暂时没有组织部门</td>
+                                </tr>
+                                <!--{/foreach}-->
+                                <!-- {if $sects} --></tbody><!-- {/if} -->
+
+
+                            </table>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="adorn_right1"></div>
+        <div class="adorn_right2"></div>
+        <div class="adorn_right3"></div>
+        <div class="adorn_right4"></div>
+    </div>
+    <div class="clear"></div>
+</div>
+</div>
+{include file=footer.html}

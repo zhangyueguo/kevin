@@ -1,0 +1,18 @@
+
+<form action="index.php?app=billing_order_seller&act=pass" method="post" target="billing_order_seller">
+    <div class="form_pass">
+        <div id="warning"></div>
+        <ul>
+            <li>
+                <label>最大记账金额（元）：</label>
+                <input type="text" name="limit">
+            </li>
+            <li>
+                <label>记账周期（天）：</label>
+                <input type="text" name="circle_date">
+            </li>
+        </ul>
+        <input type="submit" name="pass_submit" value="确定通过">
+        <input type="hidden" name="id" value="{$billing_id}">
+    </div>
+</form>

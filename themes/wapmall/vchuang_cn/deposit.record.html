@@ -1,0 +1,112 @@
+{include file=member.header.html}
+
+
+
+<body class="gray" style="overflow-x:hidden;">
+    <div class="w320">
+        <div class="fixed">
+            <!---头部------>
+            <div class="header header2">
+                <a href="{url app=default}"
+                   class="back2_index"></a>
+                交易宝
+                <a href="{url app=my_favorite}" class="bookmark"></a>
+            </div>    
+   </div>
+        
+        
+       <div class="public table deposit" style="margin-top:60px;">
+       
+       <!--{if !$deposit_record}-->
+                    <div class="notice-word">没有该条收支记录信息</div>
+         <!--{else}-->
+                	
+                    <div class="u_order">
+                    <div class="orderbox">
+                    <div class="title"><h2>记录详情</h2></div>
+       
+                   <div class="content">
+                    	<div class="status-info clearfix">
+                        	<h3>{$deposit_record.status_label}</h3>
+                            <div class="extra"></div>
+             
+             
+                <p>类型：{if $deposit_record.flow eq 'income'}{$lang.income}{else}{$lang.outlay}{/if}</p>
+             <p>名称：{$deposit_record.name}
+                                	{if $deposit_record.remark}<span title="{$deposit_record.remark|escape}" class="gray">{$deposit_record.remark|escape|truncate:30}</span>{/if}</p>
+              <p>金额：{$deposit_record.total}</p>
+             <p>对方信息：  {if $deposit_record.account}
+                                交易宝账户：{$deposit_record.account}&nbsp;&nbsp;&nbsp;{$deposit_record.real_name}&nbsp;&nbsp;&nbsp;{if $deposit_record.phone_mob}{$deposit_record.phone_mob}{else}{$deposit_record.phone_tel}{/if}
+                 {else}{$deposit_record.payway}
+                                {/if}</p>
+                                
+              
+                        <!--{if $order}-->           
+        <!--{foreach from=$order.order_goods item=goods name=fe_goods}-->
+                            <ul class="ul-list clearfix">
+                            	<li class="info clearfix">
+                                	<div class="pic float-left"><a href="{url app=goods&id=$goods.goods_id}" target="_blank"><img src="{$goods.goods_image}" width="40" height="40" /></a></div>
+                                    <div class="desc float-left"><a href="{url app=goods&id=$goods.goods_id}" target="_blank" title="{$goods.goods_name|escape}">{$goods.goods_name|escape|truncate:50}</a></div>
+                                </li>
+                                <li class="props">{$goods.specification}&nbsp;</li>
+                                <li class="status">
+
+                                	<!--{if !$goods.status && !$goods.refund_status}-->
+                                    未确认收货
+                            		<!--{elseif $goods.status eq 'SUCCESS'}-->
+                                    已确认收货
+                                    <!--{else}-->
+                            		<!--{if $goods.refund_status eq 'SUCCESS'}-->
+                           			<a href="{url app=refund&act=view&refund_id=$goods.refund_id}" target="_blank">退款成功</a>
+                            		<!--{elseif $goods.refund_status eq 'CLOSED'}-->
+                            		<a href="{url app=refund&act=view&refund_id=$goods.refund_id}" target="_blank">退款关闭</a>
+                            		<!--{else}-->
+                            		<a href="{url app=refund&act=view&refund_id=$goods.refund_id}"target="_blank">退款中</a>
+                            		<!--{/if}-->
+                            		<!--{/if}-->
+                                </li>
+                                <li class="price">{$goods.price}</li>
+                                <li class="quantity">{$goods.quantity}</li>
+                                <li class="amount" {if !$smarty.foreach.fe_goods.last} style="border-bottom:1px #fff solid;"{/if}>
+                                	{if $smarty.foreach.fe_goods.first}<p>{$order.order_amount}<br />({$order.shipping_name}:{$order.shipping_fee})</p>{/if}
+                                </li>
+                            </ul>
+                            <!--{/foreach}-->
+         <div class="trade-slips">
+                        	<dl class="clearfix">
+                            	<dt>订单编号：</dt><dd>
+                                {$deposit_record.order_sn}
+                                </dd>
+                            </dl>
+                            <dl class="clearfix">
+                            	<dt>订单详情：</dt><dd>
+                                	<!--{if $deposit_record.purpose eq 'buygoods' || $deposit_record.purpose eq 'refund'}-->
+                                    <a class="view" href="{url app=buyer_order&act=view&order_id=$deposit_record.order_id}" target="_blank">{$lang.detail}</a>
+                                    <!--{else}-->
+                                    <a class="view" href="{url app=seller_order&act=view&order_id=$deposit_record.order_id}" target="_blank">{$lang.detail}</a>
+                                    <!--{/if}-->
+                                </dd>
+                            </dl>
+                        </div>
+                       <!--{/if}-->
+                       
+                                
+               <p>创建时间:{$deposit_record.add_time|date:Y.m.d H:i:s}</p>   
+               <p>付款时间:{$deposit_record.pay_time|date:Y.m.d H:i:s}</p>   
+                    <p>结束时间:{$deposit_record.end_time|date:Y.m.d H:i:s}</p>            
+               </div>
+       
+               
+         {/if}
+     
+       </div>   
+        
+        </div>
+        </div>
+     
+     
+    </div>    
+        
+
+
+{include file=footer.html}

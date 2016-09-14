@@ -1,0 +1,52 @@
+{include file=header.html}
+    <link href="{res file=css/global_ddmall.css}" rel="stylesheet" type="text/css">
+    <link href="{res file=css/vip_integral_ddmall.css}" rel="stylesheet" type="text/css">
+
+   <!--content-->
+   <div class="content">
+    <!--choice-->
+	
+	 <div class="choice">
+	  <!--choice_L-->
+	  <div class="choice_L">
+	    <!--coupon-->
+		<div class="coupon">
+		 <h2><a href="" target="_blank">{$integral_info.wupin_name}</a></h2>
+         <p><img src="/{$integral_info.wupin_img}" alt="{$integral_info.wupin_name}" height="181" width="298"></p><br/>
+          <p>商品价格：{$integral_info.jiazhi}&nbsp;元</p><br/>
+		  <p>兑换所需积分：<span>{$integral_info.jifen}</span>&nbsp;积分</p><br/>
+		  <!--p class="time">有效时间：<span></span></p-->
+		  <p class="time">剩余数量：<span>{$integral_info.shengyu}&nbsp;份</p><br/>
+		  <p>友情提醒: 该商品一个用户累计兑换数量不得超过2件</p><br/>
+		  <!--want-->
+		  <div class="want">
+		  <form name="dpfrmnew" id="dpfrmnew_b" action="index.php" method="get">
+		    <div>
+			  <input type="hidden" name="app" value="my_money" />
+			  <input type="hidden" name="act" value="jifen_post" />
+			  <input type="hidden" name="id" value="{$integral_info.id}" />
+			  <p><span>我要兑换：</span><input name="prizenum" value="1" type="text"><span>份</span></p>
+			  <p><a style="cursor: pointer;" onclick="document.getElementById('dpfrmnew_b').submit()">点击兑换</a></p>
+			</div>
+		  </form></div>
+		  
+		  <!--want end-->
+		</div>
+		<!--coupon end-->
+	    <!--commodity-->
+	     <div class="commodity">
+		   <h2>商品详情</h2>
+		   <div>
+		    <p></p><p>{$integral_info.log_text}</p><p></p>
+			<!--p><img width="740" height="428" src="http://img2.ddmapimg.com/pageimg/dm/tool/photo1.jpg" alt=""></p-->
+		   </div>
+		 </div>
+		 <!--commodity end-->
+	   </div>
+	  <!--choice_L end-->
+     </div>
+	
+</div>
+   <!--content end-->
+
+{include file=footer.html}

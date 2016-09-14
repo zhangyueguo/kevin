@@ -1,0 +1,35 @@
+{include file=header.html}
+<link href="{res file=css/vip_index.css}" rel="stylesheet" type="text/css">
+    <link href="{res file=css/vip_integral.css}" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="{res file=js/focus.js}"></script>
+<!--content-->
+<div class="content">
+	<div class="manner">
+        <ul>
+        <li class="showred">积分商城</li>
+        	   <li class="manner_A"><a href="{url app=integral}">全部</a></li>
+			   <li><a href="{url app=integral&to_jifen=0&from_jifen=10000}">0 - 10000分</a></li>
+			   <li><a href="{url app=integral&to_jifen=10001&from_jifen=50000}">10001 - 50000分</a></li>
+        	   <li><a href="{url app=integral&to_jifen=50000}">50001分以上</a></li>
+        </ul>
+	</div>
+<div class="jfqing" id="prizeChoose">
+	<ul>
+	<!--{foreach from=$index item=integral}-->
+		<li>
+			<p class="jfqing_A"><a href="index.php?app=integral&act=view&id={$integral.id}" target="_blank"><img <!--{if $integral.wupin_img}-->src="/{$integral.wupin_img}" alt="{$integral.wupin_name}"<!--{else}-->src="/data/system/default_goods_image.gif"<!--{/if}--> height="142" width="212"></a></p>
+		<p class="jfqing_B"><span>奖品</span><a href="index.php?app=integral&act=view&id={$integral.id}" target="_blank">{$integral.wupin_name}</a></p>
+		<p class="jfqing_E"><span>兑换价：</span><span class="jfqing_F">{$integral.jifen|default:0}分</span><span class="jfqing_G">还剩{$integral.shengyu|default:0}份</span></p>
+		<p><a href="index.php?app=integral&act=view&id={$integral.id}" target="_blank"><img src="{res file=images/duihuan.jpg}" alt="立即兑换"></a></p>
+	
+		</li>
+	<!--{/foreach}-->
+	</ul>
+</div>
+<br>
+<!--list-->
+<!--list end-->
+</div>
+<!--content end-->
+
+{include file=footer.html}

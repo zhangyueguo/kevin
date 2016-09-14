@@ -1,0 +1,184 @@
+﻿{include file=top.html}
+<div id="header" class="w-full">
+	<div class="shop-t w clearfix pb10 mb5 mt5">
+      <div class="logo mt10">
+         <a href="{$site_url}" title="{$site_title}"><img alt="{$site_title}" src="{$site_logo}" /></a> <span id="changeregion"> <a href="javascript:void(0)" onclick="show_regionbox();"><script>document.write($.getCookie('region_name'));</script></a><a href="javascript:void(0)" onclick="show_regionbox();"><font color="#0063DC">【切换地区】</font></a></span>
+      </div>
+      <div class="top-search">
+         <ul class="top-search-tab clearfix">
+            <li {if $smarty.get.act neq 'store' && $smarty.get.act neq 'groupbuy'}class="current"{/if} id="index">
+            	<a href="javascript:;">{$lang.goods}</a><b class="rc-lt"></b><b class="rc-rt"></b></li>
+            <li {if $smarty.get.act eq 'store'}class="current"{/if} id="store">
+            	<a href="javascript:;">{$lang.store}</a><b class="rc-lt"></b><b class="rc-rt"></b></li>
+            <li {if $smarty.get.act eq 'groupbuy'}class="current"{/if} id="groupbuy">
+            	<a href="javascript:;">{$lang.sgroupbuy}</a><b class="rc-lt"></b><b class="rc-rt"></b>
+            </li>
+         </ul>
+         <div class="top-search-box clearfix">
+         	<div class="form-fields float-left">
+           		<form method="GET" action="{url app=search}">
+               		<input type="hidden" name="app" value="search" />
+               		<input type="hidden" name="act" value="{if $smarty.get.act eq 'store'}store{elseif $smarty.get.act eq 'groupbuy'}groupbuy{else}index{/if}" />
+               		<input type="text"   name="keyword" value="{$smarty.get.keyword}" class="keyword {if !$smarty.get.keyword}kw_bj {if $smarty.get.act eq 'store'}store{elseif $smarty.get.act eq 'groupbuy'}groupbuy{else}index{/if}_bj {/if}" />
+               		<input type="submit" value="" class="submit" hidefocus="true" />
+            	</form>
+         	</div>
+         	<div class="search-cat float-right">
+            	<a href="{url app=category}" target="_blank"><strong>{$lang.gcategory}</strong></a>
+            	<!--<br><a href="{url app=category&act=store}">{$lang.scategory}</a>-->
+        	</div>
+         </div>
+         <div class="top-search-keywords">
+         	<!--{foreach from=$hot_keywords item=keyword}-->
+    		<a href="{url app=search&keyword=$keyword|escape:url}">{$keyword}</a>
+    		<!--{/foreach}-->
+         </div>
+      </div>
+<div style="float:right;background:url(/themes/mall/yhd/styles/default/images/400.gif);height:42px;width:276px;margin-top:25px;margin-right:30px;"></div>
+   </div>
+    <div class="w-full mall-nav">
+    	<ul class="w clearfix">
+            <li class="allcategory float-left">
+            	<a class="allsort">全部商品分类</a>
+                <!--{if !$index}-->
+                <div class="allcategory-list hidden">
+					<div class="content clearfix">
+						<!--{foreach from=$header_gcategories.gcategories item=category name=fe_category}-->
+						<div class="item">
+							<div class="pborder">
+								<p><a href="{url app=search&cate_id=$category.id}" target="_blank">{$category.value|escape}</a></p>
+								<div class="line"></div>
+							</div>
+							<div class="pop" {if $category.top} style="top:{$category.top}"{/if}>
+								<div class="catlist float-left">
+									<!--{foreach from=$category.children item=child name=fe_child}--> 
+									<dl class="clearfix" {if $smarty.foreach.fe_child.last} style="border-bottom:0"{/if}>
+										<dt class="float-left"><a href="{url app=search&cate_id=$child.id}"><strong>{$child.value|escape}</strong></a></dt>
+										<dd class="float-left">
+											<!--{foreach from=$child.children item=child2 name=fe_child2}-->
+											<a href="{url app=search&cate_id=$child2.id}">{$child2.value|escape}</a>
+											<!--{/foreach}-->
+										</dd>
+									</dl> 
+									<!--{/foreach}-->
+								</div>
+								<div class="catbrand float-left">
+									<a class="btn-channel" href="{url app=search&cate_id=$category.id}">{$category.value|escape|truncate:16}<ins></ins></a>
+									<h2>热门品牌</h2>
+									<ul class="clearfix">
+										<!-- {foreach from=$header_gcategories.brands item=brand name=fe_brand} -->
+										<!--{if $category.value == $brand.tag}-->
+										<li class="float-left"><a href="{url app=search&brand=$brand.brand_name|escape:url}" title="{$brand.brand_name}">{$brand.brand_name|escape}</a></li>                                  		
+										<!--{/if}-->
+										<!-- {/foreach} -->
+									</ul>
+								</div>           
+							</div>
+						</div>
+						<!--{/foreach}-->
+					</div>
+				</div>
+                <!--{/if}-->
+            </li>
+            
+            </li>
+            <li class="each float-left inline-block"><a class="{if $index}current{/if}" href="{$site_url}">{$lang.home}</a></li>
+            <!--{foreach from=$navs.middle item=nav}-->
+            <li class="each float-left inline-block"><a class="{if !$index and $nav.link eq $current_url}current{/if}" href="{$nav.link}"{if $nav.open_new} target="_blank"{/if}>{$nav.title|escape}{if $nav.hot==1}<span class="absolute block"></span>{/if}</a></li>
+            <!--{/foreach}-->
+            
+            <li class="float-right mini-cart cart-info relative inline-block clearfix">
+                <h3 class="float-left fs14 fff bold relative">购物车<span class="absolute bold">{$cart_goods_kinds}种</span></h3>
+                <a class="cashout float-right fs14 fff bold" href="{url app=cart}">去结算</a>
+            </li>
+    	</ul>
+    </div>
+</div>
+<script type="text/javascript" src="{lib file=mlselection.js}" charset="utf-8"></script>
+<script type="text/javascript">
+//{lib file=mlselection.js}
+//<!CDATA[
+cookie_cacheday='1';
+var LargeExpDate = new Date ();
+LargeExpDate.setTime(LargeExpDate.getTime() + (cookie_cacheday*1000*3600*24))
+cookie_cacheday = LargeExpDate.toGMTString();
+cookie_region = 'region';
+cookie_region_name = 'region_name';
+select_region = 'select_region';
+$(function(){
+	regionhasstoreInit(select_region);
+	
+//	$.removeCookie(cookie_region);
+//	$.removeCookie(cookie_region_name);
+	$('#confirm').click(function(){
+		_sel = $('#'+select_region).children('select:last')
+		_id = _sel.attr('value');
+		_name = _sel.find("option:selected").text();
+		$.removeCookie(cookie_region);
+		$.removeCookie(cookie_region_name);
+		if(_id>0){
+			$.setCookie(cookie_region,_id,cookie_cacheday);
+			$.setCookie(cookie_region_name,_name,cookie_cacheday);
+		}else{
+			_sel = _sel.prev();
+			_id =  _sel.attr('value');
+			_name = _sel.find("option:selected").text();
+			if(_id>0){
+				$.setCookie(cookie_region,_id,cookie_cacheday);
+				$.setCookie(cookie_region_name,_name,cookie_cacheday);
+			}else{
+				$.removeCookie(cookie_region);
+				$.removeCookie(cookie_region_name);
+			}
+		}
+		location.reload();
+		$('#regionbox').hide();
+	});
+	$('#close').click(function(){
+		$('#regionbox').hide();
+	})
+	if(!$.getCookie(cookie_region)){
+		$('#changeregion').hide();
+	}
+})
+$(document).ready(function(){
+	if(!$.getCookie(cookie_region)){
+		setTimeout("show_regionbox()",2000);
+	}
+});
+function show_regionbox(){
+	$('#regionbox').fadeIn(1000);// mask图层
+  var newMask = document.createElement("div");
+  var m = "mask";
+  newMask.id = m;
+  newMask.style.position = "fixed";
+  newMask.style.zIndex = "9998";
+  newMask.style.width = document.body.scrollWidth + "px";
+  newMask.style.height = (document.body.scrollHeight+150) + "px";
+  newMask.style.top = "0px";
+  newMask.style.left = "0px";
+  newMask.style.background = "#000";
+  newMask.style.filter = "alpha(opacity=50)";
+  newMask.style.opacity = "0.50";
+  document.body.appendChild(newMask);
+}
+//]]>
+</script>
+<div id="regionbox" style="display:none; padding-top: 120px; padding-right: 100px; padding-bottom: 60px; padding-left: 100px; width: 339px;height:71px;text-align: center; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-color: rgb(170, 170, 170); border-right-color: rgb(170, 170, 170); border-bottom-color: rgb(170, 170, 170); border-left-color: rgb(170, 170, 170); background: url(http://www.bdtaobao.com/themes/mall/yhd/styles/default/images/sr_bg.png);background-repeat:no-repeat;background-color: rgb(255, 255, 255); position:fixed; left: 30%;z-index: 10000;_margin-left:400px;">
+	<div id="select_region" style="float:left; width:375px;height:30px; background-color:#d00208;padding-top:5px;z-index: 10000;position:relative;" >
+		<select style="background-color:#FFFFFF;">
+			<!--<option value="0">请选择</option>-->
+			<option value="194">浙江省</option>
+            <!--{html_options options=$select_regions}-->
+		</select>
+		<select><option value="197">温州</option></select>
+		<select><option value="477">苍南县</option></select>
+		<select><option>请选择...</option><option value="478">灵溪镇</option><option value="479">龙港镇</option><option value="480">宜山镇</option></select>
+	</div>
+<p style="clear:both;height:10px;">
+	</p>
+	<p style="clear:both;float:left;">
+		<input type="button" style="cursor:pointer;background:url(http://www.bdtaobao.com/themes/mall/yhd/styles/default/images/sr_bt.png);width:102px;height:32px;" value=" " id="confirm" />
+		<!--<input type="button" value="关闭" id="close" />-->
+	</p>
+</div>
